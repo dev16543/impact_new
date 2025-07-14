@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import OSALogo from "../assets/OSALogo.png";
+import MITLogo from "../assets/MITLogo.jpg";
 
 const Navbar = () => {
     const [hoveredLink, setHoveredLink] = useState(null);
@@ -133,7 +135,7 @@ const Navbar = () => {
                             <div className="flex items-center">
                                 <a href="/" className="flex items-center">
                                     <img 
-                                        src="/api/placeholder/120/40" 
+                                        src={OSALogo} 
                                         alt="Left Logo" 
                                         className="h-10 object-contain"
                                     />
@@ -158,7 +160,7 @@ const Navbar = () => {
                             <div className="flex items-center">
                                 <a href="/" className="flex items-center">
                                     <img 
-                                        src="/api/placeholder/120/40" 
+                                        src={MITLogo} 
                                         alt="Right Logo" 
                                         className="h-10 object-contain"
                                     />
@@ -176,7 +178,7 @@ const Navbar = () => {
                     <div className="flex items-center justify-start">
                         <a href="/" className="flex items-center">
                             <img 
-                                src="/api/placeholder/100/30" 
+                                src={OSALogo} 
                                 alt="Mobile Logo" 
                                 className="h-8 object-contain"
                             />

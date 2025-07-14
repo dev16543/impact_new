@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import { motion, useAnimation, useMotionValue } from "framer-motion";
 import imp1 from "../assets/im1.png"
+import im2 from "../assets/im2.png"
+import im3 from "../assets/im3.png"
 import ShinyText from "../Component/shinyText";
 const getRotationTransition = (duration, from, loop = true) => ({
   from,
@@ -169,7 +171,7 @@ const OurImpactSection = () => {
               spinDuration={20}
               onHover="speedUp"
               className="bg-black rounded-full w-[250px] h-[250px]"
-              centerImage="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face"
+              centerImage={im2}
               centerAlt="Promoting Achievement"
             />
           </div>
@@ -181,7 +183,7 @@ const OurImpactSection = () => {
               spinDuration={30}
               onHover="speedUp"
               className="bg-black rounded-full w-[250px] h-[250px]"
-              centerImage="https://images.unsplash.com/photo-1494790108755-2616b612b65c?w=100&h=100&fit=crop&crop=face"
+              centerImage={im3}
               centerAlt="Cultivating Societies"
             />
           </div>

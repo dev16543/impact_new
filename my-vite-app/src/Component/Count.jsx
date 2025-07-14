@@ -88,10 +88,10 @@ const LeadershipStatsSection = () => {
           {/* Countries Exported */}
           <div className="flex flex-col items-center">
             <CountingNumber 
-              target={44} 
+              target={15000} 
               duration={2500}
               suffix="+"
-              label="COUNTRIES EXPORTED"
+              label="STUDENTS COMMUNITY"
             />
           </div>
 
@@ -101,10 +101,10 @@ const LeadershipStatsSection = () => {
           {/* Years of Experience */}
           <div className="flex flex-col items-center">
             <CountingNumber 
-              target={38} 
-              duration={2200}
+              target={50} 
+              duration={2500}
               suffix="+"
-              label="YEARS OF EXPERIENCE"
+              label="CLUBS"
             />
           </div>
 
@@ -115,10 +115,10 @@ const LeadershipStatsSection = () => {
           {/* Installations */}
           <div className="flex flex-col items-center">
             <CountingNumber 
-              target={7500} 
-              duration={3000}
+              target={500} 
+              duration={2500}
               suffix="+"
-              label="INSTALLATIONS"
+              label="EVENTS ORGANIZED"
             />
           </div>
         </div>
