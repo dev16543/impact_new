@@ -19,30 +19,12 @@ return (
       beamWidth={8}
       beamHeight={30}
       beamNumber={22}
-      lightColor="#ff9100"
+      lightColor="#ffffff"
       speed={7}
       noiseIntensity={1.75}
       scale={0.2}
       rotation={40}
     />
-  </div>
-
-  {/* Foreground Content */}
-  <div style={{ position: 'relative', zIndex: 1 }}>
-    {/* Your page content goes here */}
-    <h1 className="text-white text-3xl font-bold">Hello World</h1>
-    <h1 className="text-white text-3xl font-bold">Hello World</h1>
-    <h1 className="text-white text-3xl font-bold">Hello World</h1>
-    <h1 className="text-white text-3xl font-bold">Hello World</h1>
-    <h1 className="text-white text-3xl font-bold">Hello World</h1>
-    <h1 className="text-white text-3xl font-bold">Hello World</h1>
-    <h1 className="text-white text-3xl font-bold">Hello World</h1>
-    <h1 className="text-white text-3xl font-bold">Hello World</h1>
-    <h1 className="text-white text-3xl font-bold">Hello World</h1>
-    <h1 className="text-white text-3xl font-bold">Hello World</h1>
-    <h1 className="text-white text-3xl font-bold">Hello World</h1>
-    <h1 className="text-white text-3xl font-bold">Hello World</h1>
-    <h1 className="text-white text-3xl font-bold">Hello World</h1>
   </div>
 </div>
 
