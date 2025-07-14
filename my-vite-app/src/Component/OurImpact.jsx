@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { motion, useAnimation, useMotionValue } from "framer-motion";
 import imp1 from "../assets/im1.png"
+import ShinyText from "../Component/shinyText";
 const getRotationTransition = (duration, from, loop = true) => ({
   from,
   to: from + 360,
@@ -88,7 +89,7 @@ const CircularText = ({
   return (
     <div className="relative">
       <motion.div
-        className={`m-0 mx-auto rounded-full w-[200px] h-[200px] relative text-white font-bold text-center cursor-pointer origin-center ${className}`}
+        className={`m-0 mx-auto rounded-full w-[300px] h-[300px] relative text-white font-bold text-center cursor-pointer origin-center ${className}`}
         style={{ rotate: rotation }}
         initial={{ rotate: 0 }}
         animate={controls}
@@ -97,7 +98,7 @@ const CircularText = ({
       >
         {letters.map((letter, i) => {
           const rotationDeg = (360 / letters.length) * i;
-          const radius = 95; // Increased radius for bigger circles
+          const radius = 133; // Increased radius for bigger circles
           const angleInRadians = (rotationDeg * Math.PI) / 180;
           const x = Math.cos(angleInRadians) * radius;
           const y = Math.sin(angleInRadians) * radius;
@@ -121,12 +122,12 @@ const CircularText = ({
       
       {/* Center Image */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-        <div className="w-40 h-40 rounded-full bg-white flex items-center justify-center shadow-lg overflow-hidden">
+        <div className="w-60 h-60 rounded-full bg-white flex items-center justify-center shadow-lg overflow-hidden">
           {centerImage ? (
             <img 
               src={centerImage} 
               alt={centerAlt}
-              className="w-40 h-40 rounded-full object-cover"
+              className="w-60 h-60 rounded-full object-cover"
             />
           ) : (
             <div className="w-12 h-12 bg-blue-500 rounded-full"></div>
@@ -143,18 +144,19 @@ const OurImpactSection = () => {
       <div className="max-w-6xl mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-800 mb-4">Our Impact</h2>
+          <h2 className="text-4xl  font-bold mb-4"><ShinyText text="Our Impact " disabled={false} speed={3} className='custom-class' />
+</h2>
         </div>
 
         {/* Circular Text Animations */}
-        <div className="flex flex-wrap justify-center items-center gap-16 lg:gap-24">
+        <div className="flex flex-wrap justify-center items-center gap-22 lg:gap-24">
           {/* First Circle - Inspiring Minds */}
           <div className="flex flex-col items-center">
             <CircularText
-              text="INSPIRING • MINDS • INSPIRING • MINDS"
+              text="INSPIRING MINDS • INSPIRING MINDS • "
               spinDuration={25}
               onHover="speedUp"
-              className="bg-black rounded-full w-[250px] h-[250px]"
+              className="bg-black rounded-full w-[300px] h-[300px]"
               centerImage={imp1}
               centerAlt="Inspiring Minds"
             />
@@ -163,7 +165,7 @@ const OurImpactSection = () => {
           {/* Second Circle - Promoting Achievement */}
           <div className="flex flex-col items-center">
             <CircularText
-              text="PROMOTING • ACHIEVEMENT • PROMOTING • ACHIEVEMENT"
+              text="PROMOTING ACHIEVEMENT • PROMOTING ACHIEVEMENT • "
               spinDuration={20}
               onHover="speedUp"
               className="bg-black rounded-full w-[250px] h-[250px]"
@@ -175,7 +177,7 @@ const OurImpactSection = () => {
           {/* Third Circle - Cultivating Societies */}
           <div className="flex flex-col items-center">
             <CircularText
-              text="CULTIVATING • SOCIETIES • CULTIVATING • SOCIETIES"
+              text="CULTIVATING SOCIETIES • CULTIVATING SOCIETIES • "
               spinDuration={30}
               onHover="speedUp"
               className="bg-black rounded-full w-[250px] h-[250px]"
