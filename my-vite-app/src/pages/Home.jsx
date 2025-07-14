@@ -46,12 +46,12 @@ return (
 <OurImpactSection/>
 <FlagshipEventsGrid/>
 
-    <Dock
+    {/* <Dock
       items={demoItems}
       panelHeight={150}
       baseItemSize={100}
       magnification={120}
-    />
+    /> */}
 <Stack 
   randomRotation={true}
   sensitivity={200}
