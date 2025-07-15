@@ -107,7 +107,7 @@ const Navbar = () => {
     const navLinks = [
         { to: '/', label: 'Home' },
         { to: '/events', label: 'Events' },
-        { to: '/our-team', label: 'Our Team' },
+        { to: '/team', label: 'Our Team' },
         { to: '/club', label: 'Club' },
         { to: '/event-calendar', label: 'Event Calendar' },
         { to: '/contact-us', label: 'Contact Us' },

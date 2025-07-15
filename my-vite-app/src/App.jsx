@@ -4,6 +4,7 @@ import './App.css'
 import HomePage from './pages/Home';
 import Navbar from './Component/Navbar';
 import EnhancedClubPage from './pages/Club';
+import CouncilMembersPage from './pages/Councilmember';
 
 function App() {
 
@@ -17,7 +18,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage/>} />
         <Route path='/club' element={<EnhancedClubPage/>}/>
-        
+        <Route path='/team' element={<CouncilMembersPage/>}/>
 
       </Routes>
  
