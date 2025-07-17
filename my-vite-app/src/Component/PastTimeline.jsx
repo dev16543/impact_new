@@ -18,13 +18,12 @@ export default function CompanyTimeline() {
           image: 'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=300&h=300&fit=crop',
           title: 'National Youth Celebration 2023',
           details: [
-            'National Youth Celebration',
-            'Dance Rally',
-            'Interactive Session with Hostel Representatives',
-            '22nd JNU Inter University Youth Festival',
-            'Conference 2023'
-          ],
-          pdfUrl: 'https://www.example.com/sample2023.pdf'
+            { text: 'National Youth Celebration', pdfUrl: 'https://www.example.com/youth-celebration-2023.pdf' },
+            { text: 'Dance Rally', pdfUrl: 'https://www.example.com/dance-rally-2023.pdf' },
+            { text: 'Interactive Session with Hostel Representatives', pdfUrl: 'https://www.example.com/hostel-session-2023.pdf' },
+            { text: '22nd JNU Inter University Youth Festival', pdfUrl: 'https://www.example.com/jnu-festival-2023.pdf' },
+            { text: 'Conference 2023', pdfUrl: 'https://www.example.com/conference-2023.pdf' }
+          ]
         }
       ],
       'Jun': [
@@ -34,12 +33,11 @@ export default function CompanyTimeline() {
           image: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=300&h=300&fit=crop',
           title: 'Summer Festival 2023',
           details: [
-            'Music Concert',
-            'Art Exhibition',
-            'Food Festival',
-            'Community Gathering'
-          ],
-          pdfUrl: 'https://www.example.com/summer2023.pdf'
+            { text: 'Music Concert', pdfUrl: 'https://www.example.com/music-concert-2023.pdf' },
+            { text: 'Art Exhibition', pdfUrl: 'https://www.example.com/art-exhibition-2023.pdf' },
+            { text: 'Food Festival', pdfUrl: 'https://www.example.com/food-festival-2023.pdf' },
+            { text: 'Community Gathering', pdfUrl: 'https://www.example.com/community-gathering-2023.pdf' }
+          ]
         }
       ]
     },
@@ -51,13 +49,12 @@ export default function CompanyTimeline() {
           image: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=300&h=300&fit=crop',
           title: 'Sports Day 2024',
           details: [
-            'Athletic Events',
-            'Team Sports',
-            'Individual Competitions',
-            'Prize Distribution',
-            'Closing Ceremony'
-          ],
-          pdfUrl: 'https://www.example.com/sports2024.pdf'
+            { text: 'Athletic Events', pdfUrl: 'https://www.example.com/athletic-events-2024.pdf' },
+            { text: 'Team Sports', pdfUrl: 'https://www.example.com/team-sports-2024.pdf' },
+            { text: 'Individual Competitions', pdfUrl: 'https://www.example.com/individual-competitions-2024.pdf' },
+            { text: 'Prize Distribution', pdfUrl: 'https://www.example.com/prize-distribution-2024.pdf' },
+            { text: 'Closing Ceremony', pdfUrl: 'https://www.example.com/closing-ceremony-2024.pdf' }
+          ]
         }
       ],
       'Jan': [
@@ -67,12 +64,11 @@ export default function CompanyTimeline() {
           image: 'https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=300&h=300&fit=crop',
           title: 'New Year Celebration 2024',
           details: [
-            'Cultural Program',
-            'Student Awards',
-            'Annual Meeting',
-            'Networking Session'
-          ],
-          pdfUrl: 'https://www.example.com/newyear2024.pdf'
+            { text: 'Cultural Program', pdfUrl: 'https://www.example.com/cultural-program-2024.pdf' },
+            { text: 'Student Awards', pdfUrl: 'https://www.example.com/student-awards-2024.pdf' },
+            { text: 'Annual Meeting', pdfUrl: 'https://www.example.com/annual-meeting-2024.pdf' },
+            { text: 'Networking Session', pdfUrl: 'https://www.example.com/networking-session-2024.pdf' }
+          ]
         }
       ]
     },
@@ -84,13 +80,12 @@ export default function CompanyTimeline() {
           image: 'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=300&h=300&fit=crop',
           title: 'National Youth Celebration 2025',
           details: [
-            'National Youth Celebration',
-            'Dance Rally',
-            'Interactive Session with Hostel and Mess Representatives',
-            '24th JNU Inter University Youth Festival',
-            'Conference 2025'
-          ],
-          pdfUrl: 'https://www.example.com/sample2025.pdf'
+            { text: 'National Youth Celebration', pdfUrl: 'https://www.example.com/youth-celebration-2025.pdf' },
+            { text: 'Dance Rally', pdfUrl: 'https://www.example.com/dance-rally-2025.pdf' },
+            { text: 'Interactive Session with Hostel and Mess Representatives', pdfUrl: 'https://www.example.com/hostel-mess-session-2025.pdf' },
+            { text: '24th JNU Inter University Youth Festival', pdfUrl: 'https://www.example.com/jnu-festival-2025.pdf' },
+            { text: 'Conference 2025', pdfUrl: 'https://www.example.com/conference-2025.pdf' }
+          ]
         },
         {
           id: 6,
@@ -98,13 +93,12 @@ export default function CompanyTimeline() {
           image: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=300&h=300&fit=crop',
           title: 'Cultural Festival 2025',
           details: [
-            'Cultural Program',
-            'Dance Competition',
-            'Music Performance',
-            'Art Exhibition',
-            'Award Ceremony'
-          ],
-          pdfUrl: 'https://www.example.com/cultural2025.pdf'
+            { text: 'Cultural Program', pdfUrl: 'https://www.example.com/cultural-program-2025.pdf' },
+            { text: 'Dance Competition', pdfUrl: 'https://www.example.com/dance-competition-2025.pdf' },
+            { text: 'Music Performance', pdfUrl: 'https://www.example.com/music-performance-2025.pdf' },
+            { text: 'Art Exhibition', pdfUrl: 'https://www.example.com/art-exhibition-2025.pdf' },
+            { text: 'Award Ceremony', pdfUrl: 'https://www.example.com/award-ceremony-2025.pdf' }
+          ]
         }
       ],
       'Jun': [
@@ -114,12 +108,11 @@ export default function CompanyTimeline() {
           image: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=300&h=300&fit=crop',
           title: 'Summer Festival 2025',
           details: [
-            'Music Concert',
-            'Art Exhibition',
-            'Food Festival',
-            'Community Gathering'
-          ],
-          pdfUrl: 'https://www.example.com/summer2025.pdf'
+            { text: 'Music Concert', pdfUrl: 'https://www.example.com/music-concert-2025.pdf' },
+            { text: 'Art Exhibition', pdfUrl: 'https://www.example.com/art-exhibition-summer-2025.pdf' },
+            { text: 'Food Festival', pdfUrl: 'https://www.example.com/food-festival-2025.pdf' },
+            { text: 'Community Gathering', pdfUrl: 'https://www.example.com/community-gathering-2025.pdf' }
+          ]
         }
       ],
       'Jan': [
@@ -129,12 +122,11 @@ export default function CompanyTimeline() {
           image: 'https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=300&h=300&fit=crop',
           title: 'New Year Celebration 2025',
           details: [
-            'Cultural Program',
-            'Student Awards',
-            'Annual Meeting',
-            'Networking Session'
-          ],
-          pdfUrl: 'https://www.example.com/newyear2025.pdf'
+            { text: 'Cultural Program', pdfUrl: 'https://www.example.com/cultural-program-newyear-2025.pdf' },
+            { text: 'Student Awards', pdfUrl: 'https://www.example.com/student-awards-2025.pdf' },
+            { text: 'Annual Meeting', pdfUrl: 'https://www.example.com/annual-meeting-2025.pdf' },
+            { text: 'Networking Session', pdfUrl: 'https://www.example.com/networking-session-2025.pdf' }
+          ]
         }
       ]
     },
@@ -146,12 +138,11 @@ export default function CompanyTimeline() {
           image: 'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=300&h=300&fit=crop',
           title: 'Upcoming Youth Event 2026',
           details: [
-            'Planned Youth Celebration',
-            'Future Dance Rally',
-            'Upcoming Interactive Sessions',
-            'Future Festival Planning'
-          ],
-          pdfUrl: 'https://www.example.com/upcoming2026.pdf'
+            { text: 'Planned Youth Celebration', pdfUrl: 'https://www.example.com/planned-youth-2026.pdf' },
+            { text: 'Future Dance Rally', pdfUrl: 'https://www.example.com/future-dance-2026.pdf' },
+            { text: 'Upcoming Interactive Sessions', pdfUrl: 'https://www.example.com/upcoming-sessions-2026.pdf' },
+            { text: 'Future Festival Planning', pdfUrl: 'https://www.example.com/future-planning-2026.pdf' }
+          ]
         }
       ]
     }
@@ -348,12 +339,12 @@ export default function CompanyTimeline() {
                     <li key={idx} className="flex items-start text-base">
                       <div className="w-1.5 h-1.5 bg-white rounded-full mr-3 flex-shrink-0 mt-2"></div>
                       <a 
-                        href={milestone.pdfUrl} 
+                        href={detail.pdfUrl} 
                         target="_blank" 
                         rel="noopener noreferrer"
                         className="text-white hover:text-blue-300 hover:underline cursor-pointer transition-colors leading-relaxed"
                       >
-                        {detail}
+                        {detail.text}
                       </a>
                     </li>
                   ))}

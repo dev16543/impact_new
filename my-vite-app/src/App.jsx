@@ -6,8 +6,6 @@ import Navbar from './Component/Navbar';
 import EnhancedClubPage from './pages/Club';
 import CouncilMembersPage from './pages/Councilmember';
 import UpcomingEvent from './pages/UpcomingEvents';
-
-import PastEventsTimeline from './pages/PastEvents';
 import ContactUs from './pages/Contact';
 import StudentAffairsFooter from './Component/Footer';
 
