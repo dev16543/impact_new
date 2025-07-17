@@ -1,113 +1,212 @@
 import React, { useEffect, useRef, useCallback, useState } from "react";
 import { ChevronDown, Mail, MapPin, Calendar, Award, Users, Sparkles, Star, Heart, Phone, Globe, Linkedin, Code, Zap, Trophy, Target, Clock } from "lucide-react";
-import Dev from "../assets/dev.png";
+import SurajSir from "../assets/team_images/surajsir.png";
+import Aaryan from "../assets/team_images/Aaryan.png";
+import Dhairya from "../assets/team_images/Dhairya.png";
+import Abhijeet from '../assets/team_images/Abhijeet.png';
+import Adarsh from '../assets/team_images/Adarsh.png';
+import Anoushka from '../assets/team_images/Anoushka.png';
+import Atharv from '../assets/team_images/Atharv.png';
+import Ayushi from "../assets/team_images/Ayushi.png";
+import Bhoumik from '../assets/team_images/Bhoumik.png';
+import Chaitrali from '../assets/team_images/Chaitrali.png';
+import Danika from '../assets/team_images/Danika.png';
+import Dev from '../assets/team_images/Dev.png';
+import Harsh from '../assets/team_images/Harsh.png';
+import Khushi from '../assets/team_images/Khushi.png';
+import Mrinmayi from '../assets/team_images/Mrinmayi.png';
+import Mugdha from '../assets/team_images/Mugdha.png';
+import Muskan from '../assets/team_images/Muskan.png';
+import Sharvil from '../assets/team_images/Sharvil.png';
+import Soham from '../assets/team_images/Soham.png';
+import Sukhada from '../assets/team_images/Sukhada.png';
+import Swara from '../assets/team_images/Swara.png';
+import Tanvi from '../assets/team_images/Tanvi.png';
+import Udita from '../assets/team_images/Udita.png';
+import Vaibhav from '../assets/team_images/Vaibhav.png';
+import Vaishnavi from '../assets/team_images/Vaishnavi.png';
+import Ansh from '../assets/team_images/Ansh.png';
+import Krushnaraj from '../assets/team_images/Krushnaraj.jpg';
+
 const COUNCIL_MEMBERS_DATA = [
   {
-    name: "Javi A. Torres",
+    name: "Aaryan Phule",
     title: "President",
-    handle: "javicodes",
+    handle: "aaryan_phule__18",
+    avatarUrl: Aaryan,
+  },
+  {
+    name: "Dhairya Patwa",
+    title: "General Secretary",
+    handle: "dhairya_patwa",
+    avatarUrl: Dhairya,
+  },
+  {
+    name: "Soham Zope",
+    title: "Vice President",
+    handle: "soham.zope",
+    avatarUrl: Soham,
+  },
+  {
+    name: "Khushi Warang",
+    title: "Joint Secretary",
+    handle: "khhhuushiiii",
+    avatarUrl: Khushi,
+  },
+  {
+    name: "Swara Kodre",
+    title: "Treasurer",
+    handle: "swara_kodre",
+    avatarUrl: Swara,
+  },
+  {
+    name: "Vaishnavi Angane",
+    title: "Art Cluster Secretary",
+    handle: "angne.vaishnavi",
+    avatarUrl: Vaishnavi,
+  },
+  {
+    name: "Harsh Vora",
+    title: "Design Cluster Secretary",
+    handle: "harsh_vora_",
+    avatarUrl: Harsh,
+  },
+  {
+    name: "Dev Sagani",
+    title: "Technology Cluster Secretary",
+    handle: "dev_16543",
     avatarUrl: Dev,
   },
   {
-    name: "Sarah Chen",
-    title: "General Secretary",
-    handle: "sarahdesigns",
-    avatarUrl: "https://images.unsplash.com/photo-1494790108755-2616b57c1fc3?w=400&h=400&fit=crop&crop=face",
+    name: "Ayushi Sharma",
+    title: "Cultural Secretary(Girls)",
+    handle: "ayushisharma_18",
+    avatarUrl: Ayushi,
   },
   {
-    name: "Marcus Johnson",
-    title: "Vice President",
-    handle: "marcuspm",
-    avatarUrl: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
+    name: "Sharvil Maind",
+    title: "Cultural Secretary(Boys)",
+    handle: "sharvil27maind",
+    avatarUrl: Sharvil,
   },
   {
-    name: "Emma Rodriguez",
-    title: "Joint Secretary",
-    handle: "emmadata",
-    avatarUrl: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face",
+    name: "Chaitrali Patil",
+    title: "Sport Secretary(Girls)",
+    handle: "chaitrali_patil5",
+    avatarUrl: Chaitrali,
   },
   {
-    name: "David Kim",
-    title: "Treasurer",
-    handle: "davidops",
-    avatarUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
+    name: "Atharv Patil",
+    title: "Sport Secretary(Boys)",
+    handle: "patilatharv_",
+    avatarUrl: Atharv,
   },
   {
-    name: "Lisa Wang",
-    title: "Cultural Secretary",
-    handle: "lisaMarketing",
-    avatarUrl: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&h=400&fit=crop&crop=face",
+    name: "Danika Patil",
+    title: "Well-Being Secretary",
+    handle: "danikaa.s",
+    avatarUrl: Danika,
   },
   {
-    name: "Carlos Mendez",
-    title: "Sports Secretary",
-    handle: "carlosqa",
-    avatarUrl: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face",
+    name: "Anouksha Joshi",
+    title: "Editorial Secretary",
+    handle: "anoushka_2306",
+    avatarUrl: Anoushka,
   },
   {
-    name: "Priya Patel",
-    title: "Academic Secretary",
-    handle: "priyafront",
-    avatarUrl: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&h=400&fit=crop&crop=face",
+    name: "Muskan Rai",
+    title: "Magazine Secretary",
+    handle: "musskannnr",
+    avatarUrl: Muskan,
   },
   {
-    name: "Alex Brown",
-    title: "Technical Secretary",
-    handle: "alexback",
-    avatarUrl: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=400&fit=crop&crop=face",
+    name: "Abhijeet Varudkar",
+    title: "Media & Outreach Secretary",
+    handle: "arv_vlogs",
+    avatarUrl: Abhijeet,
   },
   {
-    name: "Nina Gupta",
-    title: "Social Secretary",
-    handle: "ninaui",
-    avatarUrl: "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=400&h=400&fit=crop&crop=face",
+    name: "Mugdha Sonawane",
+    title: "NCC Secretary",
+    handle: "mugdhas_04",
+    avatarUrl: Mugdha,
   },
   {
-    name: "Tom Lee",
-    title: "Event Coordinator",
-    handle: "tomcloud",
-    avatarUrl: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop&crop=face",
+    name: "Tanvi Bokade",
+    title: "NSS Secretary",
+    handle: "tan.tanzzzz",
+    avatarUrl: Tanvi,
   },
   {
-    name: "Sofia Rossi",
-    title: "PR Head",
-    handle: "sofiabiz",
-    avatarUrl: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=400&h=400&fit=crop&crop=face",
+    name: "Udita Anand",
+    title: "Executive Member",
+    handle: "uditaaa_",
+    avatarUrl: Udita,
+  },
+  {
+    name: "Sukhada Tambe",
+    title: "Executive Member",
+    handle: "sukhada_photography",
+    avatarUrl: Sukhada,
+  },
+  {
+    name: "Mrinmayi Gotmare",
+    title: "Executive Member",
+    handle: "_mrin___",
+    avatarUrl: Mrinmayi,
+  },
+  {
+    name: "Vaibhav Kalaskar",
+    title: "Executive Member",
+    handle: "vaibhavv______",
+    avatarUrl: Vaibhav,
+  },
+  {
+    name: "Bhoumik Rajput",
+    title: "Executive Member",
+    handle: "bhoumikrajput",
+    avatarUrl: Bhoumik,
+  },
+  {
+    name: "Adarsh Deshmukh",
+    title: "Executive Member",
+    handle: "adarshdeshmukh",
+    avatarUrl: Adarsh,
   }
 ];
 
 const WEBSITE_TEAM = [
   {
-    name: "Aarav Mehta",
-    title: "Web Lead",
-    handle: "aaravweb",
-    avatarUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
+    name: "Dev Sagani",
+    title: "Lead Developer",
+    handle: "dev_16543",
+    avatarUrl: Dev,
   },
   {
-    name: "Sophia Lee",
-    title: "Frontend Dev",
-    handle: "sophiafront",
-    avatarUrl: "https://images.unsplash.com/photo-1494790108755-2616b57c1fc3?w=400&h=400&fit=crop&crop=face",
+    name: "Ansh Agarwal",
+    title: "Full Stack Developer",
+    handle: "anshagarwal__007",
+    avatarUrl: Ansh,
   },
   {
-    name: "Mohammed Ali",
-    title: "Backend Dev",
-    handle: "mohammedback",
-    avatarUrl: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
+    name: "Krushnaraj Bhosale",
+    title: "Full Stack Developer",
+    handle: "krushnaabhosale",
+    avatarUrl: Krushnaraj,
   },
   {
-    name: "Emma Müller",
-    title: "UI/UX Designer",
-    handle: "emmaux",
+    name: "Darshan Dorik",
+    title: "UI/UX Designer & Developer",
+    handle: "darshan_dorik",
     avatarUrl: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face",
   }
 ];
 
 const FACULTY_MENTOR = {
-  name: "Dr. Anjali Sharma",
+  name: "Dr. Suraj Bhoyar",
   title: "Faculty Mentor",
-  handle: "anjalisharma",
-  avatarUrl: "https://images.unsplash.com/photo-1511367461989-f85a21fda167?w=400&h=400&fit=crop&crop=face",
+  handle: "zindadilguru",
+  avatarUrl: SurajSir,
 };
 
 const FloatingParticles = () => {
@@ -184,7 +283,7 @@ const CompactCard = ({ member, index }) => {
       <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
       
       {/* Animated Border */}
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-blue-900 to-pink-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"></div>
       <div className="absolute inset-[2px] bg-white rounded-2xl"></div>
       
       {/* Content */}
@@ -215,7 +314,7 @@ const CompactCard = ({ member, index }) => {
         
         {/* Animated Divider */}
         <div className="relative mb-4">
-          <div className="w-20 h-1 bg-gradient-to-r from-blue-400 via-purple-400 via-black to-black mx-auto rounded-full transform transition-all duration-300 group-hover:w-24"></div>
+          <div className="w-20 h-1 bg-gradient-to-r from-blue-400 via-blue-900 via-black to-black mx-auto rounded-full transform transition-all duration-300 group-hover:w-24"></div>
         </div>
         
         {/* Name with Glow Effect */}
@@ -276,7 +375,7 @@ const SectionHeader = ({ title, subtitle, icon: Icon }) => {
 const FacultyMentorCard = ({ mentor }) => (
   <div className="bg-white rounded-3xl shadow-2xl border-2 border-blue-200 flex flex-col items-center p-8 mx-auto mb-12 max-w-xl w-full transition-transform duration-300 hover:scale-105">
     <div className="relative mb-6">
-      <div className="absolute inset-0 w-48 h-48 rounded-full bg-gradient-to-r from-blue-400 via-purple-400 via-black to-pink-400 to-black animate-spin" style={{ animationDuration: '5s' }}></div>
+      <div className="absolute inset-0 w-48 h-48 rounded-full bg-gradient-to-r from-blue-400 via-blue-900 via-black to-pink-400 to-black animate-spin" style={{ animationDuration: '5s' }}></div>
       <div className="relative w-44 h-44 mx-2 my-2">
         <div className="w-full h-full bg-gray-100 rounded-full flex items-center justify-center">
           <img
