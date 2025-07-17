@@ -6,9 +6,13 @@ import Navbar from './Component/Navbar';
 import EnhancedClubPage from './pages/Club';
 import CouncilMembersPage from './pages/Councilmember';
 import UpcomingEvent from './pages/UpcomingEvents';
+
 import PastEventsTimeline from './pages/PastEvents';
 import ContactUs from './pages/Contact';
 import StudentAffairsFooter from './Component/Footer';
+
+import Event from './pages/Event';
+
 
 function App() {
 
@@ -24,8 +28,12 @@ function App() {
         <Route path='/club' element={<EnhancedClubPage/>}/>
         <Route path='/team' element={<CouncilMembersPage/>}/>
         <Route path='/upcomingevents' element={<UpcomingEvent/>}/>
+
         <Route path='/pastevents' element={<PastEventsTimeline/>}/>
         <Route path='/contact' element={<ContactUs/>}/>
+
+        <Route path='/pastevents' element={<Event/>}/>
+
 
       </Routes>
    <StudentAffairsFooter/>
