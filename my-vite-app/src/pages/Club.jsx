@@ -1,7 +1,7 @@
 import { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import banner from "../assets/banner.png";
-import Dev from "../assets/dev.png";
+import Dev from "../assets/team_images/Dev.png";
 
 
 // Enhanced ChromaGrid Component with colorful hover effects
