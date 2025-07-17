@@ -6,7 +6,12 @@ const Event =()=>{
     return(
 
         <div>
-            <HeroBanner/>
+           
+<HeroBanner 
+  title="Cultural Festival 2024"
+  subtitle="Celebrating diversity and tradition"
+  backgroundImage="https://your-image-url.com/festival.jpg"
+/>
             <Eventsheader/>
             <PastEventsTimeline/>
 
