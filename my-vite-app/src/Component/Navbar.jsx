@@ -110,7 +110,7 @@ const Navbar = () => {
         { to: '/team', label: 'Our Team' },
         { to: '/club', label: 'Club' },
         { to: '/event-calendar', label: 'Event Calendar' },
-        { to: '/contact-us', label: 'Contact Us' },
+        { to: '/contact', label: 'Contact Us' },
         { to: '/virtual-tour', label: 'Virtual Tour' },
     ];
 
