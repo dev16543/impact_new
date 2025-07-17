@@ -28,8 +28,6 @@ function App() {
         <Route path='/club' element={<EnhancedClubPage/>}/>
         <Route path='/team' element={<CouncilMembersPage/>}/>
         <Route path='/upcomingevents' element={<UpcomingEvent/>}/>
-
-        <Route path='/pastevents' element={<PastEventsTimeline/>}/>
         <Route path='/contact' element={<ContactUs/>}/>
 
         <Route path='/pastevents' element={<Event/>}/>
