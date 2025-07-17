@@ -5,6 +5,8 @@ import HomePage from './pages/Home';
 import Navbar from './Component/Navbar';
 import EnhancedClubPage from './pages/Club';
 import CouncilMembersPage from './pages/Councilmember';
+import UpcomingEvent from './pages/UpcomingEvents';
+import PastEventsTimeline from './pages/PastEvents';
 
 function App() {
 
@@ -19,7 +21,8 @@ function App() {
         <Route path="/" element={<HomePage/>} />
         <Route path='/club' element={<EnhancedClubPage/>}/>
         <Route path='/team' element={<CouncilMembersPage/>}/>
-        <Route path='/pastEvent' element={<Event/>}/>
+        <Route path='/upcomingevents' element={<UpcomingEvent/>}/>
+        <Route path='/pastevents' element={<PastEventsTimeline/>}/>
 
       </Routes>
  

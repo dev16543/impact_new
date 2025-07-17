@@ -1,6 +1,8 @@
 import { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import banner from "../assets/banner.png";
+import Dev from "../assets/dev.png";
+
 
 // Enhanced ChromaGrid Component with colorful hover effects
 const ChromaGrid = ({
@@ -17,87 +19,6 @@ const ChromaGrid = ({
   const setY = useRef(null);
   const pos = useRef({ x: 0, y: 0 });
 
-  // Default club data with colorful hover effects
-  const defaultClubData = [
-    {
-      image: "../assets/profile.jpeg",
-      title: "The Electoral Literacy Club (ELC)",
-      subtitle: "Democratic Engagement & Civic Responsibility",
-      handle: "@elc_mitadt",
-      borderColor: "#4F46E5",
-      gradient: "linear-gradient(145deg, #1e3a8a, #000)",
-      hoverColor: "rgba(79, 70, 229, 0.5)", // Blue
-      president: "Bhoumik Rajput",
-      facultyCoordinator: "Prof. Dr. Suraj Bhoyar",
-      contact: "bhoumikrajput2002@gmail.com",
-      url: "mailto:bhoumikrajput2002@gmail.com",
-    },
-    {
-      image: "../assets/profile.jpeg",
-      title: "Tech Innovation Club",
-      subtitle: "Innovation & Technology Development",
-      handle: "@tech_mitadt",
-      borderColor: "#10B981",
-      gradient: "linear-gradient(210deg, #059669, #000)",
-      hoverColor: "rgba(16, 185, 129, 0.5)", // Green
-      president: "Tech Lead",
-      facultyCoordinator: "Prof. Tech Coordinator",
-      contact: "tech@mitadt.edu.in",
-      url: "mailto:tech@mitadt.edu.in",
-    },
-    {
-      image: "../assets/profile.jpeg",
-      title: "Cultural Society",
-      subtitle: "Arts, Culture & Creative Expression",
-      handle: "@culture_mitadt",
-      borderColor: "#F59E0B",
-      gradient: "linear-gradient(165deg, #d97706, #000)",
-      hoverColor: "rgba(245, 158, 11, 0.5)", // Orange
-      president: "Cultural Head",
-      facultyCoordinator: "Prof. Cultural Coordinator",
-      contact: "cultural@mitadt.edu.in",
-      url: "mailto:cultural@mitadt.edu.in",
-    },
-    {
-      image: "../assets/profile.jpeg",
-      title: "Sports Club",
-      subtitle: "Athletic Excellence & Team Spirit",
-      handle: "@sports_mitadt",
-      borderColor: "#EF4444",
-      gradient: "linear-gradient(195deg, #dc2626, #000)",
-      hoverColor: "rgba(239, 68, 68, 0.5)", // Red
-      president: "Sports Captain",
-      facultyCoordinator: "Prof. Sports Coordinator",
-      contact: "sports@mitadt.edu.in",
-      url: "mailto:sports@mitadt.edu.in",
-    },
-    {
-      image: "../assets/profile.jpeg",
-      title: "Literature Club",
-      subtitle: "Writing, Reading & Literary Arts",
-      handle: "@lit_mitadt",
-      borderColor: "#8B5CF6",
-      gradient: "linear-gradient(225deg, #7c3aed, #000)",
-      hoverColor: "rgba(139, 92, 246, 0.5)", // Purple
-      president: "Literature Head",
-      facultyCoordinator: "Prof. Literature Coordinator",
-      contact: "literature@mitadt.edu.in",
-      url: "mailto:literature@mitadt.edu.in",
-    },
-    {
-      image: "../assets/profile.jpeg",
-      title: "Science Club",
-      subtitle: "Research & Scientific Discovery",
-      handle: "@science_mitadt",
-      borderColor: "#06B6D4",
-      gradient: "linear-gradient(135deg, #0891b2, #000)",
-      hoverColor: "rgba(6, 182, 212, 0.5)", // Cyan
-      president: "Science Head",
-      facultyCoordinator: "Prof. Science Coordinator",
-      contact: "science@mitadt.edu.in",
-      url: "mailto:science@mitadt.edu.in",
-    },
-  ];
 
   const data = items?.length ? items : defaultClubData;
 
@@ -263,9 +184,9 @@ const EnhancedClubPage = () => {
   // Club data with colorful hover effects
   const clubData = [
     {
-      image: "../assets/profile.jpeg",
+      image: Dev,
       title: "The Electoral Literacy Club (ELC)",
-      subtitle: "The Electoral Literacy Club (ELC) at MIT ADT University, established on August 15, 2023, under the Office of Student Affairs, aims to foster democratic engagement, civic responsibility, and leadership among students. Through initiatives like voter registration drives, electoral fairs, and campaign participation, the ELC promotes electoral awareness, ethical voting practices, and hands-on civic learning. With educational programs such as lecture series and interactive exhibitions, the club empowers students to actively engage in the democratic process, building a socially responsible and informed community.",
+      subtitle: "The Electoral Literacy Club (ELC) at MIT ADT University, established on August 15, 2023, under the Office of Student Affairs, aims to foster democratic engagement, civic responsibility, and leadership among students.",
       handle: "@elc_mitadt",
       borderColor: "#4F46E5",
       gradient: "linear-gradient(145deg, #1e3a8a, #000)",
@@ -275,13 +196,78 @@ const EnhancedClubPage = () => {
       contact: "bhoumikrajput2002@gmail.com",
       url: "mailto:bhoumikrajput2002@gmail.com",
     },
+    {
+      image: "../assets/profile.jpeg",
+      title: "Tech Innovation Club",
+      subtitle: "Fostering innovation and technology development through hands-on projects and workshops.",
+      handle: "@tech_mitadt",
+      borderColor: "#10B981",
+      gradient: "linear-gradient(210deg, #059669, #000)",
+      hoverColor: "rgba(16, 185, 129, 0.5)",
+      president: "Tech Lead",
+      facultyCoordinator: "Prof. Tech Coordinator",
+      contact: "tech@mitadt.edu.in",
+      url: "mailto:tech@mitadt.edu.in",
+    },
+    {
+      image: "../assets/profile.jpeg",
+      title: "Cultural Society",
+      subtitle: "Celebrating arts, culture, and creative expression through events and performances.",
+      handle: "@culture_mitadt",
+      borderColor: "#F59E0B",
+      gradient: "linear-gradient(165deg, #d97706, #000)",
+      hoverColor: "rgba(245, 158, 11, 0.5)",
+      president: "Cultural Head",
+      facultyCoordinator: "Prof. Cultural Coordinator",
+      contact: "cultural@mitadt.edu.in",
+      url: "mailto:cultural@mitadt.edu.in",
+    },
+    {
+      image: "../assets/profile.jpeg",
+      title: "Sports Club",
+      subtitle: "Promoting athletic excellence and team spirit through sports and competitions.",
+      handle: "@sports_mitadt",
+      borderColor: "#EF4444",
+      gradient: "linear-gradient(195deg, #dc2626, #000)",
+      hoverColor: "rgba(239, 68, 68, 0.5)",
+      president: "Sports Captain",
+      facultyCoordinator: "Prof. Sports Coordinator",
+      contact: "sports@mitadt.edu.in",
+      url: "mailto:sports@mitadt.edu.in",
+    },
+    {
+      image: "../assets/profile.jpeg",
+      title: "Literature Club",
+      subtitle: "Encouraging writing, reading, and literary arts among students.",
+      handle: "@lit_mitadt",
+      borderColor: "#8B5CF6",
+      gradient: "linear-gradient(225deg, #7c3aed, #000)",
+      hoverColor: "rgba(139, 92, 246, 0.5)",
+      president: "Literature Head",
+      facultyCoordinator: "Prof. Literature Coordinator",
+      contact: "literature@mitadt.edu.in",
+      url: "mailto:literature@mitadt.edu.in",
+    },
+    {
+      image: "../assets/profile.jpeg",
+      title: "Science Club",
+      subtitle: "Advancing research and scientific discovery through experiments and discussions.",
+      handle: "@science_mitadt",
+      borderColor: "#06B6D4",
+      gradient: "linear-gradient(135deg, #0891b2, #000)",
+      hoverColor: "rgba(6, 182, 212, 0.5)",
+      president: "Science Head",
+      facultyCoordinator: "Prof. Science Coordinator",
+      contact: "science@mitadt.edu.in",
+      url: "mailto:science@mitadt.edu.in",
+    },
   ];
 
   return (
-    <div className="min-h-screen flex flex-col bg-white">
+    <div className="min-h-screen bg-white flex flex-col">
       {/* Hero Section with banner image */}
       <section 
-        className="relative w-full h-[220px] md:h-[260px] bg-cover bg-center" 
+        className="relative w-full h-[65vh] bg-cover bg-center" 
         style={{ backgroundImage: `url(${banner})` }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-30"></div>
@@ -291,13 +277,12 @@ const EnhancedClubPage = () => {
           </h1>
         </div>
       </section>
-
       {/* ChromaGrid Section */}
-      <section className="flex-1 bg-white py-12">
-        <div className="max-w-7xl mx-auto">
+      <section className="flex-1 py-">
+        <div className="w-full">
           <div className="min-h-[800px]">
             <ChromaGrid 
-              items={[...clubData, ...clubData, ...clubData, ...clubData,...clubData, ...clubData]} // Duplicate the club data thrice
+              items={clubData}
               radius={350}
               damping={0.5}
               fadeOut={0.7}
