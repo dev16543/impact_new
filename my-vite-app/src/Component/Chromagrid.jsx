@@ -1,5 +1,4 @@
 import { useRef, useEffect } from "react";
-import { gsap } from "gsap";
 
 const ChromaGrid = ({
   items,
@@ -11,9 +10,37 @@ const ChromaGrid = ({
 }) => {
   const rootRef = useRef(null);
   const fadeRef = useRef(null);
-  const setX = useRef(null);
-  const setY = useRef(null);
   const pos = useRef({ x: 0, y: 0 });
+
+  // Simple animation without GSAP
+  const animatePosition = (targetX, targetY) => {
+    const startX = pos.current.x;
+    const startY = pos.current.y;
+    const startTime = performance.now();
+    const duration = damping * 1000;
+
+    const animate = (currentTime) => {
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      
+      // Easing function (approximating power3.out)
+      const easeProgress = 1 - Math.pow(1 - progress, 3);
+      
+      pos.current.x = startX + (targetX - startX) * easeProgress;
+      pos.current.y = startY + (targetY - startY) * easeProgress;
+      
+      if (rootRef.current) {
+        rootRef.current.style.setProperty('--x', `${pos.current.x}px`);
+        rootRef.current.style.setProperty('--y', `${pos.current.y}px`);
+      }
+      
+      if (progress < 1) {
+        requestAnimationFrame(animate);
+      }
+    };
+    
+    requestAnimationFrame(animate);
+  };
 
   const demo = [
     {
@@ -77,40 +104,31 @@ const ChromaGrid = ({
   useEffect(() => {
     const el = rootRef.current;
     if (!el) return;
-    setX.current = gsap.quickSetter(el, "--x", "px");
-    setY.current = gsap.quickSetter(el, "--y", "px");
+    
     const { width, height } = el.getBoundingClientRect();
     pos.current = { x: width / 2, y: height / 2 };
-    setX.current(pos.current.x);
-    setY.current(pos.current.y);
+    el.style.setProperty('--x', `${pos.current.x}px`);
+    el.style.setProperty('--y', `${pos.current.y}px`);
   }, []);
-
-  const moveTo = (x, y) => {
-    gsap.to(pos.current, {
-      x,
-      y,
-      duration: damping,
-      ease,
-      onUpdate: () => {
-        setX.current?.(pos.current.x);
-        setY.current?.(pos.current.y);
-      },
-      overwrite: true,
-    });
-  };
 
   const handleMove = (e) => {
     const r = rootRef.current.getBoundingClientRect();
-    moveTo(e.clientX - r.left, e.clientY - r.top);
-    gsap.to(fadeRef.current, { opacity: 0, duration: 0.25, overwrite: true });
+    const newX = e.clientX - r.left;
+    const newY = e.clientY - r.top;
+    animatePosition(newX, newY);
+    
+    // Fade out effect
+    if (fadeRef.current) {
+      fadeRef.current.style.opacity = '0';
+      fadeRef.current.style.transition = 'opacity 0.25s';
+    }
   };
 
   const handleLeave = () => {
-    gsap.to(fadeRef.current, {
-      opacity: 1,
-      duration: fadeOut,
-      overwrite: true,
-    });
+    if (fadeRef.current) {
+      fadeRef.current.style.opacity = '1';
+      fadeRef.current.style.transition = `opacity ${fadeOut}s`;
+    }
   };
 
   const handleCardClick = (url) => {
@@ -129,14 +147,12 @@ const ChromaGrid = ({
       ref={rootRef}
       onPointerMove={handleMove}
       onPointerLeave={handleLeave}
-      className={`relative w-full h-full flex flex-wrap justify-center items-start gap-3 ${className}`}
-      style={
-        {
-          "--r": `${radius}px`,
-          "--x": "50%",
-          "--y": "50%",
-        }
-      }
+      className={`relative w-full h-full flex flex-wrap justify-center items-start gap-3 mt-[5px]${className}`}
+      style={{
+        "--r": `${radius}px`,
+        "--x": "50%",
+        "--y": "50%",
+      }}
     >
       {data.map((c, i) => (
         <article
@@ -144,13 +160,11 @@ const ChromaGrid = ({
           onMouseMove={handleCardMove}
           onClick={() => handleCardClick(c.url)}
           className="group relative flex flex-col w-[300px] rounded-[20px] overflow-hidden border-2 border-transparent transition-colors duration-300 cursor-pointer"
-          style={
-            {
-              "--card-border": c.borderColor || "transparent",
-              background: c.gradient,
-              "--spotlight-color": "rgba(255,255,255,0.3)",
-            }
-          }
+          style={{
+            "--card-border": c.borderColor || "transparent",
+            background: c.gradient,
+            "--spotlight-color": "rgba(255,255,255,0.3)",
+          }}
         >
           <div
             className="absolute inset-0 pointer-events-none transition-opacity duration-500 z-20 opacity-0 group-hover:opacity-100"
