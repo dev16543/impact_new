@@ -5,109 +5,114 @@ import OSALogo from '../assets/OSALogo.png';
 
 const StudentAffairsFooter = () => {
   return (
-    <footer className="bg-gray-800 text-white relative overflow-hidden py-6">
-      {/* Subtle background pattern */}
-      <div className="absolute inset-0 opacity-5">
+    <footer className="bg-gradient-to-br from-[#181f2a] via-[#232b39] to-[#181f2a] text-white relative overflow-hidden py-3 lg:py-10">
+      {/* Enhanced background pattern */}
+      <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent transform rotate-45"></div>
+        <div className="absolute inset-0 bg-gradient-to-l from-transparent via-red-500 to-transparent transform -rotate-45 opacity-20"></div>
       </div>
 
-      <div className="max-w-6xl mx-auto px-6 py-6 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 lg:py-10 relative z-10">
         {/* Main Footer Content */}
-        <div className="flex flex-row justify-between items-start gap-4 mb-2 w-full">
+        <div className="flex flex-row flex-wrap items-start justify-between gap-6 mb-3 lg:mb-4 w-full">
           
           {/* Logo and Title Section */}
-          <div className="flex flex-col items-start">
-            <div>
-              <div className="w-60 h-20 mb-1 flex items-center">
+          <div className="flex flex-col items-start flex-1 min-w-[220px] lg:flex-col lg:items-start lg:justify-start lg:gap-4">
+            {/* Vertically stack for lg and above */}
+            <div className="flex flex-col gap-2 w-full lg:gap-4">
+              <div className="w-48 sm:w-52 lg:w-56 h-12 sm:h-14 lg:h-16 flex items-center flex-shrink-0">
                 <img src={OSALogo} alt="OSA Logo" className="h-full w-auto object-contain" />
               </div>
-              <div className="flex flex-col items-start gap-1 min-w-[220px]">
-                <div className="w-40 mt-1 mb-1 transition-transform duration-300 hover:scale-105">
-                  <img src={MITLogo} alt="MIT ADT University Logo" className="w-full h-16 object-contain" />
-                </div>
-                <h3 className="text-white font-semibold text-base mb-1 transition-colors duration-300 hover:text-red-300">Council Connect</h3>
-                <p className="text-gray-400 text-sm transition-colors duration-300 hover:text-gray-300">Connecting students through leadership and service</p>
+              <div className="w-28 sm:w-32 lg:w-36 h-10 sm:h-12 lg:h-14 flex items-center transition-transform duration-300 hover:scale-105">
+                <img src={MITLogo} alt="MIT ADT University Logo" className="w-full h-full object-contain" />
+              </div>
+              <div className="flex flex-col">
+                <h3 className="text-white font-bold text-sm sm:text-base lg:text-lg transition-colors duration-300 hover:text-red-300">Council Connect</h3>
+                <p className="text-gray-400 text-xs sm:text-sm transition-colors duration-300 hover:text-gray-300 lg:max-w-xs">Student Leadership & Service</p>
               </div>
             </div>
           </div>
 
           {/* Navigation Links */}
-          <div className="flex flex-col items-start min-w-[220px]">
-            <h4 className="text-white font-semibold text-base mb-3">Quick Links</h4>
+          <div className="flex flex-col items-start flex-1 min-w-[220px]">
+            <h4 className="text-white font-semibold text-sm sm:text-base lg:text-lg mb-2 sm:mb-3 flex items-center gap-2">
+              <span className="w-1 h-6 bg-gradient-to-b from-red-500 to-red-600 rounded-full"></span>
+              Quick Links
+            </h4>
             <nav className="flex w-full">
-              <div className="flex flex-col gap-2 flex-1">
-                <a href="#" className="group flex items-center gap-2 text-gray-300 hover:text-white transition-colors duration-300 text-sm font-medium relative">
-                  <span className="inline-block w-2 h-2 rounded-full bg-white opacity-80 group-hover:opacity-100 transition-all duration-300"></span>
-                  Home
-                  <span className="block h-[2px] w-0 group-hover:w-full transition-all duration-300 bg-red-500 absolute left-0 -bottom-0.5"></span>
-                </a>
-                <a href="#" className="group flex items-center gap-2 text-gray-300 hover:text-white transition-colors duration-300 text-sm font-medium relative">
-                  <span className="inline-block w-2 h-2 rounded-full bg-white opacity-80 group-hover:opacity-100 transition-all duration-300"></span>
-                  Our Team
-                  <span className="block h-[2px] w-0 group-hover:w-full transition-all duration-300 bg-red-500 absolute left-0 -bottom-0.5"></span>
-                </a>
-                <a href="#" className="group flex items-center gap-2 text-gray-300 hover:text-white transition-colors duration-300 text-sm font-medium relative">
-                  <span className="inline-block w-2 h-2 rounded-full bg-white opacity-80 group-hover:opacity-100 transition-all duration-300"></span>
-                  Calendar
-                  <span className="block h-[2px] w-0 group-hover:w-full transition-all duration-300 bg-red-500 absolute left-0 -bottom-0.5"></span>
-                </a>
-                <a href="#" className="group flex items-center gap-2 text-gray-300 hover:text-white transition-colors duration-300 text-sm font-medium relative">
-                  <span className="inline-block w-2 h-2 rounded-full bg-white opacity-80 group-hover:opacity-100 transition-all duration-300"></span>
-                  Contact Us
-                  <span className="block h-[2px] w-0 group-hover:w-full transition-all duration-300 bg-red-500 absolute left-0 -bottom-0.5"></span>
-                </a>
-              </div>
-              <div className="flex flex-col gap-2 flex-1">
-                <a href="#" className="group flex items-center gap-2 text-gray-300 hover:text-white transition-colors duration-300 text-sm font-medium relative">
-                  <span className="inline-block w-2 h-2 rounded-full bg-white opacity-80 group-hover:opacity-100 transition-all duration-300"></span>
-                  Events
-                  <span className="block h-[2px] w-0 group-hover:w-full transition-all duration-300 bg-red-500 absolute left-0 -bottom-0.5"></span>
-                </a>
-                <a href="#" className="group flex items-center gap-2 text-gray-300 hover:text-white transition-colors duration-300 text-sm font-medium relative">
-                  <span className="inline-block w-2 h-2 rounded-full bg-white opacity-80 group-hover:opacity-100 transition-all duration-300"></span>
-                  Club
-                  <span className="block h-[2px] w-0 group-hover:w-full transition-all duration-300 bg-red-500 absolute left-0 -bottom-0.5"></span>
-                </a>
-                <a href="#" className="group flex items-center gap-2 text-gray-300 hover:text-white transition-colors duration-300 text-sm font-medium relative">
-                  <span className="inline-block w-2 h-2 rounded-full bg-white opacity-80 group-hover:opacity-100 transition-all duration-300"></span>
-                  Contact Us
-                  <span className="block h-[2px] w-0 group-hover:w-full transition-all duration-300 bg-red-500 absolute left-0 -bottom-0.5"></span>
-                </a>
+              <div className="grid grid-cols-2 sm:grid-cols-2 gap-x-6 gap-y-2 w-full lg:grid-cols-2 lg:gap-x-12 lg:gap-y-2">
+                <div className="flex flex-col gap-2">
+                  <a href="#" className="group flex items-center gap-2 text-gray-300 hover:text-white transition-all duration-300 text-xs sm:text-sm lg:text-base font-medium relative py-1">
+                    <span className="inline-block w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-red-500 opacity-80 group-hover:opacity-100 group-hover:scale-125 transition-all duration-300"></span>
+                    Home
+                    <span className="block h-[2px] w-0 group-hover:w-full transition-all duration-300 bg-gradient-to-r from-red-500 to-red-600 absolute left-0 -bottom-0.5"></span>
+                  </a>
+                  <a href="#" className="group flex items-center gap-2 text-gray-300 hover:text-white transition-all duration-300 text-xs sm:text-sm lg:text-base font-medium relative py-1">
+                    <span className="inline-block w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-red-500 opacity-80 group-hover:opacity-100 group-hover:scale-125 transition-all duration-300"></span>
+                    Our Team
+                    <span className="block h-[2px] w-0 group-hover:w-full transition-all duration-300 bg-gradient-to-r from-red-500 to-red-600 absolute left-0 -bottom-0.5"></span>
+                  </a>
+                  <a href="#" className="group flex items-center gap-2 text-gray-300 hover:text-white transition-all duration-300 text-xs sm:text-sm lg:text-base font-medium relative py-1">
+                    <span className="inline-block w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-red-500 opacity-80 group-hover:opacity-100 group-hover:scale-125 transition-all duration-300"></span>
+                    Calendar
+                    <span className="block h-[2px] w-0 group-hover:w-full transition-all duration-300 bg-gradient-to-r from-red-500 to-red-600 absolute left-0 -bottom-0.5"></span>
+                  </a>
+                </div>
+                <div className="flex flex-col gap-2">
+                  <a href="#" className="group flex items-center gap-2 text-gray-300 hover:text-white transition-all duration-300 text-xs sm:text-sm lg:text-base font-medium relative py-1">
+                    <span className="inline-block w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-red-500 opacity-80 group-hover:opacity-100 group-hover:scale-125 transition-all duration-300"></span>
+                    Events
+                    <span className="block h-[2px] w-0 group-hover:w-full transition-all duration-300 bg-gradient-to-r from-red-500 to-red-600 absolute left-0 -bottom-0.5"></span>
+                  </a>
+                  <a href="#" className="group flex items-center gap-2 text-gray-300 hover:text-white transition-all duration-300 text-xs sm:text-sm lg:text-base font-medium relative py-1">
+                    <span className="inline-block w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-red-500 opacity-80 group-hover:opacity-100 group-hover:scale-125 transition-all duration-300"></span>
+                    Club
+                    <span className="block h-[2px] w-0 group-hover:w-full transition-all duration-300 bg-gradient-to-r from-red-500 to-red-600 absolute left-0 -bottom-0.5"></span>
+                  </a>
+                  <a href="#" className="group flex items-center gap-2 text-gray-300 hover:text-white transition-all duration-300 text-xs sm:text-sm lg:text-base font-medium relative py-1">
+                    <span className="inline-block w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-red-500 opacity-80 group-hover:opacity-100 group-hover:scale-125 transition-all duration-300"></span>
+                    Contact Us
+                    <span className="block h-[2px] w-0 group-hover:w-full transition-all duration-300 bg-gradient-to-r from-red-500 to-red-600 absolute left-0 -bottom-0.5"></span>
+                  </a>
+                </div>
               </div>
             </nav>
           </div>
 
           {/* Social Media Section */}
-          <div className="flex flex-col items-end min-w-[140px]">
-            <h4 className="text-white font-semibold text-base mb-3">Follow Us</h4>
-            <div className="flex gap-4">
+          <div className="flex flex-col items-start lg:items-end flex-1 min-w-[220px]">
+            <h4 className="text-white font-semibold text-sm sm:text-base lg:text-lg mb-2 sm:mb-3 flex items-center gap-2">
+              <span className="w-1 h-6 bg-gradient-to-b from-red-500 to-red-600 rounded-full"></span>
+              Follow Us
+            </h4>
+            <div className="flex gap-3 sm:gap-4">
               <a 
                 href="#" 
-                className="w-10 h-10 bg-gray-700 hover:bg-blue-600 rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110"
+                className="w-8 h-8 sm:w-10 sm:h-10 lg:w-11 lg:h-11 bg-gradient-to-br from-gray-700 to-gray-800 hover:from-blue-600 hover:to-blue-700 rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110 hover:shadow-lg hover:shadow-blue-500/25"
               >
-                <Linkedin className="w-5 h-5 text-white" />
+                <Linkedin className="w-4 h-4 sm:w-5 sm:h-5 lg:w-5 lg:h-5 text-white" />
               </a>
               
               <a 
                 href="#" 
-                className="w-10 h-10 bg-gray-700 hover:bg-pink-600 rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110"
+                className="w-8 h-8 sm:w-10 sm:h-10 lg:w-11 lg:h-11 bg-gradient-to-br from-gray-700 to-gray-800 hover:from-pink-600 hover:to-pink-700 rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110 hover:shadow-lg hover:shadow-pink-500/25"
               >
-                <Instagram className="w-5 h-5 text-white" />
+                <Instagram className="w-4 h-4 sm:w-5 sm:h-5 lg:w-5 lg:h-5 text-white" />
               </a>
               
               <a 
                 href="#" 
-                className="w-10 h-10 bg-gray-700 hover:bg-blue-800 rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110"
+                className="w-8 h-8 sm:w-10 sm:h-10 lg:w-11 lg:h-11 bg-gradient-to-br from-gray-700 to-gray-800 hover:from-blue-800 hover:to-blue-900 rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110 hover:shadow-lg hover:shadow-blue-500/25"
               >
-                <Facebook className="w-5 h-5 text-white" />
+                <Facebook className="w-4 h-4 sm:w-5 sm:h-5 lg:w-5 lg:h-5 text-white" />
               </a>
             </div>
           </div>
         </div>
 
         {/* Copyright Section */}
-        <div className="text-center pt-2 border-t border-gray-700 mt-2">
-          <p className="text-gray-400 text-sm transition-colors duration-300 hover:text-gray-300">
+        <div className="text-center pt-2 lg:pt-3 border-t border-gray-700/50">
+          <p className="text-gray-400 text-xs sm:text-sm lg:text-sm transition-colors duration-300 hover:text-gray-300">
             Copyright © 2025 All Rights Reserved by Office of Student Affairs, MIT ADT University.
           </p>
         </div>
