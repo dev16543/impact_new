@@ -106,7 +106,15 @@ const Navbar = () => {
 
     const navLinks = [
         { to: '/', label: 'Home' },
-        { to: '/upcomingevents', label: 'Events' },
+        { 
+            to: '/upcomingevents', 
+            label: 'Events',
+            hasDropdown: true,
+            dropdownItems: [
+                { to: '/upcomingevents', label: 'Upcoming Events' },
+                { to: '/pastevents', label: 'Past Events' }
+            ]
+        },
         { to: '/team', label: 'Our Team' },
         { to: '/club', label: 'Club' },
         { to: '/event-calendar', label: 'Event Calendar' },
@@ -145,14 +153,65 @@ const Navbar = () => {
                             {/* Center - Navigation Links */}
                             <div className="flex items-center space-x-8">
                                 {navLinks.map((link, index) => (
-                                    <a
-                                        key={index}
-                                        href={link.to}
-                                        className="text-gray-700 hover:text-red-500 transition-colors duration-200 font-medium text-sm whitespace-nowrap"
-                                        onClick={handleLinkClick}
-                                    >
-                                        {link.label}
-                                    </a>
+                                    <div key={index} className="relative group">
+                                        {link.hasDropdown ? (
+                                            <div 
+                                                    className="relative"
+                                                    onMouseEnter={() => setActiveDropdown(index)}
+                                                    onMouseLeave={() => setActiveDropdown(null)}
+                                                >
+                                                <a
+                                                    href={link.to}
+                                                    className="text-gray-700 hover:text-red-500 transition-all duration-300 font-medium text-sm whitespace-nowrap flex items-center py-2"
+                                                    onClick={handleLinkClick}
+                                                >
+                                                    {link.label}
+                                                    <svg className={`ml-1 w-4 h-4 transition-transform duration-300 ${activeDropdown === index ? 'rotate-180' : ''}`} fill="currentColor" viewBox="0 0 20 20">
+                                                        <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+                                                    </svg>
+                                                </a>
+                                                <div 
+                                                    className={`absolute top-full left-1/2 transform -translate-x-1/2 mt-1 w-56 transition-all duration-300 ease-out ${
+                                                        activeDropdown === index 
+                                                            ? 'opacity-100 visible translate-y-0' 
+                                                            : 'opacity-0 invisible -translate-y-2'
+                                                    }`}
+                                                    onMouseEnter={() => setActiveDropdown(index)}
+                                                    onMouseLeave={() => setActiveDropdown(null)}
+                                                >
+                                                    {/* Invisible bridge to prevent flickering */}
+                                                    <div className="absolute -top-1 left-0 right-0 h-1"></div>
+                                                    
+                                                    <div className="bg-white/95 backdrop-blur-md rounded-2xl shadow-2xl border border-gray-100/50 py-3 overflow-hidden">
+                                                        {/* Modern gradient accent */}
+                                                        <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-red-500 via-pink-500 to-red-600"></div>
+                                                        
+                                                        {link.dropdownItems.map((dropdownItem, dropdownIndex) => (
+                                                            <a
+                                                                key={dropdownIndex}
+                                                                href={dropdownItem.to}
+                                                                className="block px-6 py-3 text-sm font-medium text-gray-700 hover:text-red-500 hover:bg-gradient-to-r hover:from-red-50/50 hover:to-pink-50/50 transition-all duration-300 relative group/item"
+                                                                onClick={handleLinkClick}
+                                                            >
+                                                                <div className="flex items-center">
+                                                                    <span className="mr-3 w-2 h-2 rounded-full bg-gradient-to-r from-red-400 to-pink-400 opacity-0 group-hover/item:opacity-100 transition-all duration-300 transform group-hover/item:scale-100 scale-75"></span>
+                                                                    {dropdownItem.label}
+                                                                </div>
+                                                            </a>
+                                                        ))}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        ) : (
+                                            <a
+                                                href={link.to}
+                                                className="text-gray-700 hover:text-red-500 transition-colors duration-200 font-medium text-sm whitespace-nowrap py-2"
+                                                onClick={handleLinkClick}
+                                            >
+                                                {link.label}
+                                            </a>
+                                        )}
+                                    </div>
                                 ))}
                             </div>
 
@@ -212,13 +271,35 @@ const Navbar = () => {
                         <ul className="flex flex-col gap-0 items-center w-full py-5">
                             {navLinks.map((link, index) => (
                                 <li className="w-full text-center border-b border-gray-100 last:border-b-0" key={index}>
-                                    <a
-                                        href={link.to}
-                                        className="w-full p-5 text-lg font-medium text-gray-800 block transition-all duration-300 hover:text-red-500"
-                                        onClick={handleLinkClick}
-                                    >
-                                        {link.label}
-                                    </a>
+                                    {link.hasDropdown ? (
+                                        <div>
+                                            <a
+                                                href={link.to}
+                                                className="w-full p-5 text-lg font-medium text-gray-800 block transition-all duration-300 hover:text-red-500"
+                                                onClick={handleLinkClick}
+                                            >
+                                                {link.label}
+                                            </a>
+                                            {link.dropdownItems.map((dropdownItem, dropdownIndex) => (
+                                                <a
+                                                    key={dropdownIndex}
+                                                    href={dropdownItem.to}
+                                                    className="w-full p-3 pl-8 text-base font-normal text-gray-600 block transition-all duration-300 hover:text-red-500 border-t border-gray-50"
+                                                    onClick={handleLinkClick}
+                                                >
+                                                    {dropdownItem.label}
+                                                </a>
+                                            ))}
+                                        </div>
+                                    ) : (
+                                        <a
+                                            href={link.to}
+                                            className="w-full p-5 text-lg font-medium text-gray-800 block transition-all duration-300 hover:text-red-500"
+                                            onClick={handleLinkClick}
+                                        >
+                                            {link.label}
+                                        </a>
+                                    )}
                                 </li>
                             ))}
                         </ul>

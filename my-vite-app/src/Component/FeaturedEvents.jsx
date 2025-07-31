@@ -1,9 +1,18 @@
 import React, { useState } from 'react';
-import { Calendar, MapPin, Users, X, Clock, Tag, ExternalLink } from 'lucide-react';
+import { Calendar, MapPin, Users, X, Clock, Tag, ExternalLink, User, Phone, GraduationCap, Building } from 'lucide-react';
 
 const UpcomingEventsPage = ({ events, className = "" }) => {
   const [selectedEvent, setSelectedEvent] = useState(null);
   const [registeredEvents, setRegisteredEvents] = useState(new Set());
+  const [showRegistrationForm, setShowRegistrationForm] = useState(false);
+  const [registrationEventId, setRegistrationEventId] = useState(null);
+  const [formData, setFormData] = useState({
+    name: '',
+    enrollmentNo: '',
+    college: '',
+    year: '',
+    contactNo: ''
+  });
 
   // Demo data with vibrant event images
   const demoEvents = [
@@ -114,13 +123,64 @@ const UpcomingEventsPage = ({ events, className = "" }) => {
   const data = events?.length ? events : demoEvents;
 
   const handleRegister = (eventId) => {
-    const newRegistered = new Set(registeredEvents);
-    if (newRegistered.has(eventId)) {
+    if (registeredEvents.has(eventId)) {
+      // If already registered, unregister
+      const newRegistered = new Set(registeredEvents);
       newRegistered.delete(eventId);
+      setRegisteredEvents(newRegistered);
     } else {
-      newRegistered.add(eventId);
+      // Show registration form
+      setRegistrationEventId(eventId);
+      setShowRegistrationForm(true);
     }
+  };
+
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+    
+    // Basic validation
+    if (!formData.name || !formData.enrollmentNo || !formData.college || !formData.year || !formData.contactNo) {
+      alert('Please fill in all fields');
+      return;
+    }
+
+    // Add to registered events
+    const newRegistered = new Set(registeredEvents);
+    newRegistered.add(registrationEventId);
     setRegisteredEvents(newRegistered);
+
+    // Reset form and close modal
+    setFormData({
+      name: '',
+      enrollmentNo: '',
+      college: '',
+      year: '',
+      contactNo: ''
+    });
+    setShowRegistrationForm(false);
+    setRegistrationEventId(null);
+
+    alert('Registration successful!');
+  };
+
+  const handleFormChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const closeRegistrationForm = () => {
+    setShowRegistrationForm(false);
+    setRegistrationEventId(null);
+    setFormData({
+      name: '',
+      enrollmentNo: '',
+      college: '',
+      year: '',
+      contactNo: ''
+    });
   };
 
   const openEventDetails = (event) => {
@@ -129,6 +189,11 @@ const UpcomingEventsPage = ({ events, className = "" }) => {
 
   const closeEventDetails = () => {
     setSelectedEvent(null);
+  };
+
+  const getRegisteredEventTitle = () => {
+    const event = data.find(e => e.id === registrationEventId);
+    return event ? event.title : 'Event';
   };
 
   return (
@@ -236,9 +301,149 @@ const UpcomingEventsPage = ({ events, className = "" }) => {
         ))}
       </div>
 
+      {/* Registration Form Modal */}
+      {showRegistrationForm && (
+        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4 z-50">
+          <div className="bg-white rounded-2xl max-w-md w-full max-h-[90vh] overflow-y-auto">
+            {/* Modal Header */}
+            <div className="p-6 border-b border-gray-100">
+              <div className="flex items-center justify-between">
+                <div>
+                  <h2 className="text-2xl font-bold text-gray-900">Event Registration</h2>
+                  <p className="text-sm text-gray-600 mt-1">Register for: {getRegisteredEventTitle()}</p>
+                </div>
+                <button
+                  onClick={closeRegistrationForm}
+                  className="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center text-gray-500 hover:bg-gray-200 transition-colors"
+                >
+                  <X className="w-4 h-4" />
+                </button>
+              </div>
+            </div>
+
+            {/* Registration Form */}
+            <div className="p-6 space-y-4">
+              {/* Name Field */}
+              <div>
+                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                  <User className="w-4 h-4 inline mr-2" />
+                  Full Name *
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleFormChange}
+                  required
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                  placeholder="Enter your full name"
+                />
+              </div>
+
+              {/* Enrollment Number Field */}
+              <div>
+                <label htmlFor="enrollmentNo" className="block text-sm font-medium text-gray-700 mb-2">
+                  <Tag className="w-4 h-4 inline mr-2" />
+                  Enrollment Number *
+                </label>
+                <input
+                  type="text"
+                  id="enrollmentNo"
+                  name="enrollmentNo"
+                  value={formData.enrollmentNo}
+                  onChange={handleFormChange}
+                  required
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                  placeholder="Enter your enrollment number"
+                />
+              </div>
+
+              {/* College Field */}
+              <div>
+                <label htmlFor="college" className="block text-sm font-medium text-gray-700 mb-2">
+                  <Building className="w-4 h-4 inline mr-2" />
+                  College/University *
+                </label>
+                <input
+                  type="text"
+                  id="college"
+                  name="college"
+                  value={formData.college}
+                  onChange={handleFormChange}
+                  required
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                  placeholder="Enter your college/university name"
+                />
+              </div>
+
+              {/* Year Field */}
+              <div>
+                <label htmlFor="year" className="block text-sm font-medium text-gray-700 mb-2">
+                  <GraduationCap className="w-4 h-4 inline mr-2" />
+                  Academic Year *
+                </label>
+                <select
+                  id="year"
+                  name="year"
+                  value={formData.year}
+                  onChange={handleFormChange}
+                  required
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                >
+                  <option value="">Select your year</option>
+                  <option value="1st Year">1st Year</option>
+                  <option value="2nd Year">2nd Year</option>
+                  <option value="3rd Year">3rd Year</option>
+                  <option value="4th Year">4th Year</option>
+                  <option value="Graduate">Graduate</option>
+                  <option value="Post Graduate">Post Graduate</option>
+                </select>
+              </div>
+
+              {/* Contact Number Field */}
+              <div>
+                <label htmlFor="contactNo" className="block text-sm font-medium text-gray-700 mb-2">
+                  <Phone className="w-4 h-4 inline mr-2" />
+                  Contact Number *
+                </label>
+                <input
+                  type="tel"
+                  id="contactNo"
+                  name="contactNo"
+                  value={formData.contactNo}
+                  onChange={handleFormChange}
+                  required
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                  placeholder="Enter your contact number"
+                />
+              </div>
+
+              {/* Form Actions */}
+              <div className="flex gap-3 pt-4">
+                <button
+                  type="button"
+                  onClick={closeRegistrationForm}
+                  className="flex-1 py-3 px-4 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50 transition-colors font-medium"
+                >
+                  Cancel
+                </button>
+                <button
+                  type="button"
+                  onClick={handleFormSubmit}
+                  className="flex-1 py-3 px-4 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors font-medium"
+                >
+                  Register Now
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* Event Details Modal */}
       {selectedEvent && (
-        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4 z-50">
+        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4 z-40">
           <div className="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
             {/* Modal Header */}
             <div className="relative h-64 overflow-hidden">
