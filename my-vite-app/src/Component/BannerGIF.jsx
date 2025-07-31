@@ -1,5 +1,5 @@
 import React from "react";
-import gifVideo from "../assets/GIF.webm";
+import gifVideo from "../assets/MIT-ADT_Campus_Tour.mp4";
 
 const BannerGIF = () => {
   return (
@@ -11,11 +11,11 @@ const BannerGIF = () => {
         muted 
         playsInline
       >
-        <source src={gifVideo} type="video/webm" />
+        <source src={gifVideo} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
       
-      <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50 p-8 lg:p-6 sm:p-4 box-border">
+      {/* <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50 p-8 lg:p-6 sm:p-4 box-border">
         <h1 className="text-white text-6xl font-bold text-center max-w-[1200px] mx-auto leading-tight transition-all duration-300 ease-in-out
                      2xl:text-6xl 2xl:max-w-[1200px]
                      xl:text-[3.5rem] xl:max-w-[1000px]
@@ -25,7 +25,7 @@ const BannerGIF = () => {
                      xs:text-2xl">
           Impact Makers,Leading Change.
         </h1>
-      </div>
+      </div> */}
     </div>
   );
 };
