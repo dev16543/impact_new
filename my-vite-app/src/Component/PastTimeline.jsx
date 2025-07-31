@@ -1,4 +1,14 @@
 import React, { useState, useEffect } from 'react';
+import july2425 from '/src/assets/pastevents/timeline_24-25/July.jpg';
+import august2425 from '/src/assets/pastevents/timeline_24-25/Aug.jpg';
+import september2425 from '/src/assets/pastevents/timeline_24-25/Sept.jpg';
+import october2425 from '/src/assets/pastevents/timeline_24-25/Oct.jpg';
+import november2425 from '/src/assets/pastevents/timeline_24-25/Nov.jpg';
+import december2425 from '/src/assets/pastevents/timeline_24-25/Dec.jpg';
+import january2425 from '/src/assets/pastevents/timeline_24-25/Jan.jpg';
+import february2425 from '/src/assets/pastevents/timeline_24-25/Feb.png';
+import march2425 from '/src/assets/pastevents/timeline_24-25/Marc.webp';
+
 
 export default function CompanyTimeline() {
   const [selectedMonth, setSelectedMonth] = useState('May');
@@ -77,7 +87,7 @@ export default function CompanyTimeline() {
     {
       "id": 1,
       "month": "July",
-      "image": "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=300&h=300&fit=crop",
+      "image": july2425,
       "title": "Monthly Events",
       "details": [
         { "text": "Orientation of Alumini 2024-25", "pdfUrl": "https://docs.google.com/presentation/d/1wqJNp3K1uwBAAH0C4Dbo-QScdeuQ-RBHYzPsc_7PWvI/edit?usp=drivesdk" },
@@ -93,7 +103,7 @@ export default function CompanyTimeline() {
     {
       "id": 2,
       "month": "August",
-      "image": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=300&h=300&fit=crop",
+      "image": august2425,
       "title": "Monthly Events",
       "details": [
         { "text": "Club Orientation Meeting", "pdfUrl": "https://docs.google.com/presentation/d/1NksB_SrQPe6m2wsTuP3s8U3SKXZz1amszEXILU1cnNg/edit?usp=drivesdk" },
@@ -110,7 +120,7 @@ export default function CompanyTimeline() {
     {
       "id": 3,
       "month": "September",
-      "image": "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=300&h=300&fit=crop",
+      "image": september2425,
       "title": "Monthly Events",
       "details": [
         { "text": "IMPACT Student Council - Interview", "pdfUrl": "https://docs.google.com/presentation/d/1gbW25GvZoR0CEwnlVu09X8S2Lj3KbxfloHR52ISYWX0/edit?usp=drivesdk" },
@@ -126,7 +136,7 @@ export default function CompanyTimeline() {
     {
       "id": 4,
       "month": "October",
-      "image": "https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=300&h=300&fit=crop",
+      "image": october2425,
       "title": "Monthly Events",
       "details": [
         { "text": "Talent Fusion 2024", "pdfUrl": "https://docs.google.com/presentation/d/1eFymPhWte2omlbE7HFSPMVMhUO9FkozAcRFUOi-aD7s/edit?usp=drivesdk" },
@@ -158,7 +168,7 @@ export default function CompanyTimeline() {
     {
       "id": 5,
       "month": "November",
-      "image": "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=300&h=300&fit=crop",
+      "image": november2425,
       "title": "Monthly Events",
       "details": [
         { "text": "Spectra 8.0", "pdfUrl": "https://docs.google.com/presentation/d/1k_HgJUIV6NA2TdXEgwejiWMM0dz_yMsIQtMg2aYuNK0/edit?usp=drivesdk" },
@@ -176,7 +186,7 @@ export default function CompanyTimeline() {
     {
       "id": 6,
       "month": "December",
-      "image": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=300&h=300&fit=crop",
+      "image": december2425,
       "title": "Monthly Events",
       "details": [
         { "text": "Unlock Java", "pdfUrl": "https://docs.google.com/presentation/d/1A26t7637U4rreqMo2vpCp-bqqJxgEEFeyomwOIc2gtk/edit?usp=drivesdk" },
@@ -198,7 +208,7 @@ export default function CompanyTimeline() {
     {
       "id": 7,
       "month": "January",
-      "image": "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=300&h=300&fit=crop",
+      "image": january2425,
       "title": "Monthly Events",
       "details": [
         { "text": "National Youth Day Celebration", "pdfUrl": "https://docs.google.com/presentation/d/1fvXqbxhgeBW_GyEecSIMzxDVOFmI_GDwpd-9L9vmVDY/edit?usp=drivesdk" },
@@ -215,7 +225,7 @@ export default function CompanyTimeline() {
     {
       "id": 8,
       "month": "February",
-      "image": "https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=300&h=300&fit=crop",
+      "image": february2425,
       "title": "Monthly Events",
       "details": [
         { "text": "Spectra 11.0", "pdfUrl": "https://docs.google.com/presentation/d/1kRORPOQj-_zqFjk6sALkhKHAsKE2vWsZlSrCiae6DdU/edit?usp=drivesdk" },
@@ -228,7 +238,7 @@ export default function CompanyTimeline() {
     {
       "id": 9,
       "month": "March",
-      "image": "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=300&h=300&fit=crop",
+      "image": march2425,
       "title": "Monthly Events",
       "details": [
         { "text": "Preparatory Meeting for Persona 2025", "pdfUrl": "https://docs.google.com/presentation/d/1GvFvAGxhPLiRsMQBKgku_rFM-NUtV-WV2kitGdVoIh0/edit?usp=drivesdk" },
@@ -329,7 +339,7 @@ export default function CompanyTimeline() {
 
       {/* Header Controls */}
       <div className="text-center py-8">
-        <h1 className="text-4xl font-bold text-gray-800 mb-6">Company Timeline</h1>
+        <h1 className="text-4xl font-bold text-gray-800 mb-6">Past Events Timeline</h1>
         
         {/* Year Navigation */}
         <div className="flex items-center justify-center gap-4 mb-8">

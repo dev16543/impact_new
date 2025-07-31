@@ -23,7 +23,7 @@ const BannerGIF = () => {
                      md:text-4xl md:max-w-[600px]
                      sm:text-3xl sm:max-w-full
                      xs:text-2xl">
-          Redefining Plastic Processing with Innovative Engineering.
+          Impact Makers,Leading Change.
         </h1>
       </div>
     </div>
