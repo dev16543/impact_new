@@ -91,7 +91,7 @@ const CircularText = ({
   return (
     <div className="relative">
       <motion.div
-        className={`m-0 mx-auto rounded-full w-[300px] h-[300px] relative text-white font-bold text-center cursor-pointer origin-center ${className}`}
+        className={`m-0 mx-auto rounded-full w-[300px] h-[300px] relative text-black font-bold text-center cursor-pointer origin-center ${className}`}
         style={{ rotate: rotation }}
         initial={{ rotate: 0 }}
         animate={controls}
@@ -108,7 +108,7 @@ const CircularText = ({
           return (
             <span
               key={i}
-              className="absolute text-base font-bold text-white select-none"
+              className="absolute text-base font-bold text-black select-none"
               style={{
                 left: '50%',
                 top: '50%',
@@ -158,7 +158,7 @@ const OurImpactSection = () => {
               text="INSPIRING MINDS • INSPIRING MINDS • "
               spinDuration={25}
               onHover="speedUp"
-              className="bg-black rounded-full w-[300px] h-[300px]"
+              className="bg-gray-50 rounded-full w-[300px] h-[300px]"
               centerImage={imp1}
               centerAlt="Inspiring Minds"
             />
@@ -170,7 +170,7 @@ const OurImpactSection = () => {
               text="PROMOTING ACHIEVEMENT • PROMOTING ACHIEVEMENT • "
               spinDuration={20}
               onHover="speedUp"
-              className="bg-black rounded-full w-[250px] h-[250px]"
+              className="bg-gray-50 rounded-full w-[250px] h-[250px]"
               centerImage={im2}
               centerAlt="Promoting Achievement"
             />
@@ -182,7 +182,7 @@ const OurImpactSection = () => {
               text="CULTIVATING SOCIETIES • CULTIVATING SOCIETIES • "
               spinDuration={30}
               onHover="speedUp"
-              className="bg-black rounded-full w-[250px] h-[250px]"
+              className="bg-gray-50 rounded-full w-[250px] h-[250px]"
               centerImage={im3}
               centerAlt="Cultivating Societies"
             />

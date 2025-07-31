@@ -349,7 +349,7 @@ export default function CompanyTimeline() {
             className={`p-3 rounded-full transition-colors ${
               currentYearIndex === 0 
                 ? 'bg-gray-300 text-gray-500 cursor-not-allowed' 
-                : 'bg-blue-600 text-white hover:bg-blue-700'
+                : 'bg-[#9b28b1] text-white '
             }`}
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -365,7 +365,7 @@ export default function CompanyTimeline() {
             className={`p-3 rounded-full transition-colors ${
               currentYearIndex === academicYears.length - 1 
                 ? 'bg-gray-300 text-gray-500 cursor-not-allowed' 
-                : 'bg-blue-600 text-white hover:bg-[#2c6eca]'
+                : 'bg-[#9b28b1] text-white'
             }`}
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -380,7 +380,7 @@ export default function CompanyTimeline() {
             <button
               key={index}
               onClick={() => scrollToMilestone(month)}
-              className="px-6 py-3 rounded-full font-medium transition-all text-base bg-blue-100 text-blue-600 hover:bg-blue-200 hover:shadow-lg"
+              className="px-6 py-3 rounded-full font-medium transition-all text-base bg-[#e4abf0ff] text-[#9b28b1] hover:shadow-lg"
             >
               {month}
             </button>
@@ -397,7 +397,7 @@ export default function CompanyTimeline() {
               onClick={() => scrollToMilestone(milestone.month)}
               className="text-center text-3xl font-bold mb-6 px-6 py-2 z-10 bg-white rounded-full cursor-pointer hover:shadow-lg transition-shadow"
               style={{
-                background: 'linear-gradient(to right, #002346 0%, #2c6eca 100%)',
+                background: 'linear-gradient(to right, #9b28b1, #ff6f3c, #ffb020)',
                 WebkitBackgroundClip: 'text',
                 backgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
@@ -410,7 +410,7 @@ export default function CompanyTimeline() {
             
             {/* Timeline Segment */}
             <div 
-              className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-[#2c6eca] z-0"
+              className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-[#9b28b1] z-0"
               style={{
                 height: 'calc(100% - 50px)',
                 top: '130px'
@@ -431,7 +431,7 @@ export default function CompanyTimeline() {
                 <div 
                   className="w-80 h-80 rounded-full overflow-hidden relative"
                   style={{
-                    border: '12px solid #2c6eca',
+                    border: '12px solid #9b28b1',
                     aspectRatio: '1/1'
                   }}
                 >
@@ -450,7 +450,7 @@ export default function CompanyTimeline() {
               </div>
               
               {/* Description Container */}
-              <div className="flex-1 p-6 bg-blue-600 text-white rounded-lg shadow-lg" style={{background:"linear-gradient(to right, #002346 0%, #2c6eca 100%)"}}>
+              <div className="flex-1 p-6 bg-blue-600 text-white rounded-lg shadow-lg" style={{background:"linear-gradient(220deg, #ff9100 0%, #9f008f 90%)"}}>
                 <h3 className="text-xl font-bold mb-4">{milestone.title}</h3>
                 <ul className="space-y-2">
                   {milestone.details.map((detail, idx) => (

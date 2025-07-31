@@ -157,7 +157,7 @@ const EventCard = ({ event }) => {
         
         {/* Back of card */}
         <div className="flip-card-back shadow-lg bg-gradient-to-br from-blue-900 to-blue-600">
-          <div className="flex flex-col justify-center items-center h-full p-6 text-white text-center">
+          <div className="flex flex-col justify-center items-center h-full p-6 text-black text-center">
             <h3 className="text-xl font-bold mb-4">{event.title}</h3>
             <p className="text-sm leading-relaxed mb-4">{event.description}</p>
             <div className="mt-auto">
