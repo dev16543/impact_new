@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Send, User, Linkedin, Phone, Mail } from 'lucide-react';
 import bannerImg from '../assets/banner.png';
+import HeroBanner from '../Component/HeroBanner';
+import past_ev from '../assets/Bannerpage/past_events.png';
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -26,11 +28,11 @@ const ContactUs = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Banner Image */}
-      <div className="w-full h-[450px] md:h-[450px] relative overflow-hidden">
+      <div className="w-full h-64 md:h-80 relative overflow-hidden">
         <img
           src={bannerImg}
           alt="Contact Banner"
-          className="w-full h-full"
+          className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-[#002346]/40 to-[#2C6ECA]/40"></div>
       </div>
