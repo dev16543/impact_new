@@ -27,13 +27,15 @@ const ContactUs = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <HeroBanner
-        title="Contact Us"
-        subtitle="Get in touch with us to inspire, cultivate and achieve togetherness"
-        backgroundImage={past_ev}
-        height="50vh"
-      />
+      {/* Banner Image */}
+      <div className="w-full h-64 md:h-80 relative overflow-hidden">
+        <img
+          src={bannerImg}
+          alt="Contact Banner"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#002346]/40 to-[#2C6ECA]/40"></div>
+      </div>
 
       {/* Contact Form Section */}
       <div className="relative -mt-20 px-4 sm:px-6 lg:px-8">

@@ -1,34 +1,38 @@
 import React from 'react';
+import Ganesh from "../assets/pastevents/GaneshFest.png";
+import Garba from "../assets/pastevents/garba.png";
+import Spectra from "../assets/pastevents/spectra.png";
+import Persona from "../assets/pastevents/timeline_24-25/Marc.webp";
 
 const FlagshipEvents = () => {
   const events = [
     {
       id: 1,
-      title: "Summer Conference 2024",
-      image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&h=300&fit=crop",
+      title: "Spectra",
+      image: Spectra,
       description: "Join us for our biggest annual conference featuring industry leaders and innovative workshops.",
-      date: "July 15-17, 2024"
+      // date: "July 15-17, 2024"
     },
     {
       id: 2,
-      title: "Tech Innovation Summit", 
-      image: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=400&h=400&fit=crop",
+      title: "Ganesh Chaturthi", 
+      image: Ganesh,
       description: "Explore cutting-edge technologies and network with tech pioneers from around the world.",
-      date: "August 22-24, 2024"
+      // date: "August 22-24, 2024"
     },
     {
       id: 3,
-      title: "Leadership Workshop",
-      image: "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?w=600&h=600&fit=crop", 
+      title: "Garba Festival",
+      image: Garba, 
       description: "Develop your leadership skills with hands-on workshops and expert mentorship sessions.",
-      date: "September 10-12, 2024"
+      // date: "September 10-12, 2024"
     },
     {
       id: 4,
-      title: "Networking Gala",
-      image: "https://images.unsplash.com/photo-1511578314322-379afb476865?w=400&h=400&fit=crop",
+      title: "Persona Fest",
+      image: Persona,
       description: "An elegant evening of networking, entertainment, and celebrating achievements in our industry.",
-      date: "October 5, 2024"
+      // date: "October 5, 2024"
     }
   ];
 
@@ -150,7 +154,7 @@ const EventCard = ({ event }) => {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
           <div className="absolute bottom-4 left-4 text-white">
-            <h3 className="text-lg font-bold mb-1">{event.title}</h3>
+            <h3 className="text-[25px] font-bold mb-1">{event.title}</h3>
             <p className="text-sm opacity-90">{event.date}</p>
           </div>
         </div>
