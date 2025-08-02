@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { X } from 'lucide-react';
 import july2425 from '/src/assets/pastevents/timeline_24-25/July.jpg';
@@ -36,33 +35,63 @@ const EventModal = ({ isOpen, onClose, event }) => {
       ></div>
       
       {/* Modal Content */}
-      <div className="relative bg-white rounded-lg shadow-2xl max-w-2xl w-full mx-4 max-h-[90vh] overflow-hidden">
+      <div className="relative bg-white rounded-lg shadow-2xl w-full max-w-xs sm:max-w-md md:max-w-lg lg:max-w-2xl mx-4 max-h-[90vh] flex flex-col">
         {/* Header */}
-        <div className="bg-gradient-to-r from-purple-600 to-pink-600 text-black p-6">
+        <div className="bg-gradient-to-r from-purple-600 to-pink-600 text-black p-3 sm:p-4 md:p-6 flex-shrink-0">
           <div className="text-center">
-            <p className="text-sm opacity-90 mb-2">Event Topic</p>
-            <h2 className="text-2xl font-bold">{event.title}</h2>
+            <p className="text-xs opacity-90 mb-1 sm:mb-2">Event Topic</p>
+            <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold leading-tight">{event.title}</h2>
+            {event.date && (
+              <p className="text-xs opacity-90 mt-1 sm:mt-2">{event.date}</p>
+            )}
+          </div>
+          
+          {/* Resource Persons and Venue Row */}
+          <div className="flex justify-between items-start mt-3 sm:mt-4 text-xs sm:text-sm gap-2">
+            {/* Resource Persons - Left Side */}
+            <div className="flex-1">
+              {event.resourcePersons && event.resourcePersons.length > 0 && (
+                <div>
+                  <h4 className="font-semibold opacity-90 mb-1">Resource Persons</h4>
+                  <div className="opacity-80">
+                    {event.resourcePersons.map((person, index) => (
+                      <p key={index} className="text-xs sm:text-sm leading-tight">{person}</p>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+            
+            {/* Venue - Right Side */}
+            <div className="flex-1 text-right">
+              {event.venue && (
+                <div>
+                  <h4 className="font-semibold opacity-90 mb-1">Venue</h4>
+                  <p className="text-xs sm:text-sm opacity-80">{event.venue}</p>
+                </div>
+              )}
+            </div>
           </div>
         </div>
         
         {/* Content */}
-        <div className="p-6 max-h-[60vh] overflow-y-auto">
-          <div className="space-y-4">
-            <div className="border-l-4 border-purple-500 pl-4">
-              <h3 className="text-lg font-semibold text-gray-800 mb-2">Event Description</h3>
-              <p className="text-gray-600 leading-relaxed">
+        <div className="flex-1 overflow-y-auto p-3 sm:p-4 md:p-6">
+          <div className="space-y-3 sm:space-y-4">
+            <div className="border-l-4 border-purple-500 pl-2 sm:pl-3 md:pl-4">
+              <h3 className="text-sm sm:text-base md:text-lg font-semibold text-gray-800 mb-2">Event Description</h3>
+              <p className="text-xs sm:text-sm md:text-base text-gray-600 leading-relaxed">
                 {event.description || "This was an exciting event organized by the student council. It brought together students from various departments and created memorable experiences for all participants. The event featured engaging activities, meaningful interactions, and valuable learning opportunities."}
               </p>
             </div>
             
             {event.highlights && event.highlights.length > 0 && (
-              <div className="border-l-4 border-orange-500 pl-4">
-                <h3 className="text-lg font-semibold text-gray-800 mb-2">Event Highlights</h3>
-                <ul className="space-y-2 text-gray-600">
+              <div className="border-l-4 border-orange-500 pl-2 sm:pl-3 md:pl-4">
+                <h3 className="text-sm sm:text-base md:text-lg font-semibold text-gray-800 mb-2">Event Highlights</h3>
+                <ul className="space-y-2 text-xs sm:text-sm md:text-base text-gray-600">
                   {event.highlights.map((highlight, index) => (
                     <li key={index} className="flex items-start">
-                      <span className="w-2 h-2 bg-orange-500 rounded-full mr-3 mt-2 flex-shrink-0"></span>
-                      {highlight}
+                      <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-orange-500 rounded-full mr-2 sm:mr-3 mt-1.5 sm:mt-2 flex-shrink-0"></span>
+                      <span className="leading-relaxed">{highlight}</span>
                     </li>
                   ))}
                 </ul>
@@ -70,9 +99,9 @@ const EventModal = ({ isOpen, onClose, event }) => {
             )}
 
             {event.additionalInfo && (
-              <div className="border-l-4 border-blue-500 pl-4">
-                <h3 className="text-lg font-semibold text-gray-800 mb-2">Additional Information</h3>
-                <p className="text-gray-600 leading-relaxed">
+              <div className="border-l-4 border-blue-500 pl-2 sm:pl-3 md:pl-4">
+                <h3 className="text-sm sm:text-base md:text-lg font-semibold text-gray-800 mb-2">Additional Information</h3>
+                <p className="text-xs sm:text-sm md:text-base text-gray-600 leading-relaxed">
                   {event.additionalInfo}
                 </p>
               </div>
@@ -81,28 +110,17 @@ const EventModal = ({ isOpen, onClose, event }) => {
         </div>
         
         {/* Footer */}
-        <div className="bg-gray-50 px-6 py-4 border-t">
+        <div className="bg-gray-50 px-3 sm:px-4 md:px-6 py-2 sm:py-3 md:py-4 border-t flex-shrink-0">
           <div className="flex justify-between items-center">
-            <div className="text-sm text-gray-500">
+            <div className="text-xs sm:text-sm text-gray-500">
               Event organized in {event.month}
             </div>
-            <div className="flex gap-3 items-center">
-              <a
-                href={event.pdfUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-4 py-2 bg-black text-white rounded-lg hover:bg-gray-800 transition-all"
-              >
-                View Details (PDF)
-              </a>
-              <button
-                onClick={onClose}
-                className="p-2 text-gray-500 hover:text-gray-700 hover:bg-gray-200 rounded-full transition-colors"
-                aria-label="Close modal"
-              >
-                <X size={20} />
-              </button>
-            </div>
+            <button
+              onClick={onClose}
+              className="px-3 sm:px-4 py-1.5 sm:py-2 text-gray-600 hover:text-gray-800 hover:bg-gray-200 rounded-lg transition-colors text-xs sm:text-sm font-medium"
+            >
+              Close
+            </button>
           </div>
         </div>
       </div>
@@ -130,21 +148,26 @@ export default function CompanyTimeline() {
           image: 'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=300&h=300&fit=crop',
           title: 'National Youth Celebration 2023',
           details: [
-            { 
-              text: 'National Youth Celebrations', 
-              pdfUrl: 'https://www.example.com/youth-celebration-2023.pdf',
-                "highlights": [
-    "Hands-on workshops in digital marketing and coding",
-    "Career guidance sessions with industry professionals", 
-    "Skill assessment and certification programs",
-    "Networking opportunities with potential employers",
-    "Interactive demonstrations of emerging technologies"
+          { 
+  "text": "National Youth Day Celebration", 
+  "pdfUrl": "https://docs.google.com/presentation/d/1fvXqbxhgeBW_GyEecSIMzxDVOFmI_GDwpd-9L9vmVDY/edit?usp=drivesdk",
+  "description": "A patriotic celebration honoring Swami Vivekananda's birthday and the spirit of Indian youth. The event featured inspirational speeches, cultural programs, and activities promoting youth empowerment.",
+  "date": "12/01/25",
+  "venue": "RK Auditorium",
+  "resourcePersons": [
+    "Dr. Mahesh Chopade",
+    "Prof. Dr. Suraj Bhoyar", 
+    "Dr. Hanumant Pawar",
+    "Prof. Padmakar Phad"
   ],
-  "additionalInfo": "The event attracted over 500 students and resulted in 50+ job placements and internship offers.",
-              description: 'A vibrant celebration of youth energy and enthusiasm featuring cultural performances, competitive events, and networking opportunities for students from across the region.'
-              
-           
-            },
+  "highlights": [
+    "Inspirational speeches on youth empowerment",
+    "Cultural performances celebrating Indian heritage",
+    "Interactive workshops on leadership development",
+    "Awards ceremony recognizing outstanding students"
+  ],
+  "additionalInfo": "The celebration attracted over 800 participants and featured special performances by local artists."
+},
             { 
               text: 'Dance Rally', 
               pdfUrl: 'https://www.example.com/dance-rally-2023.pdf',
