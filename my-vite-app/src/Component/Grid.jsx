@@ -10,28 +10,28 @@ const FlagshipEvents = () => {
       id: 1,
       title: "Spectra",
       image: Spectra,
-      description: "Join us for our biggest annual conference featuring industry leaders and innovative workshops.",
+      description: "SPECTRA is MIT ADT University's flagship cultural extravaganza that serves as a dynamic showcase of dance, music, and performance. The event features diverse artistic expressions ranging from classical dance performances honoring India's rich heritage to contemporary acts pushing creative boundaries. Multiple editions have been held (SPECTRA 5.0, 6.0, 8.0, 9.0, 11.0), with each iteration offering spectacular competitions, cultural performances, and interactive workshops that celebrate the artistic brilliance of the student community.",
       // date: "July 15-17, 2024"
     },
     {
       id: 2,
       title: "Ganesh Chaturthi", 
       image: Ganesh,
-      description: "Explore cutting-edge technologies and network with tech pioneers from around the world.",
+      description: "The Ganesh Festival at MIT ADT University is a joyous celebration of Lord Ganesha's birth, featuring elaborately crafted clay idols and vibrant decorations. The festival promotes community spirit, creativity, and collective joy through traditional rituals, cultural performances, and campus-wide participation. Held at scenic locations like the Institute of Design Lawn, the celebration emphasizes unity in diversity and brings together the entire university community in festive harmony.",
       // date: "August 22-24, 2024"
     },
     {
       id: 3,
       title: "Garba Festival",
       image: Garba, 
-      description: "Develop your leadership skills with hands-on workshops and expert mentorship sessions.",
+      description: "MIT ADT Dandiya Nights is the university's most spectacular Navaratri celebration, transforming the MIT Samarth Ramdas Swami Sports Complex into a vibrant cultural arena that attracts over 13,000 participants across two consecutive nights. Organized by the Office of Student Affairs in collaboration with Wadhwa Events, this grand festival features students dressed in colorful traditional Gujarati attire performing authentic garba and dandiya in synchronized circles, accompanied by professional troupes from Gujarat who demonstrate traditional techniques and cultural heritage. The celebration seamlessly blends tradition with modernity through DJ performances that fuse contemporary beats with traditional dandiya music, student club performances, and elaborate decorations with festive lighting that create an immersive cultural experience. Beyond entertainment, the event serves as a powerful platform for cultural unity, bringing together the entire MIT ADT community to celebrate Gujarat's rich heritage while fostering camaraderie and collective joy that extends into post-celebration activities like team bonding sessions and cleanliness drives, making it a holistic celebration of culture, community, and responsibility.",
       // date: "September 10-12, 2024"
     },
     {
       id: 4,
       title: "Persona Fest",
       image: Persona,
-      description: "An elegant evening of networking, entertainment, and celebrating achievements in our industry.",
+      description: "Persona is MIT ADT University's flagship annual fest and the ultimate celebration of student talent, creativity, and holistic development, meticulously planned as a comprehensive three-day extravaganza. More than just entertainment, Persona serves as an intensive leadership development platform. The fest embodies MIT ADT University's philosophy of nurturing well-rounded individuals who excel beyond academics, creating a benchmark event that other institutions admire while fostering innovation, creativity, and collaborative excellence that prepares students for real-world challenges and leadership roles.",
       // date: "October 5, 2024"
     }
   ];
