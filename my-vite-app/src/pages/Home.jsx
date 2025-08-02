@@ -3,7 +3,7 @@ import Beams from '../Component/Beams';
 import React from 'react';
 import OurImpactSection from '../Component/OurImpact';
 import ShinyText from '../Component/shinyText';
-import Stack  from '../Component/Gallery';
+import Stack  from '../Component/Gallerynew';
 import LeadershipStatsSection from '../Component/Count';
 import FlagshipEventsGrid from '../Component/Grid';
 import Dock from '../Component/Dock';

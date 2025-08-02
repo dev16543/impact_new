@@ -26,11 +26,11 @@ const ContactUs = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Banner Image */}
-      <div className="w-full h-64 md:h-80 relative overflow-hidden">
+      <div className="w-full h-[450px] md:h-[450px] relative overflow-hidden">
         <img
           src={bannerImg}
           alt="Contact Banner"
-          className="w-full h-full object-cover"
+          className="w-full h-full"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-[#002346]/40 to-[#2C6ECA]/40"></div>
       </div>
