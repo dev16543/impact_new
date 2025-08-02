@@ -1,6 +1,6 @@
 import React from 'react';
 import { Facebook, Instagram, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
-import MITLogo from '../assets/MITLogo.jpg';
+import MITLogo from '../assets/MITcircle.png';
 import OSALogo from '../assets/OSALogo.png';
 import FooterImage from '../assets/Newfooterimage.webp';
 

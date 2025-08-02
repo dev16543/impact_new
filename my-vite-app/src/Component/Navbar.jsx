@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import OSALogo from "../assets/OSALogo.png";
-import MITLogo from "../assets/MITLogo.jpg";
+import OSALogo from "../assets/OSALogo-main.png";
+import MITLogo from "../assets/MITLogo.png";
 
 const Navbar = () => {
     const [hoveredLink, setHoveredLink] = useState(null);
