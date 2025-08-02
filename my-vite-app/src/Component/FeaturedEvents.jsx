@@ -129,7 +129,8 @@ const UpcomingEventsPage = ({ events, className = "" }) => {
       newRegistered.delete(eventId);
       setRegisteredEvents(newRegistered);
     } else {
-      // Show registration form
+      // Close event details modal and show registration form
+      setSelectedEvent(null);
       setRegistrationEventId(eventId);
       setShowRegistrationForm(true);
     }
@@ -238,12 +239,7 @@ const UpcomingEventsPage = ({ events, className = "" }) => {
                 </div>
               )}
               
-              {/* Price Tag */}
-              <div className="absolute bottom-4 right-4">
-                <span className="px-3 py-1 bg-green-500 text-white text-sm font-bold rounded-full">
-                  {event.price}
-                </span>
-              </div>
+              
             </div>
 
             {/* Event Content */}
@@ -264,10 +260,6 @@ const UpcomingEventsPage = ({ events, className = "" }) => {
                 <div className="flex items-center gap-2">
                   <MapPin className="w-4 h-4 text-blue-500" />
                   {event.location}
-                </div>
-                <div className="flex items-center gap-2">
-                  <Users className="w-4 h-4 text-blue-500" />
-                  {event.attendees} attendees
                 </div>
               </div>
               
@@ -443,8 +435,8 @@ const UpcomingEventsPage = ({ events, className = "" }) => {
 
       {/* Event Details Modal */}
       {selectedEvent && (
-        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4 z-40">
-          <div className="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4 z-50" style={{ top: '80px' }}>
+          <div className="bg-white rounded-2xl max-w-2xl w-full max-h-[80vh] overflow-y-auto">
             {/* Modal Header */}
             <div className="relative h-64 overflow-hidden">
               <img
@@ -494,10 +486,6 @@ const UpcomingEventsPage = ({ events, className = "" }) => {
                   <MapPin className="w-5 h-5 text-blue-500" />
                   <span>{selectedEvent.location}</span>
                 </div>
-                <div className="flex items-center gap-2 text-gray-600">
-                  <Users className="w-5 h-5 text-blue-500" />
-                  <span>{selectedEvent.attendees} attendees</span>
-                </div>
               </div>
 
               {/* Venue */}
@@ -512,54 +500,40 @@ const UpcomingEventsPage = ({ events, className = "" }) => {
                 <p className="text-gray-600 leading-relaxed">{selectedEvent.description}</p>
               </div>
 
-              {/* Highlights */}
-              <div className="mb-6">
-                <h3 className="text-lg font-semibold mb-2">Event Highlights</h3>
-                <div className="grid md:grid-cols-2 gap-2">
-                  {selectedEvent.highlights?.map((highlight, index) => (
-                    <div key={index} className="flex items-center gap-2 text-gray-600">
-                      <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                      <span>{highlight}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
+                             {/* Highlights */}
+               <div className="mb-6">
+                 <h3 className="text-lg font-semibold mb-2">Event Highlights</h3>
+                 <div className="grid md:grid-cols-2 gap-2">
+                   {selectedEvent.highlights?.map((highlight, index) => (
+                     <div key={index} className="flex items-center gap-2 text-gray-600">
+                       <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                       <span>{highlight}</span>
+                     </div>
+                   ))}
+                 </div>
+               </div>
 
-              {/* Tags */}
-              <div className="mb-6">
-                <h3 className="text-lg font-semibold mb-2">Tags</h3>
-                <div className="flex flex-wrap gap-2">
-                  {selectedEvent.tags?.map((tag, index) => (
-                    <span key={index} className="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full">
-                      #{tag}
-                    </span>
-                  ))}
-                </div>
-              </div>
+               
 
-              {/* Organizer */}
+               {/* Organizer */}
               <div className="mb-6">
                 <h3 className="text-lg font-semibold mb-2">Organizer</h3>
                 <p className="text-gray-600">{selectedEvent.organizer}</p>
               </div>
 
-              {/* Price and Register */}
-              <div className="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
-                <div>
-                  <span className="text-2xl font-bold text-green-600">{selectedEvent.price}</span>
-                  <span className="text-gray-500 ml-2">per person</span>
-                </div>
-                <button
-                  onClick={() => handleRegister(selectedEvent.id)}
-                  className={`py-3 px-6 rounded-lg font-medium transition-all duration-300 ${
-                    registeredEvents.has(selectedEvent.id)
-                      ? 'bg-green-500 text-white hover:bg-green-600'
-                      : 'bg-blue-500 text-white hover:bg-blue-600'
-                  }`}
-                >
-                  {registeredEvents.has(selectedEvent.id) ? 'Registered ✓' : 'Register Now'}
-                </button>
-              </div>
+                                            {/* Register Button */}
+               <div className="flex justify-center">
+                 <button
+                   onClick={() => handleRegister(selectedEvent.id)}
+                   className={`py-3 px-8 rounded-lg font-medium transition-all duration-300 text-lg ${
+                     registeredEvents.has(selectedEvent.id)
+                       ? 'bg-green-500 text-white hover:bg-green-600'
+                       : 'bg-blue-500 text-white hover:bg-blue-600'
+                   }`}
+                 >
+                   {registeredEvents.has(selectedEvent.id) ? 'Registered ✓' : 'Register Now'}
+                 </button>
+               </div>
             </div>
           </div>
         </div>

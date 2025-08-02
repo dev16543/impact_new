@@ -15,7 +15,7 @@ const UpcomingEvent = () => {
       />
       
       {/* Featured Events Section */}
-      <div className="py-8">
+      <div className="">
         <FeaturedEventGallery/>
       </div>
     </div>
