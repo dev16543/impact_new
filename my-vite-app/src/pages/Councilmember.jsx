@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useCallback, useState } from "react";
 import { ChevronDown, Mail, MapPin, Calendar, Award, Users, Sparkles, Star, Heart, Phone, Globe, Linkedin, Code, Zap, Trophy, Target, Clock } from "lucide-react";
-import past_ev from "../assets/Bannerpage/past_events.png";
+import past_ev from "../assets/Bannerpage/Team.jpg";
 import HeroBanner from "../Component/HeroBanner";
 // Import all team images
 import AaryanImg from "../assets/team_images/Aaryan.png";
