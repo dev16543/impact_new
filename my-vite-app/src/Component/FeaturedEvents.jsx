@@ -20,123 +20,139 @@ const UpcomingEventsPage = ({ events, className = "" }) => {
     contactNo: ''
   });
 
-  // Demo data with vibrant event images
-  // Demo data with corrected event information
-const demoEvents = [
-  {
-    id: 1,
-    title: "Mega Blood Donation Camp",
-    date: "Every Month",
-    time: "All Day",
-    location: "Pune, Maharashtra, India", 
-    venue: "IT Building",
-    attendees: "200+",
-    price: "Free",
-    image: Blood,
-    category: "Social Service",
-    featured: true,
-    description: "MIT ADT University organizing a Blood Donation Drive, reaffirming its commitment to social welfare and community engagement. Get ready to witnessing enthusiastic participation from students, faculty, and staff.",
-    organizer: "MIT ADT University with AFMC",
-    tags: ["Blood Donation", "AFMC", "NCC", "NSS", "Healthcare"]
-  },
-  {
-    id: 2,
-    title: "Trek N Trail (MIT Adv. Club)",
-    date: "Every Weekend",
-    time: "Friday 10:30 PM",
-    location: "As per Announcement",
-    venue: "As per Announcement",
-    attendees: "30",
-    price: "Free",
-    image: Trek,
-    category: "Adventure",
-    featured: true,
-    description: "Join the MIT Adventure Club for Trek N Trail every weekend. Experience thrilling trekking routes with expert guides, fostering camaraderie and a spirit of exploration through nature-focused adventure activities that connect you with the great outdoors.",
-    organizer: "MIT Adventure Club & Kafila Adventures",
-    tags: ["Trekking", "Adventure", "Nature", "Outdoor"]
-  },
-  {
-    id: 3,
-    title: "SPECTRA",
-    date: "7 August 2025",
-    time: "6:00 PM - 8:00 PM",
-    location: "MIT ADT University",
-    venue: "Swami Vivekananda Mandapam",
-    attendees: "1000",
-    price: "Free",
-    image: Spectra,
-    category: "Cultural Event",
-    featured: true,
-    description: "SPECTRA is MIT ADT University's monthly cultural extravaganza showcasing a vibrant mix of music, dance, theater, and artistic performances by talented students. This event fosters cultural appreciation and unity, providing a dynamic platform for diverse talent to shine and celebrate creativity.",
-    organizer: "MIT Impact Student Council",
-    tags: ["Music", "Dance", "Culture", "Art", "Performance"]
-  },
-  {
-    id: 4,
-    title: "Ganesh Chaturthi Celebration",
-    date: "August 2025",
-    time: "10:00 AM - 08:00 PM",
-    location: "MIT ADT University Campus",
-    venue: "MIT ADT University Campus",
-    attendees: "2K+",
-    price: "Free",
-    image: Ganesh,
-    category: "Festival",
-    featured: true,
-    description: "Join us for the grand celebration of Lord Ganesha's festival featuring traditional rituals, cultural performances including classical and folk dances, devotional music, art installations, and community feast. Experience the spiritual essence and vibrant festivities of this beloved Hindu festival.",
-    highlights: ["Traditional Rituals", "Cultural Performances", "Community Feast", "Art Installations"],
-    organizer: "MIT ADT University Cultural Committee",
-    tags: ["Festival", "Culture", "Tradition", "Community"]
-  },
-  {
-    id: 5,
-    title: "Club Catalyst",
-    date: "7 August 2025",
-    time: "1:00 PM - 3:30 PM",
-    location: "MIT ADT University",
-    venue: "Bharat Ratna APJ Abdul Kalam Mandapam",
-    attendees: "2000+",
-    price: "Free",
-    image: Club,
-    category: "Innovation",
-    featured: true,
-    description: "Club Catalyst is MIT ADT University's flagship event bringing together 50+ student clubs to showcase their innovative ideas and entrepreneurial spirit. This dynamic platform fosters collaboration, leadership, and meaningful change across various domains while celebrating student innovation.",
-    highlights: ["50+ Club Showcases", "Innovation Displays", "Networking", "Leadership Development"],
-    organizer: "MIT ADT Office of Student Affairs",
-    tags: ["Innovation", "Entrepreneurship", "Leadership", "Collaboration"]
-  },
-  {
-    id: 6,
-    title: "Induction Program",
-    date: "6-8 August 2025",
-    time: "9:00 AM - 5:00 PM",
-    location: "MIT ADT University",
-    venue: "Multiple Venues",
-    attendees: "4000+",
-    price: "Free",
-    image: Induction,
-    category: "Orientation",
-    featured: true,
-    description: "A comprehensive induction program designed to warmly welcome new students and their families to MIT ADT University. The program introduces campus facilities, faculty, academic culture, and provides essential orientation for a smooth transition into university life.",
-    highlights: ["Campus Tour", "Faculty Introduction", "Academic Orientation", "Student Support Services"],
-    organizer: "MIT ADT University Administration",
-    tags: ["Orientation", "Welcome", "Academic", "Student Support"]
-  }
-];
+  // Demo data with registration links added
+  const demoEvents = [
+    {
+      id: 1,
+      title: "Mega Blood Donation Camp",
+      date: "Every Month",
+      time: "All Day",
+      location: "Pune, Maharashtra, India", 
+      venue: "IT Building",
+      attendees: "200+",
+      price: "Free",
+      image: Blood,
+      category: "Social Service",
+      featured: true,
+      description: "MIT ADT University organizing a Blood Donation Drive, reaffirming its commitment to social welfare and community engagement. Get ready to witnessing enthusiastic participation from students, faculty, and staff.",
+      organizer: "MIT ADT University with AFMC",
+      tags: ["Blood Donation", "AFMC", "NCC", "NSS", "Healthcare"],
+      registrationLink: "https://forms.google.com/blood-donation-registration"
+    },
+    {
+      id: 2,
+      title: "Trek N Trail (MIT Adv. Club)",
+      date: "Every Weekend",
+      time: "Friday 10:30 PM",
+      location: "As per Announcement",
+      venue: "As per Announcement",
+      attendees: "30",
+      price: "Free",
+      image: Trek,
+      category: "Adventure",
+      featured: true,
+      description: "Join the MIT Adventure Club for Trek N Trail every weekend. Experience thrilling trekking routes with expert guides, fostering camaraderie and a spirit of exploration through nature-focused adventure activities that connect you with the great outdoors.",
+      organizer: "MIT Adventure Club & Kafila Adventures",
+      tags: ["Trekking", "Adventure", "Nature", "Outdoor"],
+      registrationLink: "https://forms.google.com/trek-registration"
+    },
+    {
+      id: 3,
+      title: "SPECTRA",
+      date: "7 August 2025",
+      time: "6:00 PM - 8:00 PM",
+      location: "MIT ADT University",
+      venue: "Swami Vivekananda Mandapam",
+      attendees: "1000",
+      price: "Free",
+      image: Spectra,
+      category: "Cultural Event",
+      featured: true,
+      description: "SPECTRA is MIT ADT University's monthly cultural extravaganza showcasing a vibrant mix of music, dance, theater, and artistic performances by talented students. This event fosters cultural appreciation and unity, providing a dynamic platform for diverse talent to shine and celebrate creativity.",
+      organizer: "MIT Impact Student Council",
+      tags: ["Music", "Dance", "Culture", "Art", "Performance"],
+      registrationLink: "https://eventbrite.com/spectra-cultural-event"
+    },
+    {
+      id: 4,
+      title: "Ganesh Chaturthi Celebration",
+      date: "August 2025",
+      time: "10:00 AM - 08:00 PM",
+      location: "MIT ADT University Campus",
+      venue: "MIT ADT University Campus",
+      attendees: "2K+",
+      price: "Free",
+      image: Ganesh,
+      category: "Festival",
+      featured: true,
+      description: "Join us for the grand celebration of Lord Ganesha's festival featuring traditional rituals, cultural performances including classical and folk dances, devotional music, art installations, and community feast. Experience the spiritual essence and vibrant festivities of this beloved Hindu festival.",
+      highlights: ["Traditional Rituals", "Cultural Performances", "Community Feast", "Art Installations"],
+      organizer: "MIT ADT University Cultural Committee",
+      tags: ["Festival", "Culture", "Tradition", "Community"],
+      registrationLink: "https://forms.google.com/ganesh-celebration"
+    },
+    {
+      id: 5,
+      title: "Club Catalyst",
+      date: "7 August 2025",
+      time: "1:00 PM - 3:30 PM",
+      location: "MIT ADT University",
+      venue: "Bharat Ratna APJ Abdul Kalam Mandapam",
+      attendees: "2000+",
+      price: "Free",
+      image: Club,
+      category: "Innovation",
+      featured: true,
+      description: "Club Catalyst is MIT ADT University's flagship event bringing together 50+ student clubs to showcase their innovative ideas and entrepreneurial spirit. This dynamic platform fosters collaboration, leadership, and meaningful change across various domains while celebrating student innovation.",
+      highlights: ["50+ Club Showcases", "Innovation Displays", "Networking", "Leadership Development"],
+      organizer: "MIT ADT Office of Student Affairs",
+      tags: ["Innovation", "Entrepreneurship", "Leadership", "Collaboration"],
+      registrationLink: "https://forms.google.com/club-catalyst"
+    },
+    {
+      id: 6,
+      title: "Induction Program",
+      date: "6-8 August 2025",
+      time: "9:00 AM - 5:00 PM",
+      location: "MIT ADT University",
+      venue: "Multiple Venues",
+      attendees: "4000+",
+      price: "Free",
+      image: Induction,
+      category: "Orientation",
+      featured: true,
+      description: "A comprehensive induction program designed to warmly welcome new students and their families to MIT ADT University. The program introduces campus facilities, faculty, academic culture, and provides essential orientation for a smooth transition into university life.",
+      highlights: ["Campus Tour", "Faculty Introduction", "Academic Orientation", "Student Support Services"],
+      organizer: "MIT ADT University Administration",
+      tags: ["Orientation", "Welcome", "Academic", "Student Support"],
+      registrationLink: "https://university-portal.com/induction-program"
+    }
+  ];
 
   const data = events?.length ? events : demoEvents;
 
+  // Updated handleRegister function to redirect to external links
   const handleRegister = (eventId) => {
+    const event = data.find(e => e.id === eventId);
+    
     if (registeredEvents.has(eventId)) {
       // If already registered, unregister
       const newRegistered = new Set(registeredEvents);
       newRegistered.delete(eventId);
       setRegisteredEvents(newRegistered);
     } else {
-      // Close event details modal and show registration form
-      setSelectedEvent(null);
-      setRegistrationEventId(eventId);
-      setShowRegistrationForm(true);
+      // Check if event has a registration link
+      if (event && event.registrationLink) {
+        // Redirect to external registration link
+        window.open(event.registrationLink, '_blank');
+        
+        // Don't mark as registered automatically - just redirect
+      } else {
+        // Fallback to form modal if no link provided
+        setSelectedEvent(null);
+        setRegistrationEventId(eventId);
+        setShowRegistrationForm(true);
+      }
     }
   };
 
@@ -242,8 +258,6 @@ const demoEvents = [
                   </span>
                 </div>
               )}
-              
-              
             </div>
 
             {/* Event Content */}
@@ -267,20 +281,21 @@ const demoEvents = [
                 </div>
               </div>
               
-              {/* Register Button */}
+              {/* Register Button with External Link Icon */}
               <div className="mt-6 flex gap-2">
                 <button
                   onClick={(e) => {
                     e.stopPropagation();
                     handleRegister(event.id);
                   }}
-                  className={`flex-1 py-2 px-4 rounded-lg font-medium transition-all duration-300 ${
+                  className={`flex-1 py-2 px-4 rounded-lg font-medium transition-all duration-300 flex items-center justify-center gap-2 ${
                     registeredEvents.has(event.id)
                       ? 'bg-green-500 text-white hover:bg-green-600'
                       : 'bg-blue-500 text-white hover:bg-blue-600'
                   }`}
                 >
                   {registeredEvents.has(event.id) ? 'Registered ✓' : 'Register'}
+                  {!registeredEvents.has(event.id) && event.registrationLink && <ExternalLink className="w-4 h-4" />}
                 </button>
                 <button
                   onClick={(e) => {
@@ -510,19 +525,20 @@ const demoEvents = [
                 <p className="text-gray-600">{selectedEvent.organizer}</p>
               </div>
 
-                                            {/* Register Button */}
-               <div className="flex justify-center">
-                 <button
-                   onClick={() => handleRegister(selectedEvent.id)}
-                   className={`py-3 px-8 rounded-lg font-medium transition-all duration-300 text-lg ${
-                     registeredEvents.has(selectedEvent.id)
-                       ? 'bg-green-500 text-white hover:bg-green-600'
-                       : 'bg-blue-500 text-white hover:bg-blue-600'
-                   }`}
-                 >
-                   {registeredEvents.has(selectedEvent.id) ? 'Registered ✓' : 'Register Now'}
-                 </button>
-               </div>
+              {/* Register Button with External Link Icon */}
+              <div className="flex justify-center">
+                <button
+                  onClick={() => handleRegister(selectedEvent.id)}
+                  className={`py-3 px-8 rounded-lg font-medium transition-all duration-300 text-lg flex items-center justify-center gap-2 ${
+                    registeredEvents.has(selectedEvent.id)
+                      ? 'bg-green-500 text-white hover:bg-green-600'
+                      : 'bg-blue-500 text-white hover:bg-blue-600'
+                  }`}
+                >
+                  {registeredEvents.has(selectedEvent.id) ? 'Registered ✓' : 'Register Now'}
+                  {!registeredEvents.has(selectedEvent.id) && selectedEvent.registrationLink && <ExternalLink className="w-4 h-4" />}
+                </button>
+              </div>
             </div>
           </div>
         </div>
