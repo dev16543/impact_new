@@ -37,7 +37,7 @@ const UpcomingEventsPage = ({ events, className = "" }) => {
       description: "MIT ADT University organizing a Blood Donation Drive, reaffirming its commitment to social welfare and community engagement. Get ready to witnessing enthusiastic participation from students, faculty, and staff.",
       organizer: "MIT ADT University with AFMC",
       tags: ["Blood Donation", "AFMC", "NCC", "NSS", "Healthcare"],
-      registrationLink: "https://forms.google.com/blood-donation-registration"
+      registrationLink: "https://bit.ly/ImpactBloodDonation"
     },
     {
       id: 2,
@@ -54,7 +54,7 @@ const UpcomingEventsPage = ({ events, className = "" }) => {
       description: "Join the MIT Adventure Club for Trek N Trail every weekend. Experience thrilling trekking routes with expert guides, fostering camaraderie and a spirit of exploration through nature-focused adventure activities that connect you with the great outdoors.",
       organizer: "MIT Adventure Club & Kafila Adventures",
       tags: ["Trekking", "Adventure", "Nature", "Outdoor"],
-      registrationLink: "https://forms.google.com/trek-registration"
+      registrationLink: "https://kafiladventures.com/"
     },
     {
       id: 3,
@@ -71,7 +71,7 @@ const UpcomingEventsPage = ({ events, className = "" }) => {
       description: "SPECTRA is MIT ADT University's monthly cultural extravaganza showcasing a vibrant mix of music, dance, theater, and artistic performances by talented students. This event fosters cultural appreciation and unity, providing a dynamic platform for diverse talent to shine and celebrate creativity.",
       organizer: "MIT Impact Student Council",
       tags: ["Music", "Dance", "Culture", "Art", "Performance"],
-      registrationLink: "https://eventbrite.com/spectra-cultural-event"
+      registrationLink: "https://bit.ly/ImpactSpectra"
     },
     {
       id: 4,
@@ -89,7 +89,7 @@ const UpcomingEventsPage = ({ events, className = "" }) => {
       highlights: ["Traditional Rituals", "Cultural Performances", "Community Feast", "Art Installations"],
       organizer: "MIT ADT University Cultural Committee",
       tags: ["Festival", "Culture", "Tradition", "Community"],
-      registrationLink: "https://forms.google.com/ganesh-celebration"
+      registrationLink: "https://bit.ly/ImpactGanesh"
     },
     {
       id: 5,
@@ -107,7 +107,7 @@ const UpcomingEventsPage = ({ events, className = "" }) => {
       highlights: ["50+ Club Showcases", "Innovation Displays", "Networking", "Leadership Development"],
       organizer: "MIT ADT Office of Student Affairs",
       tags: ["Innovation", "Entrepreneurship", "Leadership", "Collaboration"],
-      registrationLink: "https://forms.google.com/club-catalyst"
+      registrationLink: "https://bit.ly/ImpactClubCatalyst"
     },
     {
       id: 6,
@@ -125,7 +125,7 @@ const UpcomingEventsPage = ({ events, className = "" }) => {
       highlights: ["Campus Tour", "Faculty Introduction", "Academic Orientation", "Student Support Services"],
       organizer: "MIT ADT University Administration",
       tags: ["Orientation", "Welcome", "Academic", "Student Support"],
-      registrationLink: "https://university-portal.com/induction-program"
+      registrationLink: "https://bit.ly/ImpactInductionProgram"
     }
   ];
 

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Send, User, Phone, Mail, MessageSquare, CheckCircle, AlertCircle } from 'lucide-react';
+import banner from '../assets/banner.png';
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -79,7 +80,7 @@ const ContactUs = () => {
       {/* Banner Image */}
       <div className="w-full h-64 md:h-80 relative overflow-hidden">
         <img
-          src="/api/placeholder/1200/400"
+          src={banner}
           alt="Contact Banner"
           className="w-full h-full object-cover"
         />
@@ -119,7 +120,7 @@ const ContactUs = () => {
               {/* Full Name */}
               <div className="group">
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Full Name *
+                  Full Name*
                 </label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -141,7 +142,7 @@ const ContactUs = () => {
               {/* Phone Number */}
               <div className="group">
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Phone Number *
+                  Phone Number*
                 </label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -163,7 +164,7 @@ const ContactUs = () => {
               {/* Email Address */}
               <div className="group">
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Email Address *
+                  Email Address*
                 </label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -185,7 +186,7 @@ const ContactUs = () => {
               {/* Message */}
               <div className="group">
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Message *
+                  Message*
                 </label>
                 <div className="relative">
                   <div className="absolute top-3 left-3 pointer-events-none">

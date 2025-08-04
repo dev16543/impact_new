@@ -642,7 +642,7 @@ const ModernClubPage = () => {
     <div className="min-h-screen bg-white flex flex-col">
       {/* Hero Section */}
       <HeroBanner
-        title="Club Nexus"
+        title="Club Catalyst"
         subtitle="Where Interests Ignite"
         backgroundImage={past_ev}
         height="65vh"
