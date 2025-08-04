@@ -1,7 +1,7 @@
 import React from 'react';
 import { Facebook, Instagram, Linkedin, Mail, MapPin } from 'lucide-react';
 import MITLogo from '../assets/MITcircle.png';
-import OSALogo from '../assets/OSALogo.png';
+import OSALogo from '../assets/OSALogo-main.png';
 import FooterImage from '../assets/NewFooterimage.webp';
 
 const StudentAffairsFooter = () => {

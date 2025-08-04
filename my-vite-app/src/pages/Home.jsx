@@ -7,6 +7,7 @@ import Stack  from '../Component/Gallerynew';
 import LeadershipStatsSection from '../Component/Count';
 import FlagshipEventsGrid from '../Component/Grid';
 import Dock from '../Component/Dock';
+import WhatsAppButton from '../Component/WhatsAppButton';
 
 
 const HomePage = () => {
@@ -60,7 +61,7 @@ return (
 />
 
 <LeadershipStatsSection/>
-
+<WhatsAppButton />
 
 </div>
 

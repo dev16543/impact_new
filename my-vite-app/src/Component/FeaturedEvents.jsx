@@ -1,5 +1,11 @@
 import React, { useState } from 'react';
 import { Calendar, MapPin, Users, X, Clock, Tag, ExternalLink, User, Phone, GraduationCap, Building } from 'lucide-react';
+import Spectra from '../assets/pastevents/timeline_23-24/Oct.png';
+import Club from '../assets/GalleryHome/ClubCatalyst.png';
+import Ganesh from "../assets/pastevents/GaneshFest.png";
+import Induction from '../assets/pastevents/timeline_23-24/Jul.png';
+import Blood from '../assets/pastevents/timeline_23-24/Nov.jpg';
+import Trek from '../assets/Trek.webp';
 
 const UpcomingEventsPage = ({ events, className = "" }) => {
   const [selectedEvent, setSelectedEvent] = useState(null);
@@ -15,110 +21,108 @@ const UpcomingEventsPage = ({ events, className = "" }) => {
   });
 
   // Demo data with vibrant event images
-  const demoEvents = [
-    {
-      id: 1,
-      title: "Tech Innovation Summit 2025",
-      date: "March 15, 2025",
-      time: "9:00 AM - 6:00 PM",
-      location: "San Francisco, CA",
-      venue: "Moscone Center",
-      attendees: "2.5K",
-      price: "$299",
-      image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&h=500&fit=crop",
-      category: "Technology",
-      featured: true,
-      description: "Join industry leaders discussing the future of AI and Web3. This summit brings together top innovators, entrepreneurs, and thought leaders to explore cutting-edge technologies that will shape tomorrow's digital landscape.",
-      highlights: ["AI & Machine Learning", "Web3 & Blockchain", "Startup Pitches", "Networking Sessions"],
-      organizer: "Tech Innovations Inc.",
-      tags: ["AI", "Web3", "Innovation", "Networking"]
-    },
-    {
-      id: 2,
-      title: "Design Conference 2025",
-      date: "April 22, 2025",
-      time: "10:00 AM - 8:00 PM",
-      location: "New York, NY",
-      venue: "Jacob K. Javits Convention Center",
-      attendees: "1.8K",
-      price: "$199",
-      image: "https://images.unsplash.com/photo-1559223607-b4d0555ae227?w=800&h=500&fit=crop",
-      category: "Design",
-      featured: true,
-      description: "Explore the latest trends in UX/UI and creative design. Connect with design professionals, learn from industry experts, and discover new tools and techniques that will elevate your creative work.",
-      highlights: ["UX/UI Trends", "Design Systems", "Creative Workshops", "Portfolio Reviews"],
-      organizer: "Design Masters Community",
-      tags: ["UX", "UI", "Design", "Creative"]
-    },
-    {
-      id: 3,
-      title: "Startup Pitch Night",
-      date: "March 8, 2025",
-      time: "6:00 PM - 10:00 PM",
-      location: "Austin, TX",
-      venue: "Austin Convention Center",
-      attendees: "800",
-      price: "$75",
-      image: "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=800&h=500&fit=crop",
-      category: "Business",
-      featured: true,
-      description: "Watch innovative startups pitch to top investors. An evening of entrepreneurial spirit, groundbreaking ideas, and potential investment opportunities that could change the future.",
-      highlights: ["Startup Pitches", "Investor Panel", "Networking", "Awards Ceremony"],
-      organizer: "Startup Austin",
-      tags: ["Startup", "Investment", "Entrepreneurship", "Pitching"]
-    },
-    {
-      id: 4,
-      title: "Music & Arts Festival",
-      date: "May 10, 2025",
-      time: "12:00 PM - 11:00 PM",
-      location: "Miami, FL",
-      venue: "Bayfront Park",
-      attendees: "5K",
-      price: "$150",
-      image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800&h=500&fit=crop",
-      category: "Entertainment",
-      featured: true,
-      description: "Three days of music, art, and cultural celebration. Experience diverse performances, art installations, and cultural activities in the heart of Miami's vibrant arts scene.",
-      highlights: ["Live Music", "Art Installations", "Food Vendors", "Cultural Performances"],
-      organizer: "Miami Arts Council",
-      tags: ["Music", "Art", "Culture", "Festival"]
-    },
-    {
-      id: 5,
-      title: "Wellness Retreat",
-      date: "April 5, 2025",
-      time: "8:00 AM - 8:00 PM",
-      location: "Napa Valley, CA",
-      venue: "Auberge du Soleil",
-      attendees: "300",
-      price: "$450",
-      image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=500&fit=crop",
-      category: "Wellness",
-      featured: true,
-      description: "Reconnect with nature and find your inner peace. A transformative experience combining meditation, yoga, healthy cuisine, and mindfulness practices in a serene setting.",
-      highlights: ["Meditation Sessions", "Yoga Classes", "Healthy Cuisine", "Nature Walks"],
-      organizer: "Mindful Living Institute",
-      tags: ["Wellness", "Meditation", "Yoga", "Health"]
-    },
-    {
-      id: 6,
-      title: "Blockchain Summit",
-      date: "June 12, 2025",
-      time: "9:00 AM - 7:00 PM",
-      location: "Seattle, WA",
-      venue: "Washington State Convention Center",
-      attendees: "3.2K",
-      price: "$350",
-      image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800&h=500&fit=crop",
-      category: "Technology",
-      featured: true,
-      description: "Diving deep into cryptocurrency and blockchain technology. Learn from industry pioneers, explore new applications, and understand the future of decentralized systems.",
-      highlights: ["Cryptocurrency Trends", "DeFi Applications", "NFT Marketplace", "Technical Workshops"],
-      organizer: "Blockchain Alliance",
-      tags: ["Blockchain", "Cryptocurrency", "DeFi", "Technology"]
-    }
-  ];
+  // Demo data with corrected event information
+const demoEvents = [
+  {
+    id: 1,
+    title: "Mega Blood Donation Camp",
+    date: "Every Month",
+    time: "All Day",
+    location: "Pune, Maharashtra, India", 
+    venue: "IT Building",
+    attendees: "200+",
+    price: "Free",
+    image: Blood,
+    category: "Social Service",
+    featured: true,
+    description: "MIT ADT University organizing a Blood Donation Drive, reaffirming its commitment to social welfare and community engagement. Get ready to witnessing enthusiastic participation from students, faculty, and staff.",
+    organizer: "MIT ADT University with AFMC",
+    tags: ["Blood Donation", "AFMC", "NCC", "NSS", "Healthcare"]
+  },
+  {
+    id: 2,
+    title: "Trek N Trail (MIT Adv. Club)",
+    date: "Every Weekend",
+    time: "Friday 10:30 PM",
+    location: "As per Announcement",
+    venue: "As per Announcement",
+    attendees: "30",
+    price: "Free",
+    image: Trek,
+    category: "Adventure",
+    featured: true,
+    description: "Join the MIT Adventure Club for Trek N Trail every weekend. Experience thrilling trekking routes with expert guides, fostering camaraderie and a spirit of exploration through nature-focused adventure activities that connect you with the great outdoors.",
+    organizer: "MIT Adventure Club & Kafila Adventures",
+    tags: ["Trekking", "Adventure", "Nature", "Outdoor"]
+  },
+  {
+    id: 3,
+    title: "SPECTRA",
+    date: "7 August 2025",
+    time: "6:00 PM - 8:00 PM",
+    location: "MIT ADT University",
+    venue: "Swami Vivekananda Mandapam",
+    attendees: "1000",
+    price: "Free",
+    image: Spectra,
+    category: "Cultural Event",
+    featured: true,
+    description: "SPECTRA is MIT ADT University's monthly cultural extravaganza showcasing a vibrant mix of music, dance, theater, and artistic performances by talented students. This event fosters cultural appreciation and unity, providing a dynamic platform for diverse talent to shine and celebrate creativity.",
+    organizer: "MIT Impact Student Council",
+    tags: ["Music", "Dance", "Culture", "Art", "Performance"]
+  },
+  {
+    id: 4,
+    title: "Ganesh Chaturthi Celebration",
+    date: "August 2025",
+    time: "10:00 AM - 08:00 PM",
+    location: "MIT ADT University Campus",
+    venue: "MIT ADT University Campus",
+    attendees: "2K+",
+    price: "Free",
+    image: Ganesh,
+    category: "Festival",
+    featured: true,
+    description: "Join us for the grand celebration of Lord Ganesha's festival featuring traditional rituals, cultural performances including classical and folk dances, devotional music, art installations, and community feast. Experience the spiritual essence and vibrant festivities of this beloved Hindu festival.",
+    highlights: ["Traditional Rituals", "Cultural Performances", "Community Feast", "Art Installations"],
+    organizer: "MIT ADT University Cultural Committee",
+    tags: ["Festival", "Culture", "Tradition", "Community"]
+  },
+  {
+    id: 5,
+    title: "Club Catalyst",
+    date: "7 August 2025",
+    time: "1:00 PM - 3:30 PM",
+    location: "MIT ADT University",
+    venue: "Bharat Ratna APJ Abdul Kalam Mandapam",
+    attendees: "2000+",
+    price: "Free",
+    image: Club,
+    category: "Innovation",
+    featured: true,
+    description: "Club Catalyst is MIT ADT University's flagship event bringing together 50+ student clubs to showcase their innovative ideas and entrepreneurial spirit. This dynamic platform fosters collaboration, leadership, and meaningful change across various domains while celebrating student innovation.",
+    highlights: ["50+ Club Showcases", "Innovation Displays", "Networking", "Leadership Development"],
+    organizer: "MIT ADT Office of Student Affairs",
+    tags: ["Innovation", "Entrepreneurship", "Leadership", "Collaboration"]
+  },
+  {
+    id: 6,
+    title: "Induction Program",
+    date: "6-8 August 2025",
+    time: "9:00 AM - 5:00 PM",
+    location: "MIT ADT University",
+    venue: "Multiple Venues",
+    attendees: "4000+",
+    price: "Free",
+    image: Induction,
+    category: "Orientation",
+    featured: true,
+    description: "A comprehensive induction program designed to warmly welcome new students and their families to MIT ADT University. The program introduces campus facilities, faculty, academic culture, and provides essential orientation for a smooth transition into university life.",
+    highlights: ["Campus Tour", "Faculty Introduction", "Academic Orientation", "Student Support Services"],
+    organizer: "MIT ADT University Administration",
+    tags: ["Orientation", "Welcome", "Academic", "Student Support"]
+  }
+];
 
   const data = events?.length ? events : demoEvents;
 
@@ -500,22 +504,7 @@ const UpcomingEventsPage = ({ events, className = "" }) => {
                 <p className="text-gray-600 leading-relaxed">{selectedEvent.description}</p>
               </div>
 
-                             {/* Highlights */}
-               <div className="mb-6">
-                 <h3 className="text-lg font-semibold mb-2">Event Highlights</h3>
-                 <div className="grid md:grid-cols-2 gap-2">
-                   {selectedEvent.highlights?.map((highlight, index) => (
-                     <div key={index} className="flex items-center gap-2 text-gray-600">
-                       <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                       <span>{highlight}</span>
-                     </div>
-                   ))}
-                 </div>
-               </div>
-
-               
-
-               {/* Organizer */}
+              {/* Organizer */}
               <div className="mb-6">
                 <h3 className="text-lg font-semibold mb-2">Organizer</h3>
                 <p className="text-gray-600">{selectedEvent.organizer}</p>
