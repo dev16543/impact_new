@@ -29,7 +29,7 @@ const Eventsheader = () => {
       title: "Plogathon",
       image: Plog,
       description:
-        "The annual Tech Conference gathered industry leaders, innovators, and students to explore cutting-edge technologies and emerging trends. Keynote speakers shared insights on artificial intelligence, blockchain, and sustainable technology solutions. Interactive workshops and panel discussions provided hands-on learning experiences. The event facilitated networking opportunities and sparked collaborations between academia and industry professionals.",
+        "The Plogathon Drive at MIT Art, Design and Technology University catalyzed environmental consciousness and collective action, marking National Youth Day 2024 with a resolute commitment to sustainable practices and waste management.",
     },
     {
       id: 4,

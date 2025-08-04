@@ -108,7 +108,7 @@ const ContactUs = () => {
 
             <div className="text-center mb-8">
               <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-[#002346] to-[#2C6ECA] bg-clip-text text-transparent mb-4">
-                Subscribe To Our Newsletter
+                Connect with us!
               </h1>
               <p className="text-gray-600 text-lg max-w-md mx-auto">
                 Get in touch with us to inspire, cultivate and achieve togetherness.

@@ -2,7 +2,7 @@ import { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import sampleLogo from "../assets/Mitcircle.png";
 import HeroBanner from "../Component/HeroBanner";
-import past_ev from "../assets/Bannerpage/past_events.png";
+import past_ev from "../assets/banner.png";
 
 // Sample images - you can replace these with actual club logos
 

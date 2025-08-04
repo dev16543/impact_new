@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useCallback, useState } from "react";
 import { ChevronDown, Mail, MapPin, Calendar, Award, Users, Sparkles, Star, Heart, Phone, Globe, Linkedin, Code, Zap, Trophy, Target, Clock } from "lucide-react";
-import past_ev from "../assets/Bannerpage/past_events.png";
+import past_ev from "../assets/Bannerpage/Team.jpg";
 import HeroBanner from "../Component/HeroBanner";
 // Import all team images
 import AaryanImg from "../assets/team_images/Aaryan.png";
@@ -38,170 +38,171 @@ const COUNCIL_MEMBERS_DATA = [
     title: "President",
     handle: "aaryan_phule__18",
     avatarUrl: AaryanImg,
-    linkedinUrl: "", // Add LinkedIn URL here
+    linkedinUrl: "https://www.linkedin.com/in/aaryan-phule-2a1688251",
   },
   {
     name: "Dhairya Patwa",
     title: "General Secretary",
     handle: "dhairya_patwa",
     avatarUrl: DhairyaImg,
-    linkedinUrl: "", // Add LinkedIn URL here
+    linkedinUrl: "https://www.linkedin.com/in/dhairya-patwa-714bb42ba?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
   },
   {
     name: "Soham Zope",
     title: "Vice President",
     handle: "soham.zope",
     avatarUrl: SohamImg,
-    linkedinUrl: "", // Add LinkedIn URL here
+    linkedinUrl: "http://www.linkedin.com/in/soham-zope-",
   },
   {
     name: "Khushi Warang",
     title: "Joint Secretary",
     handle: "khhhuushiiii",
     avatarUrl: KhushiImg,
-    linkedinUrl: "", // Add LinkedIn URL here
+    linkedinUrl: "https://www.linkedin.com/in/aryapaturkar1/",
   },
   {
     name: "Swara Kodre",
     title: "Treasurer",
     handle: "swara_kodre",
     avatarUrl: SwaraImg,
-    linkedinUrl: "", // Add LinkedIn URL here
+    linkedinUrl: "https://www.linkedin.com/in/swara-kodre-016454308?trk=contact-info",
   },
   {
     name: "Vaishnavi Angane",
     title: "Art Cluster Secretary",
     handle: "angne.vaishnavi",
     avatarUrl: VaishnaviImg,
-    linkedinUrl: "", // Add LinkedIn URL here
+    linkedinUrl: "https://www.linkedin.com/in/vaishnavi-angne-9b2074245?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
   },
   {
     name: "Harsh Vora",
     title: "Design Cluster Secretary",
     handle: "harsh_vora_",
     avatarUrl: HarshImg,
-    linkedinUrl: "", // Add LinkedIn URL here
+    linkedinUrl: "https://www.linkedin.com/in/harsh-vora-339b58228",
   },
   {
     name: "Dev Sagani",
     title: "Technology Cluster Secretary",
     handle: "dev_16543",
     avatarUrl: DevImg,
-    linkedinUrl: "", // Add LinkedIn URL here
+    linkedinUrl: "https://www.linkedin.com/in/dev-sagani-5ba391203",
   },
   {
     name: "Ayushi Sharma",
     title: "Cultural Secretary(Girls)",
     handle: "ayushisharma_18",
     avatarUrl: AyushiImg,
-    linkedinUrl: "", // Add LinkedIn URL here
+    linkedinUrl: "https://www.linkedin.com/in/ayushi-sharma-83728223a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
   },
   {
     name: "Sharvil Maind",
     title: "Cultural Secretary(Boys)",
     handle: "sharvil27maind",
     avatarUrl: SharvilImg,
-    linkedinUrl: "", // Add LinkedIn URL here
+    linkedinUrl: "https://www.linkedin.com/in/sharvilmaind",
   },
   {
     name: "Chaitrali Patil",
     title: "Sport Secretary(Girls)",
     handle: "chaitrali_patil5",
     avatarUrl: ChaitraliImg,
-    linkedinUrl: "", // Add LinkedIn URL here
+    linkedinUrl: "https://www.linkedin.com/in/reeva-sadiq-614245280/",
   },
   {
     name: "Atharv Patil",
     title: "Sport Secretary(Boys)",
     handle: "patilatharv_",
     avatarUrl: AtharvImg,
-    linkedinUrl: "", // Add LinkedIn URL here
+    linkedinUrl: "https://www.linkedin.com/in/atharv-patil-473853301/",
   },
   {
     name: "Danika Patil",
     title: "Well-Being Secretary",
     handle: "danikaa.s",
     avatarUrl: DanikaImg,
-    linkedinUrl: "", // Add LinkedIn URL here
+    linkedinUrl: "https://www.linkedin.com/in/danika-patil-88435b251/",
   },
   {
     name: "Anouksha Joshi",
     title: "Editorial Secretary",
     handle: "anoushka_2306",
     avatarUrl: AnoushkaImg,
-    linkedinUrl: "", // Add LinkedIn URL here
+    linkedinUrl: "https://www.linkedin.com/in/anoushkajoshi?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app", // Name mismatch: "Anouksha" vs "Anoushka"
   },
   {
     name: "Muskan Rai",
     title: "Magazine Secretary",
     handle: "musskannnr",
     avatarUrl: MuskanImg,
-    linkedinUrl: "", // Add LinkedIn URL here
+    linkedinUrl: "https://www.linkedin.com/in/muskan-rai-92838024b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
   },
   {
     name: "Abhijeet Varudkar",
     title: "Media & Outreach Secretary",
     handle: "arv_vlogs",
     avatarUrl: AbhijeetImg,
-    linkedinUrl: "", // Add LinkedIn URL here
+    linkedinUrl: "https://www.linkedin.com/in/abhijeet-varudkar-5241962a2",
   },
   {
     name: "Mugdha Sonawane",
     title: "NCC Secretary",
     handle: "mugdhas_04",
     avatarUrl: MugdhaImg,
-    linkedinUrl: "", // Add LinkedIn URL here
+    linkedinUrl: "https://www.linkedin.com/in/mugdha-sonawane-5873162b9?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
   },
   {
     name: "Tanvi Bokade",
     title: "NSS Secretary",
     handle: "tan.tanzzzz",
     avatarUrl: TanviImg,
-    linkedinUrl: "", // Add LinkedIn URL here
+    linkedinUrl: "https://www.linkedin.com/in/tanvi-bokade-3817681b0",
   },
   {
     name: "Udita Anand",
     title: "Executive Member",
     handle: "uditaaa_",
     avatarUrl: UditaImg,
-    linkedinUrl: "", // Add LinkedIn URL here
+    linkedinUrl: "https://www.linkedin.com/in/udita-anand-324541250",
   },
   {
     name: "Sukhada Tambe",
     title: "Executive Member",
     handle: "sukhada_photography",
     avatarUrl: SukhadaImg,
-    linkedinUrl: "", // Add LinkedIn URL here
+    linkedinUrl: "https://www.linkedin.com/in/sukhada-tambe-5a7b93275",
   },
   {
     name: "Mrinmayi Gotmare",
     title: "Executive Member",
     handle: "_mrin___",
     avatarUrl: MrinmayiImg,
-    linkedinUrl: "", // Add LinkedIn URL here
+    linkedinUrl: "https://www.linkedin.com/in/mrinmayi2504",
   },
   {
     name: "Vaibhav Kalaskar",
     title: "Executive Member",
     handle: "vaibhavv______",
     avatarUrl: VaibhavImg,
-    linkedinUrl: "", // Add LinkedIn URL here
+    linkedinUrl: "https://www.linkedin.com/in/vaibhav-kalaskar-646213219",
   },
   {
     name: "Bhoumik Rajput",
     title: "Executive Member",
     handle: "bhoumikrajput",
     avatarUrl: BhoumikImg,
-    linkedinUrl: "", // Add LinkedIn URL here
+    linkedinUrl: "https://www.linkedin.com/in/bhoumik-rajput-60b2221b7/",
   },
   {
     name: "Adarsh Deshmukh",
     title: "Executive Member",
     handle: "adarshdeshmukh",
     avatarUrl: AdarshImg,
-    linkedinUrl: "", // Add LinkedIn URL here
+    linkedinUrl: "https://www.linkedin.com/in/adarsh-deshmukh-486068197/",
   }
 ];
+
 
 const WEBSITE_TEAM = [
   {
@@ -209,28 +210,28 @@ const WEBSITE_TEAM = [
     title: "Lead Developer",
     handle: "dev_16543",
     avatarUrl: DevImg,
-    linkedinUrl: "", // Add LinkedIn URL here
+    linkedinUrl: "https://www.linkedin.com/in/dev-sagani-5ba391203", // Add LinkedIn URL here
   },
   {
     name: "Ansh Agarwal",
     title: "Full Stack Developer",
     handle: "anshagarwal__007",
     avatarUrl: AnshImg,
-    linkedinUrl: "", // Add LinkedIn URL here
+    linkedinUrl: "https://in.linkedin.com/in/ansh-agarwal-7275b2249", // Add LinkedIn URL here
   },
   {
     name: "Krushnaraj Bhosale",
     title: "Full Stack Developer",
     handle: "krushnaabhosale",
     avatarUrl: KrushnarajImg,
-    linkedinUrl: "", // Add LinkedIn URL here
+    linkedinUrl: "https://in.linkedin.com/in/krushnaraj-bhosale-603b48323", // Add LinkedIn URL here
   },
   {
     name: "Darshan Dorik",
     title: "UI/UX Designer & Developer",
     handle: "darshan_dorik",
     avatarUrl: DarshanImg, // Assuming Darshan's image is Harsh's for now
-    linkedinUrl: "", // Add LinkedIn URL here
+    linkedinUrl: "https://in.linkedin.com/in/darshan-dorik-07a300259", // Add LinkedIn URL here
   }
 ];
 
@@ -238,7 +239,7 @@ const FACULTY_MENTOR = {
   name: "Dr. Suraj Bhoyar",
   title: "Faculty Mentor",
   avatarUrl: SurajSirImg,
-  linkedinUrl: "https://www.linkedin.com/in/zindadilguru",
+  linkedinUrl: "https://in.linkedin.com/in/drsurajbhoyar",
 };
 
 const FloatingParticles = () => {
