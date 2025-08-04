@@ -8,7 +8,7 @@ import CouncilMembersPage from './pages/Councilmember';
 import UpcomingEvent from './pages/UpcomingEvents';
 import ContactUs from './pages/Contact';
 import StudentAffairsFooter from './Component/Footer';
-
+import WhatsappButton from './Component/WhatsAppButton'
 import Event from './pages/Event';
 
 
@@ -32,6 +32,7 @@ function App() {
 
 
       </Routes>
+      <WhatsappButton/>
    <StudentAffairsFooter/>
     </Router>
 </div>
