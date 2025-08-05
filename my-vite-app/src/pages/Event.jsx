@@ -9,8 +9,8 @@ const Event =()=>{
         <div>
            
 <HeroBanner 
-  title="Cultural Festival 2024"
-  subtitle="Celebrating diversity and tradition"
+  title="Past Events"
+  subtitle="Because every moment matters — documenting each event is essential to reflect, learn, and grow."
   backgroundImage={past_ev}
 />
             <Eventsheader/>
