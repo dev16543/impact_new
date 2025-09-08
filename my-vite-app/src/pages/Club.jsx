@@ -533,63 +533,62 @@ const ModernClubPage = () => {
       facultyCoordinator: "Prof. Ekta Shipure",
       contact: "shriyapurandarex16@gmail.com",
     },
-    {
-      image: sampleLogo,
-      title: "Vidyut Veda",
-      subtitle: "At Vidyut Veda, we nurture curiosity and empower students as engineers and problem-solvers. Members compete and secure wins in national-level hackathons, organize hands-on workshops on PCB design, 3D printing, and prototyping, and foster teamwork to turn innovative ideas into real solutions. We also arrange industrial visits to bridge academics and industry, ensuring creativity is paired with technical expertise and practical exposure.",
-      president: "Taresh Chabukswar",
-      facultyCoordinator: "Prof. Mahesh A. Kamthe",
-      contact: "taresh1008@gmail.com",
-    },
-     {
-      image: sampleLogo,
-      title: "Yuvarth",
-      subtitle:
-        "Yuvarth, the club of young minds dedicated to solving challenging problems. In a supportive and collaborative environment, Yuvarth empowers members to tackle real-world issues through creativity, critical thinking, and teamwork. This dynamic community organizes competitions, workshops, and collaborative projects, inspiring members to push boundaries and develop innovative solutions. Join Yuvarth and embark on a journey of intellectual growth and impactful problem-solving.",
-      president: "Shivam Mhamane",
-      facultyCoordinator: "Prof. Kiran Shinde",
-      contact: "shivammhamane28@gmail.com",
-    },
-    {
-      image: sampleLogo,
-      title: "Words' Worth Club",
-      subtitle: "",
-      president: "Ziyan Jahagirdar",
-      facultyCoordinator: "Prof. Balasaheb Wakde",
-      contact: "krishjha.1909@gmail.com",
-    },
-     {
-      image: sampleLogo,
-      title: "ACM-W",
-      subtitle: "",
-      president: "Malavika Unnikrishnan",
-      facultyCoordinator: "Prof. Dr. Ayesha Butalia",
-      contact: "malavikapdm@gmail.com",
-    },
-     {
-      image: sampleLogo,
-      title: "Techno Smart Campus Club",
-      subtitle: "",
-      president: "Parissa Matey",
-      facultyCoordinator: "Prof. Dr. Rajani Sajjan",
-      contact: "parissamatey405@gmail.com",
-    },
-     {
-      image: sampleLogo,
-      title: "Innovation And Entrepreneurship Club",
-      subtitle: "",
-      president: "Divyam Prabhudessai",
-      facultyCoordinator: "Moushmee Kuri",
-      contact: "divyamprabhudessai26@gmail.com",
-    },
-    {
-      image: sampleLogo,
-      title: "The Log Book",
-      subtitle: "",
-      president: "Sumeet Patankar",
-      facultyCoordinator: "Prof. Nilambari Jadhav",
-      contact: "sumeetpatankar21@gmail.com",
-    },
+      {
+    image: "sampleLogo",
+    title: "Vidyut Veda",
+    subtitle: "At Vidyut Veda, we nurture curiosity and empower students as engineers and problem-solvers. Members compete and secure wins in national-level hackathons, organize hands-on workshops on PCB design, 3D printing, and prototyping, and foster teamwork to turn innovative ideas into real solutions. We also arrange industrial visits to bridge academics and industry, ensuring creativity is paired with technical expertise and practical exposure.",
+    president: "Taresh Chabukswar",
+    facultyCoordinator: "Prof. Mahesh A. Kamthe",
+    contact: "taresh1008@gmail.com"
+  },
+  {
+    image: "sampleLogo",
+    title: "Yuvarth",
+    subtitle: "Yuvarth, the club of young minds dedicated to solving challenging problems. In a supportive and collaborative environment, Yuvarth empowers members to tackle real-world issues through creativity, critical thinking, and teamwork. This dynamic community organizes competitions, workshops, and collaborative projects, inspiring members to push boundaries and develop innovative solutions. Join Yuvarth and embark on a journey of intellectual growth and impactful problem-solving.",
+    president: "Shivam Mhamane",
+    facultyCoordinator: "Prof. Kiran Shinde",
+    contact: "shivammhamane28@gmail.com"
+  },
+  {
+    image: "sampleLogo",
+    title: "Words' Worth Club",
+    subtitle: "A dynamic club focused on English language orientation, enhancing communication skills, creative writing, and literature appreciation through workshops, storytelling sessions, and interactive language activities.",
+    president: "Ziyan Jahagirdar",
+    facultyCoordinator: "Prof. Balasaheb Wakde",
+    contact: "krishjha.1909@gmail.com"
+  },
+  {
+    image: "sampleLogo",
+    title: "ACM-W",
+    subtitle: "An empowering club dedicated to supporting and promoting women in technology and entrepreneurship, fostering leadership, innovation, and skill development through events, mentorship, and networking.",
+    president: "Malavika Unnikrishnan",
+    facultyCoordinator: "Prof. Dr. Ayesha Butalia",
+    contact: "malavikapdm@gmail.com"
+  },
+  {
+    image: "sampleLogo",
+    title: "Techno Smart Campus Club",
+    subtitle: "A technology-focused community that promotes smart campus initiatives, innovative tech solutions, and collaborative projects to advance digital transformation and sustainability on campus.",
+    president: "Parissa Matey",
+    facultyCoordinator: "Prof. Dr. Rajani Sajjan",
+    contact: "parissamatey405@gmail.com"
+  },
+  {
+    image: "sampleLogo",
+    title: "Innovation And Entrepreneurship Club",
+    subtitle: "A vibrant community fostering innovation and startup culture through brainstorming sessions, workshops, mentorship, and networking with entrepreneurs, empowering students to develop their ideas into impactful businesses.",
+    president: "Divyam Prabhudessai",
+    facultyCoordinator: "Moushmee Kuri",
+    contact: "divyamprabhudessai26@gmail.com"
+  },
+  {
+    image: "sampleLogo",
+    title: "The Log Book",
+    subtitle: "A creative platform dedicated to nurturing journalistic skills, content creation, and documentation. Members engage in publishing, photography, and editorial projects that chronicle campus life and events.",
+    president: "Sumeet Patankar",
+    facultyCoordinator: "Prof. Nilambari Jadhav",
+    contact: "sumeetpatankar21@gmail.com"
+  }
    
      
   ];

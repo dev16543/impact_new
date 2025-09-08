@@ -82,7 +82,7 @@ const Navbar = () => {
         { to: '/team', label: 'Our Team' },
         { to: '/club', label: 'Club' },
         {
-            to: 'https://docs.google.com/spreadsheets/d/1NImrPqSBEUC5Qqzb6lzJwFCasg9iYVwoMRqa8NwyrzU/edit?gid=0#gid=0',
+            to: 'https://docs.google.com/spreadsheets/d/13OhKl7JLLxy4Wun353T0eO2xgXvY-5lS/edit?usp=sharing&ouid=106236639282780490925&rtpof=true&sd=true',
             label: 'Event Calendar',
             newTab: true
         },

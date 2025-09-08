@@ -3,205 +3,202 @@ import { ChevronDown, Mail, MapPin, Calendar, Award, Users, Sparkles, Star, Hear
 import past_ev from "../assets/Bannerpage/Team.jpg";
 import HeroBanner from "../Component/HeroBanner";
 // Import all team images
-import AaryanImg from "../assets/team_images/Aaryan.png";
-import AbhijeetImg from "../assets/team_images/Abhijeet.png";
-import AdarshImg from "../assets/team_images/Adarsh.png";
-import AnoushkaImg from "../assets/team_images/Anoushka.png";
-import AnshImg from "../assets/team_images/Ansh.png";
-import AtharvImg from "../assets/team_images/Atharv.png";
-import AyushiImg from "../assets/team_images/Ayushi.png";
-import BhoumikImg from "../assets/team_images/Bhoumik.png";
-import ChaitraliImg from "../assets/team_images/Chaitrali.png";
-import DanikaImg from "../assets/team_images/Danika.png";
-import DevImg from "../assets/team_images/Dev.png";
-import DhairyaImg from "../assets/team_images/Dhairya.png";
-import DarshanImg from "../assets/team_images/Darshan.JPG";
-import KhushiImg from "../assets/team_images/Khushi.png";
-import KrushnarajImg from "../assets/team_images/Krushnaraj.jpg";
-import MrinmayiImg from "../assets/team_images/Mrinmayi.png";
-import MugdhaImg from "../assets/team_images/Mugdha.png";
-import MuskanImg from "../assets/team_images/Muskan.png";
-import SharvilImg from "../assets/team_images/Sharvil.png";
-import SohamImg from "../assets/team_images/Soham.png";
-import SukhadaImg from "../assets/team_images/Sukhada.png";
-import SwaraImg from "../assets/team_images/Swara.png";
-import TanviImg from "../assets/team_images/Tanvi.png";
-import UditaImg from "../assets/team_images/Udita.png";
-import VaibhavImg from "../assets/team_images/Vaibhav.png";
-import VaishnaviImg from "../assets/team_images/Vaishnavi.png";
-import SurajSirImg from "../assets/team_images/surajsir.png";
-import HarshImg from "../assets/team_images/Harsh.png";
+import SharvilImg from "../assets/team_image/Sharvil.png";
+import MugdhaImg from "../assets/team_image/Mugdha.png";
+import DadasahebImg from "../assets/team_image/Dadasaheb.png";
+import SwaraImg from "../assets/team_image/Swara.png";
+import YuvrajImg from "../assets/team_image/uvraj.png";
+import VedantImg from "../assets/team_image/Vedant.png";
+import GauriImg from "../assets/team_image/Gauri.png";
+import ShrutiImg from "../assets/team_image/Shrushti.png";
+import PrakritiImg from "../assets/team_image/Prakriti.png";
+import GirirajImg from "../assets/team_image/Giriraj.png";
+import KhushiImg from "../assets/team_image/Khushi.png";
+import YashImg from "../assets/team_image/Yash.png";
+import AryaImg from "../assets/team_image/Arya.png";
+import AtharvImg from "../assets/team_image/Atharv.png";
+import AnayImg from "../assets/team_image/Anay.png";
+import AanchalImg from "../assets/team_image/Aanchal.png";
+import VisakhaImg from "../assets/team_image/Vishaka.png";
+import KaveriImg from "../assets/team_image/Kaveri.png";
+import SwapnilImg from "../assets/team_image/Swapnil.png";
+import ShubhamImg from "../assets/team_image/Shubham.png";
+import TanviImg from "../assets/team_image/Tanvi.png";
+import MrinmayiImg from "../assets/team_image/Mrinmayi.png";
+import SukhadaImg from "../assets/team_image/Sukhada.png";
+import DevImg from "../assets/team_image/Dev.png";
+import BhoumikImg from "../assets/team_image/Bhoumik.png";
+import AdarshImg from "../assets/team_image/Adarsh.png";
+import AnshImg from "../assets/team_image/Ansh.png";
+import KrushnarajImg from "../assets/team_image/Krushnaraj.jpg";
+import DarshanImg from "../assets/team_image/Darshan.JPG";
+import SurajSirImg from "../assets/team_image/SurajSir.png";
+import AshishSirImg from "../assets/team_image/ashishsir.png";
+import AparnaMamImg from "../assets/team_image/aparnamam.png";
+import PratibhaMamImg from "../assets/team_image/prathibhamaam.png";
+
+
 
 const COUNCIL_MEMBERS_DATA = [
   {
-    name: "Aaryan Phule",
-    title: "President",
-    handle: "aaryan_phule__18",
-    avatarUrl: AaryanImg,
-    linkedinUrl: "https://www.linkedin.com/in/aaryan-phule-2a1688251",
-  },
-  {
-    name: "Dhairya Patwa",
-    title: "General Secretary",
-    handle: "dhairya_patwa",
-    avatarUrl: DhairyaImg,
-    linkedinUrl: "https://www.linkedin.com/in/dhairya-patwa-714bb42ba?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-  },
-  {
-    name: "Soham Zope",
-    title: "Vice President",
-    handle: "soham.zope",
-    avatarUrl: SohamImg,
-    linkedinUrl: "http://www.linkedin.com/in/soham-zope-",
-  },
-  {
-    name: "Khushi Warang",
-    title: "Joint Secretary",
-    handle: "khhhuushiiii",
-    avatarUrl: KhushiImg,
-    linkedinUrl: "https://www.linkedin.com/in/aryapaturkar1/",
-  },
-  {
-    name: "Swara Kodre",
-    title: "Treasurer",
-    handle: "swara_kodre",
-    avatarUrl: SwaraImg,
-    linkedinUrl: "https://www.linkedin.com/in/swara-kodre-016454308?trk=contact-info",
-  },
-  {
-    name: "Vaishnavi Angane",
-    title: "Art Cluster Secretary",
-    handle: "angne.vaishnavi",
-    avatarUrl: VaishnaviImg,
-    linkedinUrl: "https://www.linkedin.com/in/vaishnavi-angne-9b2074245?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-  },
-  {
-    name: "Harsh Vora",
-    title: "Design Cluster Secretary",
-    handle: "harsh_vora_",
-    avatarUrl: HarshImg,
-    linkedinUrl: "https://www.linkedin.com/in/harsh-vora-339b58228",
-  },
-  {
-    name: "Dev Sagani",
-    title: "Technology Cluster Secretary",
-    handle: "dev_16543",
-    avatarUrl: DevImg,
-    linkedinUrl: "https://www.linkedin.com/in/dev-sagani-5ba391203",
-  },
-  {
-    name: "Ayushi Sharma",
-    title: "Cultural Secretary(Girls)",
-    handle: "ayushisharma_18",
-    avatarUrl: AyushiImg,
-    linkedinUrl: "https://www.linkedin.com/in/ayushi-sharma-83728223a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
-  },
-  {
     name: "Sharvil Maind",
-    title: "Cultural Secretary(Boys)",
-    handle: "sharvil27maind",
+    title: "President",
     avatarUrl: SharvilImg,
-    linkedinUrl: "https://www.linkedin.com/in/sharvilmaind",
-  },
-  {
-    name: "Chaitrali Patil",
-    title: "Sport Secretary(Girls)",
-    handle: "chaitrali_patil5",
-    avatarUrl: ChaitraliImg,
-    linkedinUrl: "https://www.linkedin.com/in/reeva-sadiq-614245280/",
-  },
-  {
-    name: "Atharv Patil",
-    title: "Sport Secretary(Boys)",
-    handle: "patilatharv_",
-    avatarUrl: AtharvImg,
-    linkedinUrl: "https://www.linkedin.com/in/atharv-patil-473853301/",
-  },
-  {
-    name: "Danika Patil",
-    title: "Well-Being Secretary",
-    handle: "danikaa.s",
-    avatarUrl: DanikaImg,
-    linkedinUrl: "https://www.linkedin.com/in/danika-patil-88435b251/",
-  },
-  {
-    name: "Anouksha Joshi",
-    title: "Editorial Secretary",
-    handle: "anoushka_2306",
-    avatarUrl: AnoushkaImg,
-    linkedinUrl: "https://www.linkedin.com/in/anoushkajoshi?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app", // Name mismatch: "Anouksha" vs "Anoushka"
-  },
-  {
-    name: "Muskan Rai",
-    title: "Magazine Secretary",
-    handle: "musskannnr",
-    avatarUrl: MuskanImg,
-    linkedinUrl: "https://www.linkedin.com/in/muskan-rai-92838024b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
-  },
-  {
-    name: "Abhijeet Varudkar",
-    title: "Media & Outreach Secretary",
-    handle: "arv_vlogs",
-    avatarUrl: AbhijeetImg,
-    linkedinUrl: "https://www.linkedin.com/in/abhijeet-varudkar-5241962a2",
+    linkedinUrl: "https://www.linkedin.com/in/sharvilmaind"
   },
   {
     name: "Mugdha Sonawane",
-    title: "NCC Secretary",
-    handle: "mugdhas_04",
+    title: "General Secretary",
     avatarUrl: MugdhaImg,
-    linkedinUrl: "https://www.linkedin.com/in/mugdha-sonawane-5873162b9?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+    linkedinUrl: "https://www.linkedin.com/in/mugdha-sonawane-5873162b9?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+  },
+  {
+    name: "Dadasaheb Bhosure",
+    title: "Vice President",
+    avatarUrl: DadasahebImg,
+    linkedinUrl: "https://www.linkedin.com/in/dadasaheb-bhosure"
+  },
+  {
+    name: "Swara Kodre",
+    title: "Joint Secretary",
+    avatarUrl: SwaraImg,
+    linkedinUrl: "https://www.linkedin.com/in/swara-kodre-016454308?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+  },
+  {
+    name: "Yuvraj Bade",
+    title: "Treasurer (Budget & Planning)",
+    avatarUrl: YuvrajImg,
+    linkedinUrl: null
+  },
+  {
+    name: "Vedant Raut",
+    title: "Treasurer (Audit & Settlement)",
+    avatarUrl: VedantImg,
+    linkedinUrl: "https://www.linkedin.com/in/vedant-raut-a51287303"
+  },
+  {
+    name: "Gauri Wankhede",
+    title: "Wellbeing Secretary",
+    avatarUrl: GauriImg,
+    linkedinUrl: "https://linkedin.com/in/gauri-wankhede-g240605"
+  },
+  {
+    name: "Shruti Gosavi",
+    title: "Arts Cluster Secretary",
+    avatarUrl: ShrutiImg,
+    linkedinUrl: "https://www.linkedin.com/in/shruti-gosavi-903008383?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+  },
+  {
+    name: "Prakriti Chakravarty",
+    title: "Design Cluster Secretary",
+    avatarUrl: PrakritiImg,
+    linkedinUrl: "https://in.linkedin.com/in/prakriti-chakravarty-8016b9240"
+  },
+  {
+    name: "Giriraj Baheti",
+    title: "Technology Cluster Secretary",
+    avatarUrl: GirirajImg,
+    linkedinUrl: "https://www.linkedin.com/in/giriraj-baheti-899ab5211/"
+  },
+  {
+    name: "Khushi Warang",
+    title: "Cultural Secretary (Girls)",
+    avatarUrl: KhushiImg,
+    linkedinUrl: "https://www.linkedin.com/in/aryapaturkar1/"
+  },
+  {
+    name: "Yash Gutte",
+    title: "Cultural Secretary (Boys)",
+    avatarUrl: YashImg,
+    linkedinUrl: "https://www.linkedin.com/in/yash-gutte-992b19316/"
+  },
+  {
+    name: "Arya Chaudhary",
+    title: "Sports Secretary (Girls)",
+    avatarUrl: AryaImg,
+    linkedinUrl: "https://www.linkedin.com/in/arya-chaudhary-5256331b8?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+  },
+  {
+    name: "Atharv Jadhav",
+    title: "Sports Secretary (Boys)",
+    avatarUrl: AtharvImg,
+    linkedinUrl: "https://www.linkedin.com/in/atharv-jadhav-31baa331a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+  },
+  {
+    name: "Anay Ahire",
+    title: "Editorial Secretary",
+    avatarUrl: AnayImg,
+    linkedinUrl: "https://www.linkedin.com/in/anay-ahire-828439332?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+  },
+  {
+    name: "Aanchal Tamboli",
+    title: "Magazine Secretary",
+    avatarUrl: AanchalImg,
+    linkedinUrl: "https://linkedin.com/in/aanchaltamboli"
+  },
+  {
+    name: "Visakha Nilakh",
+    title: "NCC Secretary",
+    avatarUrl: VisakhaImg,
+    linkedinUrl: "https://www.linkedin.com/in/vishakha-b-nilakh-b28479369?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+  },
+  {
+    name: "Kaveri Khairnar",
+    title: "NSS Secretary",
+    avatarUrl: KaveriImg,
+    linkedinUrl: "https://www.linkedin.com/in/kaveri-khairnar-b9b9082a2"
+  },
+  {
+    name: "Swapnil Patil",
+    title: "Media Secretary (Digital Media & Outreach)",
+    avatarUrl: SwapnilImg,
+    linkedinUrl: "https://www.linkedin.com/in/swapnil-patil-742697218?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+  },
+  {
+    name: "Shubham Sorate",
+    title: "Media Secretary (Creative Design & Content)",
+    avatarUrl: ShubhamImg,
+    linkedinUrl: "https://www.linkedin.com/in/shubham-sorate-3b8489323?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
   },
   {
     name: "Tanvi Bokade",
-    title: "NSS Secretary",
-    handle: "tan.tanzzzz",
+    title: "Executive Member",
     avatarUrl: TanviImg,
-    linkedinUrl: "https://www.linkedin.com/in/tanvi-bokade-3817681b0",
-  },
-  {
-    name: "Udita Anand",
-    title: "Executive Member",
-    handle: "uditaaa_",
-    avatarUrl: UditaImg,
-    linkedinUrl: "https://www.linkedin.com/in/udita-anand-324541250",
-  },
-  {
-    name: "Sukhada Tambe",
-    title: "Executive Member",
-    handle: "sukhada_photography",
-    avatarUrl: SukhadaImg,
-    linkedinUrl: "https://www.linkedin.com/in/sukhada-tambe-5a7b93275",
+    linkedinUrl: "https://www.linkedin.com/in/tanvi-bokade-3817681b0"
   },
   {
     name: "Mrinmayi Gotmare",
     title: "Executive Member",
-    handle: "_mrin___",
     avatarUrl: MrinmayiImg,
-    linkedinUrl: "https://www.linkedin.com/in/mrinmayi2504",
+    linkedinUrl: "https://www.linkedin.com/in/mrinmayi2504/"
   },
   {
-    name: "Vaibhav Kalaskar",
+    name: "Sukhada Tambe",
     title: "Executive Member",
-    handle: "vaibhavv______",
-    avatarUrl: VaibhavImg,
-    linkedinUrl: "https://www.linkedin.com/in/vaibhav-kalaskar-646213219",
+    avatarUrl: SukhadaImg,
+    linkedinUrl: "https://www.linkedin.com/in/sukhada-tambe-5a7b93275"
+  },
+  {
+    name: "Dev Sagani",
+    title: "Executive Member",
+    avatarUrl: DevImg,
+    linkedinUrl: "https://www.linkedin.com/in/dev-sagani-5ba391203"
   },
   {
     name: "Bhoumik Rajput",
     title: "Executive Member",
-    handle: "bhoumikrajput",
     avatarUrl: BhoumikImg,
-    linkedinUrl: "https://www.linkedin.com/in/bhoumik-rajput-60b2221b7/",
+    linkedinUrl: "https://www.linkedin.com/in/bhoumik-rajput-60b2221b7/"
   },
   {
     name: "Adarsh Deshmukh",
     title: "Executive Member",
-    handle: "adarshdeshmukh",
     avatarUrl: AdarshImg,
-    linkedinUrl: "https://www.linkedin.com/in/adarsh-deshmukh-486068197/",
+    linkedinUrl: "https://www.linkedin.com/in/adarsh-deshmukh-486068197/"
   }
 ];
+
+
 
 
 const WEBSITE_TEAM = [
@@ -241,6 +238,28 @@ const FACULTY_MENTOR = {
   avatarUrl: SurajSirImg,
   linkedinUrl: "https://in.linkedin.com/in/drsurajbhoyar",
 };
+
+const FACULTY_MENTOR_1 = [
+  {
+    name: "Prof. Dr. Pratibha Jagtap",
+    title: "Asst. Director - Student Welfare",
+    avatarUrl: PratibhaMamImg,
+    linkedinUrl: "https://linkedin.com/in/dr-pratibha-j-28b2ba15"
+  },
+  {
+    name: "Prof. Aparna Bhadke",
+    title: "Senior Administrative Officer - Student Affairs",
+    avatarUrl: AparnaMamImg,
+    linkedinUrl: "https://in.linkedin.com/in/aparna-bhadke-788a603b"
+  },
+  {
+    name: "Prof. Ashish Honrao",
+    title: "Manager - Student Affairs",
+    avatarUrl: AshishSirImg,
+    linkedinUrl: "https://in.linkedin.com/in/ashish-honrao-530b30292"
+  }
+];
+
 
 const FloatingParticles = () => {
   return (
@@ -456,13 +475,25 @@ const CouncilMembersPage = () => {
       />
       
       {/* Faculty Mentor Section */}
-      <div className="max-w-7xl mx-auto px-4 py-8 sm:py-10 lg:py-12">
-        <SectionHeader
-          title="Faculty Mentor"
-          subtitle="Guiding our council with wisdom and experience"
-        />
-        <FacultyMentorCard mentor={FACULTY_MENTOR} />
-      </div>
+<div className="max-w-7xl mx-auto px-4 py-8 sm:py-10 lg:py-12">
+  <SectionHeader
+    title="Faculty Mentors"
+    subtitle="Guiding our council with wisdom and experience"
+  />
+
+  {/* Main Faculty Mentor (highlighted separately) */}
+  <div className="flex justify-center mb-10">
+    <FacultyMentorCard mentor={FACULTY_MENTOR} />
+  </div>
+
+  {/* Additional Faculty Mentors (use CompactCard for same look as TorchBearers) */}
+  <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8 lg:gap-10">
+    {FACULTY_MENTOR_1.map((mentor, index) => (
+      <CompactCard key={index} member={mentor} index={index} />
+    ))}
+  </div>
+</div>
+
       
       {/* Council Members Section */}
       <div className="w-full px-4 py-8 sm:py-10 lg:py-12">

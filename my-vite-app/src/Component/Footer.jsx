@@ -54,7 +54,7 @@ const StudentAffairsFooter = () => {
             <div className="flex items-center gap-6 text-sm">
               <div className="flex items-center gap-2 text-white hover:text-white transition-colors duration-300">
                 <Mail className="w-4 h-4" />
-                <span>student.success@mituniversity.edu.in</span>
+                <span>studentsuccess@mituniversity.edu.in</span>
               </div>
               <div className="hidden sm:block w-px h-5 bg-white/30"></div>
               <div className="hidden lg:flex items-center gap-2 text-white hover:text-white transition-colors duration-300">
