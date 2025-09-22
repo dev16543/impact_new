@@ -185,413 +185,337 @@ const ChromaGrid = ({
 const ModernClubPage = () => {
   // Club data with modern styling
 
-  const clubData = [
-    {
-      image: sampleLogo,
-      title: "Aces MITSOE",
-      subtitle:
-        "ACES, a dynamic academic community, prioritizes student happiness and holistic development. With a focus on enhancing the student happiness index, it spearheads transformative change through innovative curricular and co-curricular initiatives. Committed to nurturing well-being and empowerment, ACES fosters a sense of purpose and belonging through progressive programs and policies.",
-      president: "Aayush Dalvi",
-      facultyCoordinator: "Prof. SwapnIl Patil",
-      contact: "aayushdalvi485@gmail.com",
-    },
-    {
-      image: sampleLogo,
-      title: "Mirage",
-      subtitle:
-        "Mirage is the AR & VR Club at MIT ADT University, dedicated to pushing the boundaries of immersive technologies. The club serves as a hub for innovation, creativity, and collaboration, bringing together students passionate about building experiences that blend imagination with cutting-edge reality.",
-      president: "Meghraj Nair",
-      facultyCoordinator: "Prof. Revati Deshpande",
-      contact: "nairmeghraj@gmail.com",
-    },
-    {
-      image: sampleLogo,
-      title: "Aws Cloud Club",
-      subtitle:
-        "The AWS Club at MIT ADT University is dedicated to exploring Amazon Web Services and cloud computing technologies through hands-on workshops, projects, and certification preparation. Our club offers opportunities to learn from industry experts, participate in hackathons, and connect with like-minded peers. Join us to enhance your cloud skills and prepare for a future in technology!",
-      president: "Parth Shah",
-      facultyCoordinator: "Prof. Dr. Rajani Sajjan",
-      contact: "parths.1305@gmail.com",
-    },
-    {
-      image: sampleLogo,
-      title: "Ideate",
-      subtitle:
-        "IDEATE pioneers UI/UX design innovation, redefining digital experiences with user-centric principles. It fosters creativity and functionality through a vibrant community of designers, developers, and visionaries. Through ideation sessions, workshops, and industry insights, IDEATE empowers individuals to create immersive, engaging digital experiences, shaping the future of UI/UX with cutting-edge technology.",
-      president: "Tejas Gavhane",
-      facultyCoordinator: "Prof. Dr. Anant Kaulage",
-      contact: "tgavhane340@gmail.com",
-    },
-
-    {
-      image: sampleLogo,
-      title: "Arcade - Game Development And Metaverse Club",
-      subtitle:
-        "The Arcade Club at MIT ADT University is all about celebrating the joy of gaming and game development. We bring together students who are passionate about retro and modern games to explore game design, development, and play. Whether you're a casual gamer or an aspiring game developer, come be a part of our community where we dive into the world of games and share the excitement!",
-      president: "Sarbojit Mandal",
-      facultyCoordinator: "Prof. Shubhra Mathur",
-      contact: "sarbojit2424@gmail.com",
-    },
-    {
-      image: sampleLogo,
-      title: "ASTECH",
-      subtitle:
-        "The ASTECH Club at MIT ADT University focuses on advancing knowledge in aerospace and space technology. We engage students through workshops, projects, and seminars on topics such as spacecraft design, satellite technology, and space exploration. Our club aims to inspire and prepare the next generation of aerospace engineers and enthusiasts by exploring the latest innovations and challenges in the field.",
-      president: "Yash Gutte",
-      facultyCoordinator: "Prof. Benazir Pirjade",
-      contact: "yashgutte13@gmail.com",
-    },
-    {
-      image: sampleLogo,
-      title: "Between The Lines Book Club",
-      subtitle:
-        "Between The Lines Book Club is a vibrant community fostering a love for literature and meaningful discussions. With a curated selection of diverse works, members embark on enriching literary journeys through engaging discussions and shared experiences. Committed to igniting intellectual curiosity, the club promotes lifelong learning and the power of storytelling.",
-      president: "Shreya Pandya",
-      facultyCoordinator: "Prof. Siddhi Lonkar",
-      contact: "shreya793313@gmail.com",
-    },
-    {
-      image: sampleLogo,
-      title: "Cinemaniacs",
-      subtitle:
-        "Cinemaniacs is the official photography and filmmaking club of MIT ADT University, dedicated to those who love capturing moments, telling stories, and exploring the art of visual expression. The club provides a platform for students to enhance their photography and videography skills through workshops, photo walks, short-film projects, and exhibitions.",
-      president: "Vidhi Gandhi",
-      facultyCoordinator: "Prof. Siddhi Lonkar",
-      contact: "vidhigandhi603@gmail.com",
-    },
-    
-    {
-      image: sampleLogo,
-      title: "Codechef",
-      subtitle:
-        "Codechef is a leading competitive programming platform fostering innovation and excellence globally. It ignites passion and sharpens coding skills through contests, challenges, and learning resources. The club nurtures talent, promotes technical proficiency, and empowers aspiring coders to excel in today’s digital world. Embracing collaboration, creativity, and continuous improvement, Codechef inspires transformative journeys in coding excellence.",
-      president: "Shreeya Phapale",
-      facultyCoordinator: "Prof. Ravi Chaudhari",
-      contact: "shreeya.phapale@gmail.com",
-    },
-    {
-      image: sampleLogo,
-      title: "Electoral Literacy Club",
-      subtitle:
-        "The Electoral Literacy Club (ELC) at MIT ADT University, established August 15, 2023, promotes democratic engagement, civic responsibility, and student leadership. Through voter drives, electoral fairs, and campaign participation, it fosters electoral awareness and ethical voting. Educational programs such as lectures and interactive exhibitions empower students to actively participate in democracy, building a socially responsible, informed community.",
-      president: "Mugdha Sonawane",
-      facultyCoordinator: "Prof. Dr. Pratibha Jagtap",
-      contact: "mugdhasonawane04@gmail.com",
-    },
-    {
-      image: sampleLogo,
-      title: "ERC-Music Studio (ERCMS)",
-      subtitle:
-        "The ERC Music Studio Club at MIT ADT University is a vibrant hub for music enthusiasts. It fosters talent and passion by providing a platform to explore, create, and perform across genres and instruments. From live shows and jam sessions to production workshops and original compositions, ERCMS encourages creativity and collaboration among musicians, vocalists, and sound engineers, building a community where rhythm, melody, and innovation unite.",
-      president: "Vaishnavi Yadav",
-      facultyCoordinator: "Prof. Vivek Sutar",
-      contact: "ercmusicstudios@gmail.com",
-    },
-    {
-      image: sampleLogo,
-      title: "The Foodpreneurs Club",
-      subtitle:
-        "The Foodpreneur's Club drives innovation in food technology by empowering aspiring foodpreneurs with tools, mentorship, and resources. Focusing on taste, health, and sustainability, it hosts events and fosters a supportive community to turn creative ideas into successful ventures and advance gastronomic excellence.",
-      president: "Akul Agarwal",
-      facultyCoordinator: "Dr. Sandip Gaikwad",
-      contact: "akulaagrawal@gmail.com",
-    },
-    {
-      image: sampleLogo,
-      title: "Gearhead Riders Bikers Community",
-      subtitle:
-        'The Bikers Community is a tight-knit group of riders bound by their love for the open road and the thrill of adventure. With a motto of "Freedom, Adventure, Camaraderie," they provide a platform for enthusiasts to connect, share stories, and embark on unforgettable journeys together. From scenic cruises to tackling challenging routes, members find solace and excitement in the freedom of the ride.',
-      president: "Mayank Mandiya",
-      facultyCoordinator: "Prof. Dr. Swapnil Shirsath",
-      contact: "mandiyamayank533@gmail.com",
-    },
-    {
-      image: sampleLogo,
-      title: "Geeks For Geeks Student Chapter",
-      subtitle:
-        "The Geeks For Geeks Student Chapter is a vibrant community fostering collaboration and innovation in technology and computer science. It empowers programmers and tech enthusiasts through workshops, hackathons, and guest lectures. Focused on continuous learning, the chapter equips students with up-to-date tools and resources, inspiring the next generation of tech leaders driven by passion and intellectual curiosity.",
-      president: "Kunal Singh",
-      facultyCoordinator: "Prof. Hemant Shinde",
-      contact: "kunalsingh2514@gmail.com",
-    },
-    {
-      image: sampleLogo,
-      title: "Groovance",
-      subtitle:
-        "Groovance, the Classical Dance Club, is dedicated to preserving and promoting the timeless artistry of classical dance forms. With a mission to celebrate heritage and elegance, Groovance offers training sessions, performances, and workshops to nurture talent and foster appreciation for classical dance. Through engaging events, the club aims to enrich the university community with the grace and allure of this traditional form of expression.",
-      president: "Bhavya Bhasin",
-      facultyCoordinator: "Prof. Aditi Riswadkar",
-      contact: "bhavyabhasin337@gmail.com",
-    },
-    {
-      image: sampleLogo,
-      title: "Heritage Yatra",
-      subtitle:
-        "The Heritage Club stands as a bastion of cultural preservation and celebration within the community. With a resolute dedication to honoring collective history and natural heritage, the club's motto is rooted in fostering pride and connection to our roots. Through diverse educational initiatives, community outreach, and preservation efforts, it ensures the cherished treasures of our heritage endure for generations.",
-      president: "Harshala M Bhandare",
-      facultyCoordinator: "Prof. Ravi Roshan",
-      contact: "harshalabhandare9@gmail.com",
-    },
-    {
-      image: sampleLogo,
-      title: "IEEE Student Branch MIT-ADT",
-      subtitle:
-        "The IEEE Student Branch at MIT-ADT is a vibrant community passionate about technology and innovation. It advances knowledge through events, workshops, and competitions, providing hands-on projects and connections with industry leaders. Emphasizing inclusivity and collaboration, the branch empowers students to push boundaries and shape the future through innovation.",
-      president: "Roshan Warade",
-      facultyCoordinator: "Prof. Reena Pagare",
-      contact: "moreshwarnaikwadi@ieee.org",
-    },
-    {
-      image: sampleLogo,
-      title: "Ignite",
-      subtitle:
-        "IGNITE is a dynamic community dedicated to igniting the spark of creativity and innovation within its members. With a clear mission to empower individuals to unleash their full potential, IGNITE offers a vibrant ecosystem of ideas, resources, and mentorship. Through a variety of events, workshops, and projects, IGNITE cultivates a culture of exploration, experimentation, and collaboration, encouraging members to push boundaries and make their mark on the world.",
-      president: "Parth Datar",
-      facultyCoordinator: "Prof. Pallavi Bhujbal",
-      contact: "parthdatar18@gmail.com",
-    },
-   
-    {
-      image: sampleLogo,
-      title: "ISBJ Binge Watcher's",
-      subtitle:
-        "The ISBJ Movie Club is a dynamic community united by their devotion to the art of storytelling on the silver screen. With an unwavering passion for cinematic brilliance, members gather to explore, analyze, and revel in the rich tapestry of films. From timeless classics to cutting-edge works, the club offers a platform for enthusiasts to immerse themselves in diverse cinematic experiences. Through lively discussions, screenings, and interactive sessions, participants uncover the intricacies of filmmaking while exchanging valuable insights and perspectives.",
-      president: "Fatema Ebrahim",
-      facultyCoordinator: "Prof Devashish Shedge",
-      contact: "fatemaebrahim2004@gmail.com",
-    },
-    {
-      image: sampleLogo,
-      title: "Java Brewers",
-      subtitle:
-        "The Java Brewers Club at MIT ADT University focuses on mastering Java programming through interactive sessions, coding challenges, and real-world projects. We provide a platform for students to enhance their coding skills, collaborate on innovative solutions, and prepare for careers in software development. Join us to learn, code, and brew your passion for Java!",
-      president: "Lalit Deshmukh",
-      facultyCoordinator: "Prof. Rahul More",
-      contact: "lalitdeshmukh018@gmail.com",
-    },
-    {
-      image: sampleLogo,
-      title: "Laggar Falcon Aero Club",
-      subtitle:
-        "LFAC (MIT's Aerospace Club) has consistently organized a spectrum of engaging events. From Interactive Seminars and Workshops to Podcasts and Technical Competitions, LFAC offers a diverse platform for enthusiasts to delve into UAV, Rocketry, and Astronomy. With a mission to foster innovation and idea acceleration within MIT's aerospace domain, LFAC aims to cultivate a community of passionate learners, dedicated to sharing and exchanging knowledge and experiences.",
-      president: "Shezhan Ghamat",
-      facultyCoordinator: "Prof. Krishna Jadhav",
-      contact: "shezanghamat@gmail.com",
-    },
-    {
-      image: sampleLogo,
-      title: "Leap Of Grace",
-      subtitle:
-        "LEAP OF GRACE Dance Club is a vibrant, inclusive community where dancers of all levels freely express creativity and explore movement artistry. Through dynamic performances, workshops, and collaborations, members experience growth and self-discovery, guided by experienced mentors and supported by peers. Join us to embrace the joy of dance and unleash your artistic passion.",
-      president: "Ketan Malviya",
-      facultyCoordinator: "Prof. Reshma Girigosavi",
-      contact: "ketanmalviya20@gmail.com",
-    },
-    {
-      image: sampleLogo,
-      title: "Mechanical Engineering Student Association",
-      subtitle:
-        "The Mechanical Engineering Student Association (MESA) is a dynamic student-driven body at MIT ADT University that aims to bridge the gap between classroom learning and real-world engineering applications. It provides a collaborative platform for mechanical engineering students to innovate, learn, and lead through a wide range of technical, professional, and cultural activities.",
-      president: "Krishna Bhavsar",
-      facultyCoordinator: "Prof. Shashank S. Gawade",
-      contact: "bhavsark0099@gmail.com",
-    },
-    {
-      image: sampleLogo,
-      title: "Muse",
-      subtitle:
-        "The Muse Music Club is a dynamic community dedicated to fostering creativity, expression, and musical exploration. With a commitment to inclusivity and support, the club offers a platform for musicians of all levels to connect, collaborate, and grow. From jam sessions to workshops, performances to open mic nights, members are encouraged to unleash their artistic potential and contribute to the vibrant tapestry of musical innovation.",
-      president: "Ankan Maity",
-      facultyCoordinator: "Prof. Dr. Suraj Bhoyar",
-      contact: "ankan3555@gmail.com",
-    },
-    {
-      image: sampleLogo,
-      title: "Cloud Computing Club",
-      subtitle:
-        "The Cloud Computing Club is a dynamic community fostering innovation in cloud technology. Dedicated to nurturing talent, the club offers hands-on experience, collaborative projects, and industry insights. Through workshops, seminars, and real-world applications, members gain essential skills for success in today's digital world. With a vision to inspire future leaders in cloud computing, the club drives transformative change across industries.",
-      president: "Rushikesh Zope",
-      facultyCoordinator: "Prof. Sumit Hirve",
-      contact: "rushikesh.zope@gmail.com",
-    },
-    {
-      image: sampleLogo,
-      title: "Painting Club",
-      subtitle:
-        "Step into the world of artistry with the Painting Club, where artists of all levels unite in a supportive atmosphere to hone their skills and unleash their creativity. With a commitment to kindling passion and fostering talent, this vibrant community hosts exhibitions, workshops, and collaborative endeavors, empowering members to explore their imagination with confidence. Join the Painting Club and embark on a journey of artistic discovery and expression.",
-      president: "Arya Ashtikar",
-      facultyCoordinator: "Prof. Uttam Janawade",
-      contact: "ashtikaraarya@gmail.com",
-    },
-    {
-      image: sampleLogo,
-      title: "Panchayati Drama Club",
-      subtitle:
-        "The Panchayati Drama Club, official performing arts society at MIT ADT University, nurtures creativity, expression, and cultural storytelling. It offers a vibrant platform for acting, stagecraft, direction, and scriptwriting. The club revives Indian theatre’s essence while embracing modern drama, exploring genres from classical to experimental. Through workshops, productions, competitions, and events, it hones skills and fosters confidence, teamwork, and leadership.",
-      president: "Dadasaheb Bhosure",
-      facultyCoordinator: "Prof. Kiran Pavaskar",
-      contact: "dadabhosure0049@gmail.com",
-    },
-    {
-      image: sampleLogo,
-      title: "Photography Club",
-      subtitle:
-        "The Photography Club is a dynamic community of photography enthusiasts dedicated to fostering creativity and appreciation for the art of visual storytelling. Through workshops, photo walks, and hands-on sessions, members explore technical skills and unleash their artistic vision. With a focus on collaboration and learning, the club invites all skill levels to join in capturing life's beauty through the lens of imagination.",
-      president: "Saurav Sharma",
-      facultyCoordinator: "Prof. Tushar Panke",
-      contact: "sauravkumarssingh1399@gmail.com",
-    },
-    {
-      image: sampleLogo,
-      title: "SAE Collegiate Club",
-      subtitle:
-        "We are the leading technical body for knowledge dissemination and skill development in mobility. As a trusted think-tank, we advise policymakers on mobility-related matters. Our self-sustaining society includes over 10% of mobility professionals as members. We are a professional organization dedicated to creating value for the mobility engineering community.",
-      president: "Athrva Bagul",
-      facultyCoordinator: "Dr. Anurag Nema",
-      contact: "atharvb214@gmail.com",
-    },
-    {
-      image: sampleLogo,
-      title: "Samarpan Club",
-      subtitle:
-        "MESA stands as a beacon of innovation and collaboration in mechanical engineering, empowering students with knowledge, skills, and opportunities for excellence. Through events, workshops, and projects, MESA inspires creativity, fosters leadership, and builds camaraderie. Committed to pushing boundaries, it catalyzes growth and success in academic and professional endeavors. Join MESA on a journey of discovery and innovation.",
-      president: "Runali Tawade",
-      facultyCoordinator: "Prof. Komal Gagare",
-      contact: "runalitawade@gmail.com",
-    },
-    {
-      image: sampleLogo,
-      title: "Shivraya Dhol Tasha Pathak",
-      subtitle:
-        "Shivraya Dhol Tasha Pathak, immersed in Maharashtra's cultural heritage, is a beacon of tradition and rhythm. With resounding beats, it embodies the state’s rich cultural tapestry. Dedicated to preserving Maharashtra’s legacy, it captivates audiences with mesmerizing performances. Passionate and proud, each beat evokes unity and celebration, showcasing a dynamic fusion of music, dance, and folklore. Their performances ignite pride and nostalgia, weaving tradition and modernity into an unforgettable spectacle.",
-      president: "Satvik Chaudhari",
-      facultyCoordinator: "Prof. Dr. Suraj Bhoyar",
-      contact: "chaudharisatvik57@gmail.com",
-    },
-    {
-      image: sampleLogo,
-      title: "Speedtail Racing",
-      subtitle:
-        "The Speedtail Racing Club is a vibrant community united by a passion for automotive innovation and societal impact. With a focus on fostering competitiveness and sustainability, the club pushes boundaries in technology while making positive contributions to society. Through hands-on projects and competitions, members develop practical skills and strive for excellence. Emphasizing professional and personal growth, the club empowers individuals to excel academically and contribute meaningfully to automotive innovation and beyond.",
-      president: "Abhishek Saha",
-      facultyCoordinator: "Dr. Anurag Nema",
-      contact: "abhisheksaha.speedtail.raicing@gmail.com",
-    },
-    {
-      image: sampleLogo,
-      title: "Synapse AI",
-      subtitle:
-        "Synapse AI, where innovation meets passion! With exceptional leadership, we're poised to achieve groundbreaking advancements and milestones in the world of artificial intelligence. The enthusiasm for AI and remarkable leadership qualities promise an exciting and transformative journey for our club. Join us in celebrating this new chapter and be part of a vibrant community dedicated to pushing the boundaries of AI.",
-      president: "Shifa Pathan",
-      facultyCoordinator: "Prof. Shahin Makubhai",
-      contact: "shifa.pathan1908@gmail.com",
-    },
-    {
-      image: sampleLogo,
-      title: "Team Volta",
-      subtitle:
-        "Team Volta is where innovation and collaboration drive excellence in technology and engineering. The team pushes boundaries, solves complex problems, and creates groundbreaking solutions. Focused on fostering creativity and technical expertise, Team Volta undertakes transformative projects and initiatives. Their commitment shows through collaboration, innovation, and impactful contributions. Join Team Volta to grow, solve challenges, and shape the future.",
-      president: "Atharav Phadtare",
-      facultyCoordinator: "Prof. Praveen Bhojane",
-      contact: "patharav2005@gmail.com",
-    },
-   
-    {
-      image: sampleLogo,
-      title: "Ted-X",
-      subtitle:
-        'TEDx clubs are local hubs of innovation and inspiration, driven by the motto "Ideas Worth Spreading." These clubs host self-organized events featuring diverse speakers who share innovative ideas, insights, and stories. Through dynamic and interactive presentations, TEDx clubs foster meaningful dialogue and connections within communities, sparking inspiration and driving positive change.',
-      president: "Abhinav Jaiswal",
-      facultyCoordinator: "Prof. Moushmee Kuri",
-      contact: "abhinavjaiswal1201@gmail.com",
-    },
-    {
-      image: sampleLogo,
-      title: "The Alpha Cell",
-      subtitle:
-        "The Alpha Cell brings artists of all backgrounds together in an enriching environment to cultivate skills and fuel artistic passion. Dedicated to nurturing talent, the community offers exhibitions, workshops, and collaborative projects. Members push creative boundaries, develop unique voices, and build confidence. Join to immerse in a supportive network that champions creativity, personal growth, and artistic achievement.",
-      president: "Deepesh Patil",
-      facultyCoordinator: "Prof. Balaji Jadhav",
-      contact: "deepeshpatil0101@gmail.com",
-    },
-    {
-      image: sampleLogo,
-      title: "The Infusion Club",
-      subtitle:
-        "The Infusion Club blends taste and wellness, redefining flavour through the art of infusion with a focus on health and culinary innovation. Members explore tastes crafted with quality ingredients and mindful preparation, creating refreshing herbal and fruit infusions. Every sip celebrates health, vitality, and culinary excellence.",
-      president: "Shreya Patil",
-      facultyCoordinator: "Prof. Yogita Chavan",
-      contact: "shreyaapatil28@gmail.com",
-    },
-   
-    {
-      image: sampleLogo,
-      title: "The Psychology Club",
-      subtitle:
-        "The Psychology Club is a vibrant community dedicated to promoting holistic wellness and resilience. Through engaging events and workshops, they empower individuals to explore the interconnectedness of mind and body, offering tools for managing stress, practicing self-care, and fostering mental fitness. With a vision focused on achieving fulfillment through physical and mental well-being, the club invites all to join in their journey of self-discovery and empowerment.",
-      president: "Shriya Purandare",
-      facultyCoordinator: "Prof. Ekta Shipure",
-      contact: "shriyapurandarex16@gmail.com",
-    },
-      {
+const clubData = [
+  {
     image: "sampleLogo",
-    title: "Vidyut Veda",
-    subtitle: "At Vidyut Veda, we nurture curiosity and empower students as engineers and problem-solvers. Members compete and secure wins in national-level hackathons, organize hands-on workshops on PCB design, 3D printing, and prototyping, and foster teamwork to turn innovative ideas into real solutions. We also arrange industrial visits to bridge academics and industry, ensuring creativity is paired with technical expertise and practical exposure.",
-    president: "Taresh Chabukswar",
-    facultyCoordinator: "Prof. Mahesh A. Kamthe",
-    contact: "taresh1008@gmail.com"
+    title: "Shivray Dhol Tasha Pathak",
+    subtitle: "Shivray Dhol Tasha Pathak deeply honors Maharashtra’s vibrant cultural heritage through traditional drumming and dance performances. The club brings together passionate performers to preserve and showcase the rhythmic arts, creating powerful experiences that celebrate unity, tradition, and spirited cultural expression.",
+    president: "Satvik Chaudhari",
+    facultyCoordinator: "Prof. Dr. Suraj Bhoyar",
+    contact: "chaudharisatvik57@gmail.com"
   },
   {
     image: "sampleLogo",
-    title: "Yuvarth",
-    subtitle: "Yuvarth, the club of young minds dedicated to solving challenging problems. In a supportive and collaborative environment, Yuvarth empowers members to tackle real-world issues through creativity, critical thinking, and teamwork. This dynamic community organizes competitions, workshops, and collaborative projects, inspiring members to push boundaries and develop innovative solutions. Join Yuvarth and embark on a journey of intellectual growth and impactful problem-solving.",
-    president: "Shivam Mhamane",
-    facultyCoordinator: "Prof. Kiran Shinde",
-    contact: "shivammhamane28@gmail.com"
+    title: "MIT Adventure Club",
+    subtitle: "MIT Adventure Club fosters a spirit of adventure and learning by organizing outdoor expeditions, trekking, and other thrilling activities. It encourages personal growth, resilience, teamwork, and a connection with nature, enabling students to create unforgettable experiences beyond the classroom.",
+    president: "Gaurav Bhimache",
+    facultyCoordinator: "Mr. Sandeep Bhapkar",
+    contact: "mitadventureclub@gmail.com"
   },
   {
     image: "sampleLogo",
-    title: "Words' Worth Club",
-    subtitle: "A dynamic club focused on English language orientation, enhancing communication skills, creative writing, and literature appreciation through workshops, storytelling sessions, and interactive language activities.",
-    president: "Ziyan Jahagirdar",
-    facultyCoordinator: "Prof. Balasaheb Wakde",
-    contact: "krishjha.1909@gmail.com"
+    title: "Electoral Literacy Club",
+    subtitle: "The Electoral Literacy Club (ELC) promotes awareness of democratic values and electoral processes through engaging campaigns, workshops, and voter education. It empowers students to make informed decisions, enhancing civic responsibility and active participation in democratic governance.",
+    president: "Mugdha Sonawane",
+    facultyCoordinator: "Prof. Dr. Pratibha Jagtap",
+    contact: "mugdhasonawane04@gmail.com"
   },
   {
     image: "sampleLogo",
-    title: "ACM-W",
-    subtitle: "An empowering club dedicated to supporting and promoting women in technology and entrepreneurship, fostering leadership, innovation, and skill development through events, mentorship, and networking.",
-    president: "Malavika Unnikrishnan",
-    facultyCoordinator: "Prof. Dr. Ayesha Butalia",
-    contact: "malavikapdm@gmail.com"
+    title: "Muse",
+    subtitle: "Muse Music Club provides a creative platform for musicians, vocalists, and sound engineers to collaborate, learn, and perform. The club celebrates musical diversity, fostering a supportive environment where members hone their skills and share their passion with the community.",
+    president: "Ankan Maity",
+    facultyCoordinator: "Prof. Dr. Suraj Bhoyar",
+    contact: "ankan3555@gmail.com"
+  },
+  {
+    image: "sampleLogo",
+    title: "Cloud Computing Club",
+    subtitle: "The Cloud Computing Club offers hands-on learning opportunities in cloud technologies, encouraging members to explore, innovate, and apply solutions in real-world contexts. Through workshops and collaborative projects, it prepares students for careers in the evolving cloud computing landscape.",
+    president: "Rushikesh Zope",
+    facultyCoordinator: "Prof. Sumit Hirve",
+    contact: "rushikesh.zope@gmail.com"
+  },
+  {
+    image: "sampleLogo",
+    title: "Mechanical Engineering Student Association",
+    subtitle: "MESA bridges academic theory with practical engineering applications, supporting students with technical workshops, leadership opportunities, and professional networking. The club nurtures innovation and teamwork to prepare members for successful careers in mechanical engineering.",
+    president: "Krishna Bhavsar",
+    facultyCoordinator: "Prof. Shashank S. Gawade",
+    contact: "bhavsark0099@gmail.com"
+  },
+  {
+    image: "sampleLogo",
+    title: "Mirage",
+    subtitle: "Mirage is the pioneering AR and VR club dedicated to advancing immersive technology. It offers hands-on projects, expert sessions, and collaborative learning to push the boundaries of virtual experiences, creativity, and digital innovation.",
+    president: "Meghraj Nair",
+    facultyCoordinator: "Prof. Revati Deshpande",
+    contact: "nairmeghraj@gmail.com"
+  },
+  {
+    image: "sampleLogo",
+    title: "The Foodpreneurs Club",
+    subtitle: "Focused on food technology and entrepreneurship, The Foodpreneurs Club empowers members to develop innovative culinary ideas into successful ventures. It offers mentorship, resources, and events that balance taste, health, and sustainability to advance gastronomical excellence.",
+    president: "Akul Agarwal",
+    facultyCoordinator: "Dr. Sandip Gaikwad",
+    contact: "akulaagrawal@gmail.com"
+  },
+  {
+    image: "sampleLogo",
+    title: "Laggar Falcon Aero Club",
+    subtitle: "LFAC fosters aerospace enthusiasm through seminars, workshops, and competitions in UAVs, rocketry, and astronomy. The club cultivates innovation and shared learning among members passionate about aerospace technologies and exploration.",
+    president: "Shezhan Ghamat",
+    facultyCoordinator: "Prof. Krishna Jadhav",
+    contact: "shezanghamat@gmail.com"
+  },
+  {
+    image: "sampleLogo",
+    title: "ERC-Music Studio (ERCMS)",
+    subtitle: "ERCMS is a vibrant community for music lovers, offering platforms for live performances, production workshops, and creative collaborations. It encourages artistic expression and professional skill development in music production and performance.",
+    president: "Vaishnavi Yadav",
+    facultyCoordinator: "Prof. Vivek Sutar",
+    contact: "ercmusicstudios@gmail.com"
+  },
+  {
+    image: "sampleLogo",
+    title: "Painting Club",
+    subtitle: "The Painting Club nurtures artistic talent and creativity through workshops, exhibitions, and collaborative projects. It provides an encouraging environment for artists of all levels to express themselves and enrich campus culture with visual art.",
+    president: "Arya Ashtikar",
+    facultyCoordinator: "Prof. Uttam Janawade",
+    contact: "ashtikaraarya@gmail.com"
   },
   {
     image: "sampleLogo",
     title: "Techno Smart Campus Club",
-    subtitle: "A technology-focused community that promotes smart campus initiatives, innovative tech solutions, and collaborative projects to advance digital transformation and sustainability on campus.",
+    subtitle: "Leading technology-driven campus transformation, this club develops innovative smart solutions for sustainability and digital advancement. It cultivates student collaboration on cutting-edge projects to modernize and enhance campus life.",
     president: "Parissa Matey",
     facultyCoordinator: "Prof. Dr. Rajani Sajjan",
     contact: "parissamatey405@gmail.com"
   },
   {
     image: "sampleLogo",
+    title: "Geeks For Geeks Student Chapter",
+    subtitle: "This chapter fuels tech innovation by hosting workshops, hackathons, and collaborative learning opportunities. It equips students with skills and knowledge to excel in competitive programming and software development.",
+    president: "Kunal Singh",
+    facultyCoordinator: "Prof. Hemant Shinde",
+    contact: "kunalsingh2514@gmail.com"
+  },
+  {
+    image: "sampleLogo",
+    title: "ASTECH",
+    subtitle: "ASTECH catalyzes student interest in aerospace technology through hands-on education, seminars, and exploration of emerging space innovations. It inspires future aerospace professionals to excel in the dynamic field.",
+    president: "Yash Gutte",
+    facultyCoordinator: "Prof. Benazir Pirjade",
+    contact: "yashgutte13@gmail.com"
+  },
+  {
+    image: "sampleLogo",
+    title: "Speedtail Racing",
+    subtitle: "This club champions automotive innovation and sustainability through practical projects and competitions. Members develop engineering expertise, embracing creativity and leadership to impact the future of transportation.",
+    president: "Abhishek Saha",
+    facultyCoordinator: "Dr. Anurag Nema",
+    contact: "abhisheksaha.speedtail.raicing@gmail.com"
+  },
+  {
+    image: "sampleLogo",
+    title: "Aws Cloud Club",
+    subtitle: "AWS Cloud Club delves deep into cloud computing, organizing workshops and certification preparation to build career-ready skills in cloud technologies and Amazon Web Services.",
+    president: "Parth Shah",
+    facultyCoordinator: "Prof. Dr. Rajani Sajjan",
+    contact: "parths.1305@gmail.com"
+  },
+  {
+    image: "sampleLogo",
+    title: "The Log Book",
+    subtitle: "Dedicated to campus journalism and content creation, The Log Book hones storytelling, photography, and editorial abilities, engaging students in documenting vibrant campus life and events.",
+    president: "Sumeet Patankar",
+    facultyCoordinator: "Prof. Nilambari Jadhav",
+    contact: "sumeetpatankar21@gmail.com"
+  },
+  {
+    image: "sampleLogo",
+    title: "MIT ADT Consulting Club (MACC)",
+    subtitle: "MACC nurtures consulting skills by immersing members in case studies, workshops, and mentorship programs. It prepares students to excel in business problem-solving and strategic thinking.",
+    president: "Pranita Potghan",
+    facultyCoordinator: "Prof. Palash Sontakke",
+    contact: "pranitapp1587@gmail.com"
+  },
+  {
+    image: "sampleLogo",
+    title: "Gearhead Riders Bikers Community",
+    subtitle: "This passionate community of bikers celebrates freedom, adventure, and camaraderie through organized rides and events, creating strong bonds and unforgettable experiences on the road.",
+    president: "Mayank Mandiya",
+    facultyCoordinator: "Prof. Dr. Swapnil Shirsath",
+    contact: "mandiyamayank533@gmail.com"
+  },
+  {
+    image: "sampleLogo",
+    title: "SAE Collegiate Club",
+    subtitle: "The SAE Club promotes excellence in mobility engineering through workshops, technical skill-building, and expert guidance. It supports students aiming to innovate in automotive and aerospace industries.",
+    president: "Athrva Bagul",
+    facultyCoordinator: "Dr. Anurag Nema",
+    contact: "atharvb214@gmail.com"
+  },
+  {
+    image: "sampleLogo",
+    title: "MIT Swift Coding Club",
+    subtitle: "Focused on Swift programming, this club encourages skill growth, coding challenges, and collaboration to empower budding developers in app development and software engineering.",
+    president: "Ms. Sanskriti Khamkar",
+    facultyCoordinator: "Prof. Reetika Kerketta",
+    contact: "sanskriti.khamkar.101@gmail.com"
+  },
+  {
+    image: "sampleLogo",
+    title: "Yuvarth",
+    subtitle: "Yuvarth inspires innovative problem-solving by fostering teamwork in competitions, workshops, and project development. It enhances members' abilities to tackle real-world challenges creatively.",
+    president: "Shivam Mhamane",
+    facultyCoordinator: "Prof. Kiran Shinde",
+    contact: "shivammhamane28@gmail.com"
+  },
+  {
+    image: "sampleLogo",
     title: "Innovation And Entrepreneurship Club",
-    subtitle: "A vibrant community fostering innovation and startup culture through brainstorming sessions, workshops, mentorship, and networking with entrepreneurs, empowering students to develop their ideas into impactful businesses.",
+    subtitle: "This dynamic club accelerates innovation and entrepreneurial skill-building through mentorship, startup workshops, and networking, preparing students to transform ideas into impactful ventures.",
     president: "Divyam Prabhudessai",
     facultyCoordinator: "Moushmee Kuri",
     contact: "divyamprabhudessai26@gmail.com"
   },
   {
     image: "sampleLogo",
+    title: "Panchayati Drama Club",
+    subtitle: "Panchayati Drama Club revives the spirit of Indian theater, offering rich experiences in acting, stagecraft, direction, and scriptwriting, cultivating confidence and cultural appreciation among members.",
+    president: "Dadasaheb Bhosure",
+    facultyCoordinator: "Prof. Kiran Pavaskar",
+    contact: "dadabhosure0049@gmail.com"
+  },
+  {
+    image: "sampleLogo",
+    title: "Words' Worth Club",
+    subtitle: "Focused on enhancing English language proficiency and creativity, Words' Worth Club offers workshops in writing, storytelling, and literature appreciation to nurture expressive communication.",
+    president: "Ziyan Jahagirdar",
+    facultyCoordinator: "Prof. Balasaheb Wakde",
+    contact: "krishjha.1909@gmail.com"
+  },
+  {
+    image: "sampleLogo",
+    title: "Photography Club",
+    subtitle: "The Photography Club provides a community for enthusiasts to master the art of photography, sharing techniques through workshops, photo walks, and exhibitions to capture compelling stories visually.",
+    president: "Saurav Sharma",
+    facultyCoordinator: "Prof. Tushar Panke",
+    contact: "sauravkumarssingh1399@gmail.com"
+  },
+  {
+    image: "sampleLogo",
+    title: "Synapse AI",
+    subtitle: "Synapse AI fosters passion for artificial intelligence by promoting research projects, workshops, and collaborative innovation aimed at advancing AI applications within and beyond campus.",
+    president: "Shifa Pathan",
+    facultyCoordinator: "Prof. Shahin Makubhai",
+    contact: "shifa.pathan1908@gmail.com"
+  },
+  {
+    image: "sampleLogo",
+    title: "MIT CBC (Cybersecurity And Blockchain Club)",
+    subtitle: "MIT CBC Club empowers students in the growing fields of cybersecurity and blockchain through hands-on workshops, expert-led seminars, and collaborative problem-solving activities.",
+    president: "Ritik Singh",
+    facultyCoordinator: "Prof. Aman Kamble",
+    contact: "singhritik62@gmail.com"
+  },
+  {
+    image: "sampleLogo",
+    title: "Java Brewers",
+    subtitle: "Java Brewers Club hones students' Java programming skills via coding challenges, collaborative projects, and knowledge-sharing sessions preparing members for successful tech careers.",
+    president: "Lalit Deshmukh",
+    facultyCoordinator: "Prof. Rahul More",
+    contact: "lalitdeshmukh018@gmail.com"
+  },
+  {
+    image: "sampleLogo",
+    title: "Leap Of Grace",
+    subtitle: "Leap Of Grace Dance Club encourages dancers of all experience levels to explore movement artistry through performances, workshops, and peer mentorship in an inclusive and dynamic setting.",
+    president: "Ketan Malviya",
+    facultyCoordinator: "Prof. Reshma Girigosavi",
+    contact: "ketanmalviya20@gmail.com"
+  },
+  {
+    image: "sampleLogo",
+    title: "Ted-X",
+    subtitle: "The TEDx Club cultivates a platform for spreading transformative ideas through self-organized events featuring engaging speakers who inspire the university community.",
+    president: "Abhinav Jaiswal",
+    facultyCoordinator: "Prof. Moushmee Kuri",
+    contact: "abhinavjaiswal1201@gmail.com"
+  },
+  {
+    image: "sampleLogo",
+    title: "The Psychology Club",
+    subtitle: "The Psychology Club promotes mental wellness and resilience by organizing workshops and events that deepen understanding of mind-body health and stress management strategies.",
+    president: "Shriya Purandare",
+    facultyCoordinator: "Prof. Ekta Shipure",
+    contact: "shriyapurandarex16@gmail.com"
+  },
+  {
+    image: "sampleLogo",
+    title: "The Infusion Club",
+    subtitle: "The Infusion Club innovates in culinary arts with a focus on wellness, teaching members to craft herbal and fruit infusions that enhance health, flavor, and creativity in beverage preparation.",
+    president: "Shreya Patil",
+    facultyCoordinator: "Prof. Yogita Chavan",
+    contact: "shreyaapatil28@gmail.com"
+  },
+  {
+    image: "sampleLogo",
+    title: "The Alpha Cell",
+    subtitle: "The Alpha Cell unites diverse artists, providing workshops, exhibitions, and collaborative platforms that inspire creativity, foster artistic growth, and celebrate original expression across mediums.",
+    president: "Deepesh Patil",
+    facultyCoordinator: "Prof. Balaji Jadhav",
+    contact: "deepeshpatil0101@gmail.com"
+  },
+  {
+    image: "sampleLogo",
     title: "The Log Book",
-    subtitle: "A creative platform dedicated to nurturing journalistic skills, content creation, and documentation. Members engage in publishing, photography, and editorial projects that chronicle campus life and events.",
+    subtitle: "The Log Book drives journalistic and editorial innovation, encouraging members to craft compelling media content that chronicles campus culture and significant events with integrity and creativity.",
     president: "Sumeet Patankar",
     facultyCoordinator: "Prof. Nilambari Jadhav",
     contact: "sumeetpatankar21@gmail.com"
+  },
+  {
+    image: "sampleLogo",
+    title: "Vidyut Veda",
+    subtitle: "Vidyut Veda empowers engineering students with hands-on hackathons, workshops, and industrial visits that build technical expertise and teamwork skills essential for technological innovation.",
+    president: "Taresh Chabukswar",
+    facultyCoordinator: "Prof. Mahesh A. Kamthe",
+    contact: "taresh1008@gmail.com"
+  },
+  {
+    image: "sampleLogo",
+    title: "ACM-W",
+    subtitle: "ACM-W is a supportive community promoting the advancement and leadership of women in technology and entrepreneurship with mentorship programs, skill-building workshops, and networking events.",
+    president: "Malavika Unnikrishnan",
+    facultyCoordinator: "Prof. Dr. Ayesha Butalia",
+    contact: "malavikapdm@gmail.com"
+  },
+  {
+    image: "sampleLogo",
+    title: "Codechef",
+    subtitle: "Codechef fosters passionate coders through competitive programming, challenges, and educational resources focused on preparing students for excellence in coding and software development careers.",
+    president: "Shreeya Phapale",
+    facultyCoordinator: "Prof. Ravi Chaudhari",
+    contact: "shreeya.phapale@gmail.com"
+  },
+  {
+    image: "sampleLogo",
+    title: "Ignite",
+    subtitle: "IGNITE sparks creativity and innovation by hosting inspiring events, collaborative workshops, and projects that encourage experimentation and personal growth among members.",
+    president: "Parth Datar",
+    facultyCoordinator: "Prof. Pallavi Bhujbal",
+    contact: "parthdatar18@gmail.com"
+  },
+  {
+    image: "sampleLogo",
+    title: "Ideate",
+    subtitle: "IDEATE pioneers UI/UX excellence by fostering a creative community of designers and developers dedicated to crafting user-centric, innovative digital experiences through workshops and ideation sessions.",
+    president: "Tejas Gavhane",
+    facultyCoordinator: "Prof. Dr. Anant Kaulage",
+    contact: "tgavhane340@gmail.com"
+  },
+  {
+    image: "sampleLogo",
+    title: "Team Volta",
+    subtitle: "Team Volta drives technological innovation by collaboratively solving engineering challenges, encouraging creativity, and delivering impactful solutions that advance industry and academia.",
+    president: "Atharav Phadtare",
+    facultyCoordinator: "Prof. Praveen Bhojane",
+    contact: "patharav2005@gmail.com"
   }
-   
-     
-  ];
+];
+
 
   return (
     <div className="min-h-screen bg-white flex flex-col">

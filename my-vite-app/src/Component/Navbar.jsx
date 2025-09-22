@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import OSALogo from "../assets/OSALogo-main.png";
 import MITLogo from "../assets/MITLogo.png";
+import News from "../assets/newsletter/Samanvay Newsletter Sept. 22, 2025.pdf"
 
 const Navbar = () => {
     const [hoveredLink, setHoveredLink] = useState(null);
@@ -84,6 +85,10 @@ const Navbar = () => {
         {
             to: 'https://docs.google.com/spreadsheets/d/13OhKl7JLLxy4Wun353T0eO2xgXvY-5lS/edit?usp=sharing&ouid=106236639282780490925&rtpof=true&sd=true',
             label: 'Event Calendar',
+            newTab: true
+        },{
+            to: News,
+            label: 'Newsletter',
             newTab: true
         },
         { to: '/contact', label: 'Contact Us' },
