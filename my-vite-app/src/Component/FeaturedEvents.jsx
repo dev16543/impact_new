@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import { Calendar, MapPin, X, Clock } from 'lucide-react';
 import Trek from '../assets/Trek.webp';
-import Induction from '../assets/pastevents/timeline_23-24/Jul.png';
-import Onam from '../assets/onam.jpg'
-import Garba from '../assets/pastevents/garba.png'
-import Football from '../assets/pastevents/football.png'
-import Garbaw from '../assets/garbaw.webp'
-
+// import Induction from '../assets/pastevents/timeline_23-24/Jul.png';
+// import Onam from '../assets/onam.jpg'
+// import Garba from '../assets/pastevents/garba.png'
+import VSM from '../assets/pastevents/vsm2026poster2.png'
+// import Football from '../assets/pastevents/football.png'
+// import Garbaw from '../assets/garbaw.webp'
+import Persona from '../assets/pastevents/Persona2026.png'
+import SciFest from '../assets/GalleryHome/ClubCatalyst.png'
 const UpcomingEventsPage = ({ events, className = "" }) => {
   const [selectedEvent, setSelectedEvent] = useState(null);
 
@@ -14,35 +16,35 @@ const UpcomingEventsPage = ({ events, className = "" }) => {
   const demoEvents = [
     {
       id: 1,
-      title: "MIT ADT Dandiya Nights",
-      date: "31 September and 1 October 2025",
-      time: "Evening onwards",
-      location: "Pune, Maharashtra, India",
-      venue: "MIT ADT University Campus",
-      attendees: "10000+",
-      price: "Free",
-      image: Garba,
-      category: "Cultural Festival",
-      featured: true,
-      description:
-        "Join the vibrant celebration of Navratri at MIT ADT University with colorful Dandiya Nights full of music, dance, and festive joy.",
-      organizer: "MIT ADT University",
+  title: "Vishwanath Sports Meet (VSM) 2026",
+  date: "23 January – 28 January 2026",
+  time: "All Day",
+  location: "Pune, Maharashtra, India",
+  venue: "MIT Art, Design and Technology University Campus",
+  attendees: "10,000+ athletes from institutions across India",
+  price: "As per sport / Registration based",
+  image: VSM, 
+  category: "Sports Event",
+  featured: true,
+  description:
+    "Vishwanath Sports Meet (VSM) 2026 is the 8th National-Level Inter-Collegiate and Inter-University sports championship organized by MIT Art, Design and Technology University, Pune. Guided by the theme 'Nation Building Through Sports', the event brings together athletes from across the country to compete in over 15 sporting disciplines, promoting sportsmanship, unity, leadership, and holistic development.",
+  organizer: "MIT ADT University, Pune",
     },
     {
       id: 2,
-      title: "MIT ADT Onam Celebration",
-      date: "12 September 2025",
-      time: "10:00 AM - 1:00 PM",
-      location: "Pune, Maharashtra, India",
-      venue: "MIT ADT University",
-      attendees: "300+",
-      price: "Free",
-      image: Onam,
-      category: "Cultural Festival",
-      featured: true,
-      description:
-        "Celebrate the vibrant festival of Onam with stunning pookalams, traditional dances, and cultural performances showcasing the spirit of Kerala.",
-      organizer: "MIT ADT University",
+  title: "Persona 2026",
+  date: "19 – 21 February 2026",
+  time: "All Day",
+  location: "Pune, Maharashtra, India",
+  venue: "MIT Art, Design and Technology University Campus",
+  attendees: "Thousands of students across multiple universities",
+  price: "Varies by event",
+  image: Persona, 
+  category: "Cultural Festival",
+  featured: true,
+  description:
+    "Persona is MIT ADT University’s flagship annual cultural fest and a three-day celebration of student talent, creativity, and holistic development. More than entertainment, Persona functions as an intensive leadership development platform, reflecting the university’s vision of nurturing well-rounded individuals who excel beyond academics. The fest sets a benchmark for inter-university cultural events through innovation, collaboration, and creative excellence.",
+  organizer: "MIT ADT University, Pune",
     },
     {
       id: 3,
@@ -61,53 +63,22 @@ const UpcomingEventsPage = ({ events, className = "" }) => {
       organizer: "MIT Adventure Club & Kafila Adventures",
     },
     {
-      id: 4,
-      title: "Annual Inter Collegiate Sports",
-      date: "9 September 2025 to 30 October 2025",
-      time: "All Day",
-      location: "Pune, Maharashtra, India",
-      venue: "MIT ADT University Campus Sports Complex",
-      attendees: "4000+ participants from 140+ institutions",
-      price: "Free",
-      image: Football,
-      category: "Sports Event",
-      featured: true,
-      description:
-        "A grand state-level inter-collegiate and inter-university sports competition featuring 15 sports categories including cricket, basketball, football, badminton, kho-kho, kabaddi, tennis, volleyball, and more.",
-      organizer: "MIT ADT University",
-    },
-    {
-      id: 5,
-      title: "Garba Workshop - Leap of Grace",
-      date: "September 2025",
-      time: "Evening onwards",
-      location: "Pune, Maharashtra, India",
-      venue: "MIT ADT University Campus",
-      attendees: "700+",
-      price: "Free",
-      image: Garbaw,
-      category: "Cultural Festival",
-      featured: true,
-      description:
-        "A lively workshop focusing on traditional Garba dance with enthusiastic participation from students attending the Annual Inter Collegiate Sports event.",
-      organizer: "MIT ADT University",
-    },
-    {
-      id: 6,
-      title: "ADT Talk - SHD",
-      date: "29 September 2025",
-      time: "10:00 AM - 4:00 PM",
-      location: "Pune, Maharashtra, India",
-      venue: "School of Holistic Development, MIT ADT University",
-      attendees: "500+",
-      price: "Free",
-      image: Induction,
-      category: "Oratory & Public Speaking",
-      featured: true,
-      description:
-        "An engaging oratorical championship and public speaking platform organized by the School of Holistic Development. ADT Talk is a multi-round event aimed at enhancing public speaking skills, confidence, and leadership among students across the university.",
-      organizer: "MIT ADT University - School of Holistic Development",
-    },
+  id: 4,
+  title: "SciFest 2026 – Club Catalyst",
+  date: "27 – 28 February 2026",
+  time: "All Day",
+  location: "Pune, Maharashtra, India",
+  venue: "As per Announcement",
+  attendees: "50+ student clubs and university-wide participation",
+  price: "Free",
+  image: SciFest, 
+  category: "Innovation & Leadership",
+  featured: true,
+  description:
+    "SciFest 2026 – Club Catalyst is a flagship innovation and leadership showcase of MIT ADT University, organized by the Office of Student Affairs. The event brings together 50+ student clubs to present innovative ideas, entrepreneurial initiatives, and collaborative solutions. Inaugurated by the Executive President and Vice-Chancellor and led by Prof. Dr. Suraj Bhoyar, the event fosters a culture of creativity, leadership, collaboration, and real-world problem solving among students.",
+  organizer: "Office of Student Affairs, MIT ADT University",
+}
+    
   ];
 
   const data = events?.length ? events : demoEvents;

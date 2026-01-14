@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import OSALogo from "../assets/OSALogo-main.png";
 import MITLogo from "../assets/MITLogo.png";
-import News from "../assets/newsletter/Samanvay Newsletter Sept. 22, 2025.pdf"
+import News from "../assets/newsletter/SamanvayNewsletterNov.pdf"
 
 const Navbar = () => {
     const [hoveredLink, setHoveredLink] = useState(null);
