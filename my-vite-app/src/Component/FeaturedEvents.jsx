@@ -9,6 +9,8 @@ import VSM from '../assets/pastevents/vsm2026poster2.png'
 // import Garbaw from '../assets/garbaw.webp'
 import Persona from '../assets/pastevents/Persona2026.png'
 import SciFest from '../assets/GalleryHome/ClubCatalyst.png'
+import BloodDonation from '../assets/GalleryHome/BloodDonation.png'
+import Lohri from '../assets/GalleryHome/Lohri.png'
 const UpcomingEventsPage = ({ events, className = "" }) => {
   const [selectedEvent, setSelectedEvent] = useState(null);
 
@@ -29,9 +31,24 @@ const UpcomingEventsPage = ({ events, className = "" }) => {
   description:
     "Vishwanath Sports Meet (VSM) 2026 is the 8th National-Level Inter-Collegiate and Inter-University sports championship organized by MIT Art, Design and Technology University, Pune. Guided by the theme 'Nation Building Through Sports', the event brings together athletes from across the country to compete in over 15 sporting disciplines, promoting sportsmanship, unity, leadership, and holistic development.",
   organizer: "MIT ADT University, Pune",
-    },
+    },{
+  id: 2,
+  title: "Lohri Celebration 2026",
+  date: "14 January 2026",
+  time: "Evening",
+  location: "Pune, Maharashtra, India",
+  venue: "MIT ADT University Campus",
+  attendees: "Students and faculty across the university",
+  price: "Free",
+  image: Lohri, 
+  category: "Cultural Festival",
+  featured: false,
+  description:
+    "Lohri Celebration 2026 at MIT ADT University marks the joyous harvest festival that signifies prosperity, gratitude, and togetherness. The event brings students together to celebrate cultural traditions through music, dance, and festive rituals, fostering unity, inclusivity, and a vibrant campus spirit.",
+  organizer: "MIT ADT University",
+},
     {
-      id: 2,
+      id: 3,
   title: "Persona 2026",
   date: "19 – 21 February 2026",
   time: "All Day",
@@ -46,8 +63,9 @@ const UpcomingEventsPage = ({ events, className = "" }) => {
     "Persona is MIT ADT University’s flagship annual cultural fest and a three-day celebration of student talent, creativity, and holistic development. More than entertainment, Persona functions as an intensive leadership development platform, reflecting the university’s vision of nurturing well-rounded individuals who excel beyond academics. The fest sets a benchmark for inter-university cultural events through innovation, collaboration, and creative excellence.",
   organizer: "MIT ADT University, Pune",
     },
+    
     {
-      id: 3,
+      id: 4,
       title: "Trek N Trail (MIT Adv. Club)",
       date: "Every Weekend",
       time: "Friday 10:30 PM",
@@ -63,7 +81,7 @@ const UpcomingEventsPage = ({ events, className = "" }) => {
       organizer: "MIT Adventure Club & Kafila Adventures",
     },
     {
-  id: 4,
+  id: 5,
   title: "SciFest 2026 – Club Catalyst",
   date: "27 – 28 February 2026",
   time: "All Day",
@@ -77,8 +95,24 @@ const UpcomingEventsPage = ({ events, className = "" }) => {
   description:
     "SciFest 2026 – Club Catalyst is a flagship innovation and leadership showcase of MIT ADT University, organized by the Office of Student Affairs. The event brings together 50+ student clubs to present innovative ideas, entrepreneurial initiatives, and collaborative solutions. Inaugurated by the Executive President and Vice-Chancellor and led by Prof. Dr. Suraj Bhoyar, the event fosters a culture of creativity, leadership, collaboration, and real-world problem solving among students.",
   organizer: "Office of Student Affairs, MIT ADT University",
-}
-    
+},
+{
+  id: 6,
+  title: "Blood Donation Drive 2026",
+  date: "3 February 2026",
+  time: "As per Schedule",
+  location: "Pune, Maharashtra, India",
+  venue: "As per Announcement",
+  attendees: "100+ donors",
+  price: "Free",
+  image: BloodDonation, 
+  category: "Social Responsibility",
+  featured: true,
+  description:
+    "The Blood Donation Drive organized by MIT ADT University reflects the institution’s strong commitment to social responsibility and humanitarian values. Conducted under the leadership of Prof. Dr. Mangesh Karad and spearheaded by Prof. Dr. Suraj Bhoyar, the initiative was organized in collaboration with AFMC and supported by NCC and NSS. With participation from over 100 donors, the drive highlighted the power of collective action in saving lives and fostering a culture of compassion and service.",
+  organizer: "MIT ADT University (Office of Student Affairs)",
+},
+
   ];
 
   const data = events?.length ? events : demoEvents;
